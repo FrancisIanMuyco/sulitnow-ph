@@ -1,0 +1,49 @@
+name: Auto Scrape & Deploy Promos
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright beautifulsoup4 lxml httpx
+          playwright install chromium --with-deps
+          npm ci
+
+      - name: Scrape promos
+        env:
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
+        run: python3 scripts/scrape-promos.py
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=sulitnow-ph
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/promos.json
+          git diff --staged --quiet || git commit -m "data: auto-update promo data"
+          git push
