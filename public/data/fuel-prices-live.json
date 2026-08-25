@@ -1,0 +1,36 @@
+{
+  "lastUpdated": "2026-08-25T17:10:53.299305",
+  "source": "GasWatch PH / DOE",
+  "brands": [
+    {
+      "name": "Shell",
+      "diesel": null,
+      "gasoline91": null
+    },
+    {
+      "name": "Shell",
+      "diesel": null,
+      "gasoline91": null
+    },
+    {
+      "name": "Shell",
+      "diesel": null,
+      "gasoline91": null
+    },
+    {
+      "name": "Shell",
+      "diesel": null,
+      "gasoline91": null
+    },
+    {
+      "name": "Petron",
+      "diesel": null,
+      "gasoline91": null
+    },
+    {
+      "name": "Petron",
+      "diesel": null,
+      "gasoline91": null
+    }
+  ]
+}

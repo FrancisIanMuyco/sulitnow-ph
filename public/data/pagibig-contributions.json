@@ -1,0 +1,31 @@
+{
+  "lastUpdated": "2026-08-25T17:06:32.381495",
+  "year": 2026,
+  "description": "Pag-IBIG (HDMF) Contribution Table 2026",
+  "table": [
+    {
+      "salaryFrom": 0,
+      "salaryTo": 1500,
+      "employeeRate": 0.01,
+      "employerRate": 0.02,
+      "employeeMax": 200,
+      "employerMax": 200
+    },
+    {
+      "salaryFrom": 1500.01,
+      "salaryTo": 5000,
+      "employeeRate": 0.02,
+      "employerRate": 0.02,
+      "employeeMax": 200,
+      "employerMax": 200
+    },
+    {
+      "salaryFrom": 5000.01,
+      "salaryTo": 50000,
+      "employeeRate": 0.02,
+      "employerRate": 0.02,
+      "employeeMax": 200,
+      "employerMax": 200
+    }
+  ]
+}

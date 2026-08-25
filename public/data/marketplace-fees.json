@@ -1,0 +1,87 @@
+{
+  "lastUpdated": "2026-08-25T17:06:32.375017",
+  "shopee": {
+    "name": "Shopee Philippines",
+    "fees": {
+      "commission": {
+        "marketplace": {
+          "min": 0.01,
+          "max": 0.06,
+          "description": "1%-6% of selling price"
+        },
+        "mall": {
+          "min": 0.01,
+          "max": 0.08,
+          "description": "1%-8% of selling price"
+        }
+      },
+      "serviceFee": {
+        "marketplace": 0.056,
+        "mall": 0.0448,
+        "description": "5.6% marketplace, 4.48% Mall"
+      },
+      "transactionFee": 0.0224,
+      "paymentFee": 0.02,
+      "shippingFee": {
+        "seller": "5.6% of shipping fee (marketplace)",
+        "mall": "4.48% of shipping fee"
+      },
+      "failedDelivery": 35,
+      "returnShipping": "Seller pays return shipping",
+      "techFee": {
+        "marketplace": 0.02,
+        "mall": 0.03,
+        "description": "2%-3% tech fee"
+      }
+    },
+    "exampleCalculation": {
+      "price": 500,
+      "commission": "\u20b125 (5%)",
+      "serviceFee": "\u20b128 (5.6%)",
+      "transactionFee": "\u20b111.20 (2.24%)",
+      "totalFees": "\u20b164.20",
+      "netReceive": "\u20b1435.80"
+    }
+  },
+  "lazada": {
+    "name": "Lazada Philippines",
+    "fees": {
+      "commission": {
+        "marketplace": {
+          "min": 0.01,
+          "max": 0.065,
+          "description": "1%-6.5%"
+        },
+        "mall": {
+          "min": 0.01,
+          "max": 0.08,
+          "description": "1%-8%"
+        }
+      },
+      "paymentFee": 0.0224,
+      "serviceFee": 0.056,
+      "fulfillmentFee": "Varies by weight/distance",
+      "returnShipping": "Lazada covers for mall items"
+    },
+    "exampleCalculation": {
+      "price": 500,
+      "commission": "\u20b122.50 (4.5%)",
+      "paymentFee": "\u20b111.20 (2.24%)",
+      "serviceFee": "\u20b128 (5.6%)",
+      "totalFees": "\u20b161.70",
+      "netReceive": "\u20b1438.30"
+    }
+  },
+  "tiktokshop": {
+    "name": "TikTok Shop Philippines",
+    "fees": {
+      "commission": {
+        "min": 0.01,
+        "max": 0.05,
+        "description": "1%-5%"
+      },
+      "paymentFee": 0.02,
+      "serviceFee": 0.05
+    }
+  }
+}

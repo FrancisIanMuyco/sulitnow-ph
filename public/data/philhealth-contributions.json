@@ -1,0 +1,160 @@
+{
+  "lastUpdated": "2026-08-25T17:06:32.379156",
+  "year": 2026,
+  "rate": "5% of monthly basic salary",
+  "floor": 10000,
+  "ceiling": 100000,
+  "split": "50/50 employer-employee",
+  "table": [
+    {
+      "monthlyBasicSalary": 10000,
+      "totalContribution": 500.0,
+      "employeeShare": 250.0,
+      "employerShare": 250.0
+    },
+    {
+      "monthlyBasicSalary": 15000,
+      "totalContribution": 750.0,
+      "employeeShare": 375.0,
+      "employerShare": 375.0
+    },
+    {
+      "monthlyBasicSalary": 20000,
+      "totalContribution": 1000.0,
+      "employeeShare": 500.0,
+      "employerShare": 500.0
+    },
+    {
+      "monthlyBasicSalary": 25000,
+      "totalContribution": 1250.0,
+      "employeeShare": 625.0,
+      "employerShare": 625.0
+    },
+    {
+      "monthlyBasicSalary": 30000,
+      "totalContribution": 1500.0,
+      "employeeShare": 750.0,
+      "employerShare": 750.0
+    },
+    {
+      "monthlyBasicSalary": 35000,
+      "totalContribution": 1750.0,
+      "employeeShare": 875.0,
+      "employerShare": 875.0
+    },
+    {
+      "monthlyBasicSalary": 40000,
+      "totalContribution": 2000.0,
+      "employeeShare": 1000.0,
+      "employerShare": 1000.0
+    },
+    {
+      "monthlyBasicSalary": 45000,
+      "totalContribution": 2250.0,
+      "employeeShare": 1125.0,
+      "employerShare": 1125.0
+    },
+    {
+      "monthlyBasicSalary": 50000,
+      "totalContribution": 2500.0,
+      "employeeShare": 1250.0,
+      "employerShare": 1250.0
+    },
+    {
+      "monthlyBasicSalary": 52500,
+      "totalContribution": 2625.0,
+      "employeeShare": 1312.5,
+      "employerShare": 1312.5
+    },
+    {
+      "monthlyBasicSalary": 55000,
+      "totalContribution": 2750.0,
+      "employeeShare": 1375.0,
+      "employerShare": 1375.0
+    },
+    {
+      "monthlyBasicSalary": 57500,
+      "totalContribution": 2875.0,
+      "employeeShare": 1437.5,
+      "employerShare": 1437.5
+    },
+    {
+      "monthlyBasicSalary": 60000,
+      "totalContribution": 3000.0,
+      "employeeShare": 1500.0,
+      "employerShare": 1500.0
+    },
+    {
+      "monthlyBasicSalary": 62500,
+      "totalContribution": 3125.0,
+      "employeeShare": 1562.5,
+      "employerShare": 1562.5
+    },
+    {
+      "monthlyBasicSalary": 65000,
+      "totalContribution": 3250.0,
+      "employeeShare": 1625.0,
+      "employerShare": 1625.0
+    },
+    {
+      "monthlyBasicSalary": 67500,
+      "totalContribution": 3375.0,
+      "employeeShare": 1687.5,
+      "employerShare": 1687.5
+    },
+    {
+      "monthlyBasicSalary": 70000,
+      "totalContribution": 3500.0,
+      "employeeShare": 1750.0,
+      "employerShare": 1750.0
+    },
+    {
+      "monthlyBasicSalary": 72500,
+      "totalContribution": 3625.0,
+      "employeeShare": 1812.5,
+      "employerShare": 1812.5
+    },
+    {
+      "monthlyBasicSalary": 75000,
+      "totalContribution": 3750.0,
+      "employeeShare": 1875.0,
+      "employerShare": 1875.0
+    },
+    {
+      "monthlyBasicSalary": 77500,
+      "totalContribution": 3875.0,
+      "employeeShare": 1937.5,
+      "employerShare": 1937.5
+    },
+    {
+      "monthlyBasicSalary": 80000,
+      "totalContribution": 4000.0,
+      "employeeShare": 2000.0,
+      "employerShare": 2000.0
+    },
+    {
+      "monthlyBasicSalary": 85000,
+      "totalContribution": 4250.0,
+      "employeeShare": 2125.0,
+      "employerShare": 2125.0
+    },
+    {
+      "monthlyBasicSalary": 90000,
+      "totalContribution": 4500.0,
+      "employeeShare": 2250.0,
+      "employerShare": 2250.0
+    },
+    {
+      "monthlyBasicSalary": 95000,
+      "totalContribution": 4750.0,
+      "employeeShare": 2375.0,
+      "employerShare": 2375.0
+    },
+    {
+      "monthlyBasicSalary": 100000,
+      "totalContribution": 5000.0,
+      "employeeShare": 2500.0,
+      "employerShare": 2500.0
+    }
+  ]
+}

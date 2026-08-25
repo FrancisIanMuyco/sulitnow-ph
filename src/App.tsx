@@ -57,6 +57,11 @@ const InternetPlanComparator = lazy(() => import('./tools/mobile/internet-plan/I
 const URLChecker = lazy(() => import('./tools/safety/url-checker/URLChecker'));
 const WebsiteRisk = lazy(() => import('./tools/safety/website-risk/WebsiteRisk'));
 const RaketCheck = lazy(() => import('./tools/raket/raketcheck/RaketCheck'));
+const TakeHomePayCalculator = lazy(() => import('./tools/money/take-home-pay/TakeHomePayCalculator'));
+const TransportFareCalculator = lazy(() => import('./tools/transport/fare/TransportFareCalculator'));
+const LTOFeeCalculator = lazy(() => import('./tools/transport/lto/LTOFeeCalculator'));
+const WeatherChecker = lazy(() => import('./tools/daily/weather/WeatherChecker'));
+const SellerFeeCalculator = lazy(() => import('./tools/shopping/seller-fees/SellerFeeCalculator'));
 
 function Loading() {
   return (
@@ -139,6 +144,13 @@ export default function App() {
           {/* Safety */}
           <Route path="tools/url-checker" element={<Suspense fallback={<Loading />}><URLChecker /></Suspense>} />
           <Route path="tools/website-risk" element={<Suspense fallback={<Loading />}><WebsiteRisk /></Suspense>} />
+
+          {/* New Tools */}
+          <Route path="tools/take-home-pay" element={<Suspense fallback={<Loading />}><TakeHomePayCalculator /></Suspense>} />
+          <Route path="tools/transport-fare" element={<Suspense fallback={<Loading />}><TransportFareCalculator /></Suspense>} />
+          <Route path="tools/lto-fee-calculator" element={<Suspense fallback={<Loading />}><LTOFeeCalculator /></Suspense>} />
+          <Route path="tools/weather-checker" element={<Suspense fallback={<Loading />}><WeatherChecker /></Suspense>} />
+          <Route path="tools/seller-fee-calculator" element={<Suspense fallback={<Loading />}><SellerFeeCalculator /></Suspense>} />
 
           {/* Raket */}
           <Route path="tools/raketcheck" element={<Suspense fallback={<Loading />}><RaketCheck /></Suspense>} />

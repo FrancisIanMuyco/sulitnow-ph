@@ -1,0 +1,322 @@
+{
+  "lastUpdated": "2026-08-25T17:06:32.375065",
+  "year": 2026,
+  "description": "SSS Contribution Table 2026 (RA 11199)",
+  "table": [
+    {
+      "salaryFrom": 3250,
+      "salaryTo": 3749.99,
+      "employeeShare": 135.0,
+      "employerShare": 585.0,
+      "totalContribution": 720.0
+    },
+    {
+      "salaryFrom": 3750,
+      "salaryTo": 4249.99,
+      "employeeShare": 157.5,
+      "employerShare": 675.0,
+      "totalContribution": 832.5
+    },
+    {
+      "salaryFrom": 4250,
+      "salaryTo": 4749.99,
+      "employeeShare": 180.0,
+      "employerShare": 765.0,
+      "totalContribution": 945.0
+    },
+    {
+      "salaryFrom": 4750,
+      "salaryTo": 5249.99,
+      "employeeShare": 202.5,
+      "employerShare": 855.0,
+      "totalContribution": 1057.5
+    },
+    {
+      "salaryFrom": 5250,
+      "salaryTo": 5749.99,
+      "employeeShare": 225.0,
+      "employerShare": 945.0,
+      "totalContribution": 1170.0
+    },
+    {
+      "salaryFrom": 5750,
+      "salaryTo": 6249.99,
+      "employeeShare": 247.5,
+      "employerShare": 1035.0,
+      "totalContribution": 1282.5
+    },
+    {
+      "salaryFrom": 6250,
+      "salaryTo": 6749.99,
+      "employeeShare": 270.0,
+      "employerShare": 1125.0,
+      "totalContribution": 1395.0
+    },
+    {
+      "salaryFrom": 6750,
+      "salaryTo": 7249.99,
+      "employeeShare": 292.5,
+      "employerShare": 1215.0,
+      "totalContribution": 1507.5
+    },
+    {
+      "salaryFrom": 7250,
+      "salaryTo": 7749.99,
+      "employeeShare": 315.0,
+      "employerShare": 1305.0,
+      "totalContribution": 1620.0
+    },
+    {
+      "salaryFrom": 7750,
+      "salaryTo": 8249.99,
+      "employeeShare": 337.5,
+      "employerShare": 1395.0,
+      "totalContribution": 1732.5
+    },
+    {
+      "salaryFrom": 8250,
+      "salaryTo": 8749.99,
+      "employeeShare": 360.0,
+      "employerShare": 1485.0,
+      "totalContribution": 1845.0
+    },
+    {
+      "salaryFrom": 8750,
+      "salaryTo": 9249.99,
+      "employeeShare": 382.5,
+      "employerShare": 1575.0,
+      "totalContribution": 1957.5
+    },
+    {
+      "salaryFrom": 9250,
+      "salaryTo": 9749.99,
+      "employeeShare": 405.0,
+      "employerShare": 1665.0,
+      "totalContribution": 2070.0
+    },
+    {
+      "salaryFrom": 9750,
+      "salaryTo": 10249.99,
+      "employeeShare": 427.5,
+      "employerShare": 1755.0,
+      "totalContribution": 2182.5
+    },
+    {
+      "salaryFrom": 10250,
+      "salaryTo": 10749.99,
+      "employeeShare": 450.0,
+      "employerShare": 1845.0,
+      "totalContribution": 2295.0
+    },
+    {
+      "salaryFrom": 10750,
+      "salaryTo": 11249.99,
+      "employeeShare": 472.5,
+      "employerShare": 1935.0,
+      "totalContribution": 2407.5
+    },
+    {
+      "salaryFrom": 11250,
+      "salaryTo": 11749.99,
+      "employeeShare": 495.0,
+      "employerShare": 2025.0,
+      "totalContribution": 2520.0
+    },
+    {
+      "salaryFrom": 11750,
+      "salaryTo": 12249.99,
+      "employeeShare": 517.5,
+      "employerShare": 2115.0,
+      "totalContribution": 2632.5
+    },
+    {
+      "salaryFrom": 12250,
+      "salaryTo": 12749.99,
+      "employeeShare": 540.0,
+      "employerShare": 2205.0,
+      "totalContribution": 2745.0
+    },
+    {
+      "salaryFrom": 12750,
+      "salaryTo": 13249.99,
+      "employeeShare": 562.5,
+      "employerShare": 2295.0,
+      "totalContribution": 2857.5
+    },
+    {
+      "salaryFrom": 13250,
+      "salaryTo": 13749.99,
+      "employeeShare": 585.0,
+      "employerShare": 2385.0,
+      "totalContribution": 2970.0
+    },
+    {
+      "salaryFrom": 13750,
+      "salaryTo": 14249.99,
+      "employeeShare": 607.5,
+      "employerShare": 2475.0,
+      "totalContribution": 3082.5
+    },
+    {
+      "salaryFrom": 14250,
+      "salaryTo": 14749.99,
+      "employeeShare": 630.0,
+      "employerShare": 2565.0,
+      "totalContribution": 3195.0
+    },
+    {
+      "salaryFrom": 14750,
+      "salaryTo": 15249.99,
+      "employeeShare": 652.5,
+      "employerShare": 2655.0,
+      "totalContribution": 3307.5
+    },
+    {
+      "salaryFrom": 15250,
+      "salaryTo": 15749.99,
+      "employeeShare": 675.0,
+      "employerShare": 2745.0,
+      "totalContribution": 3420.0
+    },
+    {
+      "salaryFrom": 15750,
+      "salaryTo": 16249.99,
+      "employeeShare": 697.5,
+      "employerShare": 2835.0,
+      "totalContribution": 3532.5
+    },
+    {
+      "salaryFrom": 16250,
+      "salaryTo": 16749.99,
+      "employeeShare": 720.0,
+      "employerShare": 2925.0,
+      "totalContribution": 3645.0
+    },
+    {
+      "salaryFrom": 16750,
+      "salaryTo": 17249.99,
+      "employeeShare": 742.5,
+      "employerShare": 3015.0,
+      "totalContribution": 3757.5
+    },
+    {
+      "salaryFrom": 17250,
+      "salaryTo": 17749.99,
+      "employeeShare": 765.0,
+      "employerShare": 3105.0,
+      "totalContribution": 3870.0
+    },
+    {
+      "salaryFrom": 17750,
+      "salaryTo": 18249.99,
+      "employeeShare": 787.5,
+      "employerShare": 3195.0,
+      "totalContribution": 3982.5
+    },
+    {
+      "salaryFrom": 18250,
+      "salaryTo": 18749.99,
+      "employeeShare": 810.0,
+      "employerShare": 3285.0,
+      "totalContribution": 4095.0
+    },
+    {
+      "salaryFrom": 18750,
+      "salaryTo": 19249.99,
+      "employeeShare": 832.5,
+      "employerShare": 3375.0,
+      "totalContribution": 4207.5
+    },
+    {
+      "salaryFrom": 19250,
+      "salaryTo": 19749.99,
+      "employeeShare": 855.0,
+      "employerShare": 3465.0,
+      "totalContribution": 4320.0
+    },
+    {
+      "salaryFrom": 19750,
+      "salaryTo": 20249.99,
+      "employeeShare": 877.5,
+      "employerShare": 3555.0,
+      "totalContribution": 4432.5
+    },
+    {
+      "salaryFrom": 20250,
+      "salaryTo": 20749.99,
+      "employeeShare": 900.0,
+      "employerShare": 3645.0,
+      "totalContribution": 4545.0
+    },
+    {
+      "salaryFrom": 20750,
+      "salaryTo": 21249.99,
+      "employeeShare": 922.5,
+      "employerShare": 3735.0,
+      "totalContribution": 4657.5
+    },
+    {
+      "salaryFrom": 21250,
+      "salaryTo": 21749.99,
+      "employeeShare": 945.0,
+      "employerShare": 3825.0,
+      "totalContribution": 4770.0
+    },
+    {
+      "salaryFrom": 21750,
+      "salaryTo": 22249.99,
+      "employeeShare": 967.5,
+      "employerShare": 3915.0,
+      "totalContribution": 4882.5
+    },
+    {
+      "salaryFrom": 22250,
+      "salaryTo": 22749.99,
+      "employeeShare": 990.0,
+      "employerShare": 4005.0,
+      "totalContribution": 4995.0
+    },
+    {
+      "salaryFrom": 22750,
+      "salaryTo": 23249.99,
+      "employeeShare": 1012.5,
+      "employerShare": 4095.0,
+      "totalContribution": 5107.5
+    },
+    {
+      "salaryFrom": 23250,
+      "salaryTo": 23749.99,
+      "employeeShare": 1035.0,
+      "employerShare": 4185.0,
+      "totalContribution": 5220.0
+    },
+    {
+      "salaryFrom": 23750,
+      "salaryTo": 24249.99,
+      "employeeShare": 1057.5,
+      "employerShare": 4275.0,
+      "totalContribution": 5332.5
+    },
+    {
+      "salaryFrom": 24250,
+      "salaryTo": 24749.99,
+      "employeeShare": 1080.0,
+      "employerShare": 4365.0,
+      "totalContribution": 5445.0
+    },
+    {
+      "salaryFrom": 24750,
+      "salaryTo": 30249.99,
+      "employeeShare": 1102.5,
+      "employerShare": 4455.0,
+      "totalContribution": 5557.5
+    },
+    {
+      "salaryFrom": 30250,
+      "salaryTo": null,
+      "employeeShare": 1125.0,
+      "employerShare": 4500.0,
+      "totalContribution": 5625.0
+    }
+  ]
+}

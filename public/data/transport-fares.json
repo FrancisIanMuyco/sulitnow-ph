@@ -1,0 +1,314 @@
+{
+  "lastUpdated": "2026-08-25T17:06:32.372555",
+  "jeepney": {
+    "traditional": {
+      "minimumFare": 14,
+      "perKm": 2.0,
+      "studentDiscount": 0.2,
+      "seniorDiscount": 0.2
+    },
+    "modern": {
+      "minimumFare": 17,
+      "perKm": 2.4,
+      "studentDiscount": 0.2,
+      "seniorDiscount": 0.2
+    }
+  },
+  "lrt1": {
+    "name": "LRT-1",
+    "operator": "LRMC",
+    "lastUpdated": "2026-03-23",
+    "stations": [
+      {
+        "id": 1,
+        "name": "Roosevelt",
+        "zone": 1
+      },
+      {
+        "id": 2,
+        "name": "Balintawak",
+        "zone": 1
+      },
+      {
+        "id": 3,
+        "name": "Monumento",
+        "zone": 1
+      },
+      {
+        "id": 4,
+        "name": "5th Avenue",
+        "zone": 1
+      },
+      {
+        "id": 5,
+        "name": "R. Papa",
+        "zone": 1
+      },
+      {
+        "id": 6,
+        "name": "Abad Santos",
+        "zone": 1
+      },
+      {
+        "id": 7,
+        "name": "Blumentritt",
+        "zone": 1
+      },
+      {
+        "id": 8,
+        "name": "Tayuman",
+        "zone": 1
+      },
+      {
+        "id": 9,
+        "name": "Bambang",
+        "zone": 1
+      },
+      {
+        "id": 10,
+        "name": "Carriedo",
+        "zone": 2
+      },
+      {
+        "id": 11,
+        "name": "Central Terminal",
+        "zone": 2
+      },
+      {
+        "id": 12,
+        "name": "UN Avenue",
+        "zone": 2
+      },
+      {
+        "id": 13,
+        "name": "Pedro Gil",
+        "zone": 2
+      },
+      {
+        "id": 14,
+        "name": "Quirino",
+        "zone": 2
+      },
+      {
+        "id": 15,
+        "name": "Vito Cruz",
+        "zone": 2
+      },
+      {
+        "id": 16,
+        "name": "Baclaran",
+        "zone": 3
+      }
+    ],
+    "fareMatrix": {
+      "singleJourney": {
+        "1Zone": {
+          "regular": 15,
+          "student": 12,
+          "senior": 12
+        },
+        "2Zone": {
+          "regular": 20,
+          "student": 16,
+          "senior": 16
+        },
+        "3Zone": {
+          "regular": 25,
+          "student": 20,
+          "senior": 20
+        }
+      },
+      "storedValue": {
+        "1Zone": {
+          "regular": 14,
+          "student": 11,
+          "senior": 11
+        },
+        "2Zone": {
+          "regular": 19,
+          "student": 15,
+          "senior": 15
+        },
+        "3Zone": {
+          "regular": 24,
+          "student": 19,
+          "senior": 19
+        }
+      }
+    }
+  },
+  "lrt2": {
+    "name": "LRT-2",
+    "lastUpdated": "2026-03-23",
+    "discount": "50% across the board",
+    "stations": [
+      {
+        "id": 1,
+        "name": "Recto",
+        "zone": 1
+      },
+      {
+        "id": 2,
+        "name": "Legarda",
+        "zone": 1
+      },
+      {
+        "id": 3,
+        "name": "Pureza",
+        "zone": 1
+      },
+      {
+        "id": 4,
+        "name": "V. Mapa",
+        "zone": 1
+      },
+      {
+        "id": 5,
+        "name": "J. Ruiz",
+        "zone": 2
+      },
+      {
+        "id": 6,
+        "name": "Gilmore",
+        "zone": 2
+      },
+      {
+        "id": 7,
+        "name": "Betty Go-Belmonte",
+        "zone": 2
+      },
+      {
+        "id": 8,
+        "name": "Cubao",
+        "zone": 2
+      },
+      {
+        "id": 9,
+        "name": "Anonas",
+        "zone": 3
+      },
+      {
+        "id": 10,
+        "name": "Katipunan",
+        "zone": 3
+      },
+      {
+        "id": 11,
+        "name": "Santolan",
+        "zone": 3
+      },
+      {
+        "id": 12,
+        "name": "Marikina-Pasig",
+        "zone": 3
+      },
+      {
+        "id": 13,
+        "name": "Antipolo",
+        "zone": 4
+      }
+    ],
+    "fareMatrix": {
+      "regular": 15,
+      "maxFare": 35,
+      "studentSenior": "50% discount"
+    }
+  },
+  "mrt3": {
+    "name": "MRT-3",
+    "lastUpdated": "2026-03-23",
+    "discount": "50% across the board",
+    "stations": [
+      {
+        "id": 1,
+        "name": "North Avenue",
+        "zone": 1
+      },
+      {
+        "id": 2,
+        "name": "Quezon Avenue",
+        "zone": 1
+      },
+      {
+        "id": 3,
+        "name": "GMA-Kamuning",
+        "zone": 1
+      },
+      {
+        "id": 4,
+        "name": "Cubao",
+        "zone": 2
+      },
+      {
+        "id": 5,
+        "name": "Santolan-Annapolis",
+        "zone": 2
+      },
+      {
+        "id": 6,
+        "name": "Ortigas",
+        "zone": 2
+      },
+      {
+        "id": 7,
+        "name": "Shaw Boulevard",
+        "zone": 3
+      },
+      {
+        "id": 8,
+        "name": "Boni",
+        "zone": 3
+      },
+      {
+        "id": 9,
+        "name": "Guadalupe",
+        "zone": 3
+      },
+      {
+        "id": 10,
+        "name": "Buendia",
+        "zone": 4
+      },
+      {
+        "id": 11,
+        "name": "Ayala",
+        "zone": 4
+      },
+      {
+        "id": 12,
+        "name": "Magallanes",
+        "zone": 4
+      },
+      {
+        "id": 13,
+        "name": "Taft Avenue",
+        "zone": 5
+      }
+    ],
+    "fareMatrix": {
+      "regular": 13,
+      "maxFare": 28,
+      "studentSenior": "50% discount"
+    }
+  },
+  "bus": {
+    "aircon": {
+      "minimumFare": 15,
+      "perKm": 1.9
+    },
+    "nonAircon": {
+      "minimumFare": 12,
+      "perKm": 1.5
+    }
+  },
+  "taxi": {
+    "flagdown": 50,
+    "perKm": 15,
+    "waitingPerMinute": 2.0
+  },
+  "grabcash": {
+    "baseFare": 50,
+    "perKm": 12,
+    "minFare": 100
+  }
+}

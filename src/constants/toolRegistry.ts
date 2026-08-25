@@ -57,6 +57,13 @@ export const toolRegistry: Tool[] = [
 
   // === RAKET ===
   { id: 'raketcheck', name: 'RaketCheck PH', slug: 'raketcheck', description: 'Check earning platforms, side hustles, and online jobs', category: 'raket', keywords: ['raket', 'earn', 'side', 'hustle', 'income', 'job', 'online', 'freelance'], icon: 'Briefcase', status: 'active', path: '/tools/raketcheck', requiresApi: false },
+
+  // === NEW TOOLS (2026 Data) ===
+  { id: 'take-home-pay', name: 'Take-Home Pay Calculator', slug: 'take-home-pay', description: 'Compute net salary after SSS, PhilHealth, Pag-IBIG, and BIR tax using 2026 tables', category: 'money', keywords: ['take-home', 'net', 'pay', 'salary', 'sss', 'philhealth', 'pag-ibig', 'tax', 'bir', 'deduction', 'sweldo', 'neto'], icon: 'Calculator', status: 'active', path: '/tools/take-home-pay', requiresApi: false },
+  { id: 'transport-fare', name: 'Transport Fare Calculator', slug: 'transport-fare', description: 'Check jeepney, LRT-1, LRT-2, MRT-3 fares and monthly commute cost', category: 'daily', keywords: ['transport', 'fare', 'jeepney', 'lrt', 'mrt', 'train', 'commute', 'biyahe', 'pamasahe', 'lrt-1', 'lrt-2', 'mrt-3'], icon: 'Train', status: 'active', path: '/tools/transport-fare', requiresApi: false },
+  { id: 'lto-fee-calculator', name: 'LTO Registration Fee Calculator', slug: 'lto-fee-calculator', description: 'Estimate LTO vehicle registration fees for motorcycle, car, or PUV', category: 'daily', keywords: ['lto', 'registration', 'vehicle', 'car', 'motorcycle', 'renewal', 'mvuc', 'plate'], icon: 'Car', status: 'active', path: '/tools/lto-fee-calculator', requiresApi: false },
+  { id: 'weather-checker', name: 'PAGASA Weather Checker', slug: 'weather-checker', description: 'Check current Philippine weather, typhoon signals, and forecasts', category: 'daily', keywords: ['weather', 'pagasa', 'typhoon', 'signal', 'rain', 'ulan', 'bagyo', 'forecast'], icon: 'CloudRain', status: 'active', path: '/tools/weather-checker', requiresApi: false },
+  { id: 'seller-fee-calculator', name: 'Shopee/Lazada Seller Fee Calculator', slug: 'seller-fee-calculator', description: 'Compute seller fees and net profit for Shopee, Lazada, TikTok Shop', category: 'shopping', keywords: ['shopee', 'lazada', 'tiktok', 'seller', 'fee', 'commission', 'net', 'profit', 'marketplace'], icon: 'Store', status: 'active', path: '/tools/seller-fee-calculator', requiresApi: false },
 ];
 
 export const categories = [
@@ -84,10 +91,12 @@ export const popularTools = [
 ];
 
 export const quickActions = [
+  { toolId: 'take-home-pay', label: 'Take-Home Pay', icon: 'Calculator' },
   { toolId: 'salary-calculator', label: 'Calculate Salary', icon: 'Banknote' },
   { toolId: 'gwa-calculator', label: 'Calculate GWA', icon: 'GraduationCap' },
+  { toolId: 'load-promo-finder', label: 'Find Load Promo', icon: 'Smartphone' },
   { toolId: 'discount-calculator', label: 'Check Discount', icon: 'Tag' },
   { toolId: 'fuel-calculator', label: 'Fuel Cost', icon: 'Fuel' },
-  { toolId: 'bill-splitter', label: 'Split Bill', icon: 'Users' },
-  { toolId: 'electricity-calculator', label: 'Electricity Cost', icon: 'Zap' },
+  { toolId: 'weather-checker', label: 'Weather', icon: 'CloudRain' },
+  { toolId: 'transport-fare', label: 'Transport Fare', icon: 'Train' },
 ];

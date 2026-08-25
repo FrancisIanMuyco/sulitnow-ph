@@ -1,0 +1,49 @@
+{
+  "lastUpdated": "2026-08-25T17:06:32.383260",
+  "year": 2026,
+  "description": "BIR Withholding Tax Table 2026 (TRAIN Law)",
+  "table": [
+    {
+      "monthlyFrom": 0,
+      "monthlyTo": 20832,
+      "taxRate": 0,
+      "excessOver": 0,
+      "fixedAmount": 0
+    },
+    {
+      "monthlyFrom": 20833,
+      "monthlyTo": 33332,
+      "taxRate": 0.15,
+      "excessOver": 20832,
+      "fixedAmount": 0
+    },
+    {
+      "monthlyFrom": 33333,
+      "monthlyTo": 66666,
+      "taxRate": 0.2,
+      "excessOver": 33332,
+      "fixedAmount": 1875
+    },
+    {
+      "monthlyFrom": 66667,
+      "monthlyTo": 166666,
+      "taxRate": 0.25,
+      "excessOver": 66666,
+      "fixedAmount": 8541.8
+    },
+    {
+      "monthlyFrom": 166667,
+      "monthlyTo": 666666,
+      "taxRate": 0.3,
+      "excessOver": 166666,
+      "fixedAmount": 33541.8
+    },
+    {
+      "monthlyFrom": 666667,
+      "monthlyTo": null,
+      "taxRate": 0.35,
+      "excessOver": 666666,
+      "fixedAmount": 183541.8
+    }
+  ]
+}
