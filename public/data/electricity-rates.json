@@ -1,0 +1,76 @@
+{
+  "lastUpdated": "2026-08-25T08:30:41.363627",
+  "source": "Meralco Official (company.meralco.com.ph)",
+  "billingMonth": "August 2026",
+  "rates": {
+    "meralco": {
+      "overallRate": 14.7833,
+      "unit": "per kWh",
+      "previousRate": 14.8261,
+      "change": -0.0428,
+      "note": "Includes AWAT refund of \u20b10.5861/kWh"
+    },
+    "components": {
+      "generationCharge": 5.85,
+      "transmissionCharge": 1.2,
+      "systemLoss": 0.45,
+      "distributionCharge": 1.05,
+      "meteringCharge": 0.45,
+      "fitAll": 0.04,
+      "renewableEnergy": 0.0,
+      "vat": 2.37,
+      "others": 3.37
+    },
+    "lifelineRate": 7.39,
+    "seniorCitizenDiscount": 5.0
+  },
+  "historical": [
+    {
+      "month": "August 2026",
+      "rate": 14.7833,
+      "change": -0.0428
+    },
+    {
+      "month": "July 2026",
+      "rate": 14.8261,
+      "change": 0.34
+    },
+    {
+      "month": "June 2026",
+      "rate": 14.4833,
+      "change": 0.1488
+    },
+    {
+      "month": "May 2026",
+      "rate": 14.3345,
+      "change": -0.21
+    },
+    {
+      "month": "April 2026",
+      "rate": 14.5445,
+      "change": 0.18
+    },
+    {
+      "month": "March 2026",
+      "rate": 14.3645,
+      "change": -0.12
+    }
+  ],
+  "alternativeProviders": [
+    {
+      "provider": "VECOCO (Visayas)",
+      "rate": 12.5,
+      "note": "Regional cooperative"
+    },
+    {
+      "provider": "IslaSol (Isabela)",
+      "rate": 11.8,
+      "note": "Provincial cooperative"
+    },
+    {
+      "provider": "Global Green Energy",
+      "rate": 13.2,
+      "note": "Solar-powered provider"
+    }
+  ]
+}

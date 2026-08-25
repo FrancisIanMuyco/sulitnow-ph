@@ -1,0 +1,101 @@
+{
+  "lastUpdated": "2026-08-25T08:30:41.363627",
+  "source": "DOE Weekly Advisory + GasWatch PH",
+  "weekOf": "August 25-31, 2026",
+  "adjustment": {
+    "gasoline": "+\u20b11.08/L",
+    "diesel": "+\u20b12.31/L",
+    "kerosene": "+\u20b10.95/L"
+  },
+  "averages": {
+    "metroManila": {
+      "diesel": 93.06,
+      "unleaded91": 80.42,
+      "premium95": 87.5,
+      "premium97": 91.2,
+      "kerosene": 89.3
+    }
+  },
+  "brands": [
+    {
+      "brand": "Shell",
+      "diesel": 93.4,
+      "unleaded91": 80.65,
+      "premium95": 87.8,
+      "premium97": 91.5,
+      "stations": 285
+    },
+    {
+      "brand": "Petron",
+      "diesel": 93.2,
+      "unleaded91": 80.5,
+      "premium95": 87.6,
+      "premium97": 91.3,
+      "stations": 312
+    },
+    {
+      "brand": "Caltex",
+      "diesel": 93.1,
+      "unleaded91": 80.45,
+      "premium95": 87.4,
+      "premium97": 91.1,
+      "stations": 198
+    },
+    {
+      "brand": "Flying V",
+      "diesel": 89.52,
+      "unleaded91": 78.1,
+      "premium95": 84.9,
+      "premium97": 88.5,
+      "stations": 45
+    },
+    {
+      "brand": "PTT",
+      "diesel": 90.03,
+      "unleaded91": 78.5,
+      "premium95": 85.2,
+      "premium97": 88.8,
+      "stations": 67
+    },
+    {
+      "brand": "Unioil",
+      "diesel": 91.09,
+      "unleaded91": 77.1,
+      "premium95": 84.5,
+      "premium97": 88.0,
+      "stations": 52
+    },
+    {
+      "brand": "Seaoil",
+      "diesel": 92.5,
+      "unleaded91": 77.95,
+      "premium95": 85.8,
+      "premium97": 89.4,
+      "stations": 78
+    },
+    {
+      "brand": "Total",
+      "diesel": 92.8,
+      "unleaded91": 79.37,
+      "premium95": 86.5,
+      "premium97": 90.0,
+      "stations": 43
+    },
+    {
+      "brand": "Jetti",
+      "diesel": 91.5,
+      "unleaded91": 78.8,
+      "premium95": 85.3,
+      "premium97": 88.9,
+      "stations": 35
+    },
+    {
+      "brand": "Phoenix",
+      "diesel": 92.0,
+      "unleaded91": 79.2,
+      "premium95": 86.0,
+      "premium97": 89.5,
+      "stations": 89
+    }
+  ]
+}

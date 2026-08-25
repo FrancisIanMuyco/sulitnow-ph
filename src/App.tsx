@@ -29,6 +29,7 @@ const InstallmentCalculator = lazy(() => import('./tools/money/installment/Insta
 const SavingsGoalCalculator = lazy(() => import('./tools/money/savings/SavingsGoalCalculator'));
 const DailyBudgetCalculator = lazy(() => import('./tools/money/budget/DailyBudgetCalculator'));
 const PercentageCalculator = lazy(() => import('./tools/money/percentage/PercentageCalculator'));
+const CurrencyConverter = lazy(() => import('./tools/money/currency/CurrencyConverter'));
 const DiscountCalculator = lazy(() => import('./tools/shopping/discount/DiscountCalculator'));
 const UnitPriceComparator = lazy(() => import('./tools/shopping/unit-price/UnitPriceComparator'));
 const FuelCalculator = lazy(() => import('./tools/daily/fuel/FuelCalculator'));
@@ -99,6 +100,7 @@ export default function App() {
           <Route path="tools/savings-goal" element={<Suspense fallback={<Loading />}><SavingsGoalCalculator /></Suspense>} />
           <Route path="tools/daily-budget" element={<Suspense fallback={<Loading />}><DailyBudgetCalculator /></Suspense>} />
           <Route path="tools/percentage-calculator" element={<Suspense fallback={<Loading />}><PercentageCalculator /></Suspense>} />
+          <Route path="tools/currency-converter" element={<Suspense fallback={<Loading />}><CurrencyConverter /></Suspense>} />
 
           {/* Shopping Tools */}
           <Route path="tools/discount-calculator" element={<Suspense fallback={<Loading />}><DiscountCalculator /></Suspense>} />

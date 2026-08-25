@@ -1,0 +1,91 @@
+{
+  "lastUpdated": "2026-08-25T08:30:41.363627",
+  "source": "Maya Help Center",
+  "fees": {
+    "sendMoney": {
+      "mayaToMaya": {
+        "fee": 0,
+        "note": "Free"
+      },
+      "mayaToBank": {
+        "instapay": {
+          "fee": 15,
+          "note": "Instant, up to \u20b150,000/transaction"
+        },
+        "pesonet": {
+          "fee": 0,
+          "note": "Free, next business day"
+        }
+      },
+      "mayaToGCash": {
+        "fee": 15,
+        "note": "Via Instapay"
+      }
+    },
+    "cashIn": {
+      "bankTransfer": {
+        "fee": 0,
+        "note": "Free via bank app"
+      },
+      "linkedBank": {
+        "fee": 0,
+        "note": "Free"
+      },
+      "convenienceStore": {
+        "fee": 0,
+        "note": "7-Eleven, SM, etc."
+      },
+      "overTheCounter": {
+        "fee": 0,
+        "note": "Robinsons, Puregold, etc."
+      }
+    },
+    "cashOut": {
+      "bankTransfer": {
+        "fee": 15,
+        "note": "Instapay"
+      },
+      "atm": {
+        "fee": 18,
+        "note": "Via Euronet/Eonet"
+      },
+      "convenienceStore": {
+        "fee": 0,
+        "note": "7-Eleven, SM, etc."
+      },
+      "overTheCounter": {
+        "fee": 0,
+        "note": "Minimum \u20b1500 withdrawal"
+      }
+    },
+    "billsPayment": {
+      "fee": 0,
+      "note": "Free for most billers"
+    },
+    "buyLoad": {
+      "fee": 0,
+      "note": "Free"
+    },
+    "payQR": {
+      "fee": 0,
+      "note": "Free for in-store QR"
+    }
+  },
+  "limits": {
+    "fullyVerified": {
+      "daily": 200000,
+      "monthly": 600000,
+      "perTransaction": 100000
+    },
+    "partiallyVerified": {
+      "daily": 50000,
+      "monthly": 100000,
+      "perTransaction": 50000
+    },
+    "basic": {
+      "daily": 10000,
+      "monthly": 50000,
+      "perTransaction": 10000
+    }
+  }
+}

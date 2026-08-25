@@ -1,0 +1,512 @@
+{
+  "lastUpdated": "2026-08-25T08:30:41.363627",
+  "source": "Official websites + YugaTech comparison",
+  "categories": [
+    "postpaid",
+    "prepaid"
+  ],
+  "plans": [
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 1299",
+      "price": 1299,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid",
+      "promo": "Free Netflix for 3 months"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 1699",
+      "price": 1699,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 2099",
+      "price": 2099,
+      "speed": 200,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 2699",
+      "price": 2699,
+      "speed": 400,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 3499",
+      "price": 3499,
+      "speed": 600,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 4499",
+      "price": 4499,
+      "speed": 800,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Unli Plan 5999",
+      "price": 5999,
+      "speed": 1000,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 50Mbps 1-Day",
+      "price": 50,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 50Mbps 7-Day",
+      "price": 199,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 50Mbps 30-Day",
+      "price": 449,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 100Mbps 1-Day",
+      "price": 99,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 100Mbps 7-Day",
+      "price": 349,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 100Mbps 30-Day",
+      "price": 799,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 300Mbps 1-Day",
+      "price": 199,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 300Mbps 7-Day",
+      "price": 599,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 300Mbps 30-Day",
+      "price": 1299,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Fiber Prepaid 300Mbps 365-Day",
+      "price": 9999,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 365,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Plan 1499",
+      "price": 1499,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Plan 1799",
+      "price": 1799,
+      "speed": 500,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Plan 2499",
+      "price": 2499,
+      "speed": 800,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 50Mbps 1-Day",
+      "price": 50,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 50Mbps 7-Day",
+      "price": 199,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 50Mbps 30-Day",
+      "price": 449,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 100Mbps 1-Day",
+      "price": 99,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 100Mbps 7-Day",
+      "price": 349,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 100Mbps 30-Day",
+      "price": 799,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 300Mbps 7-Day",
+      "price": 599,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "GFiber Prepaid 300Mbps 30-Day",
+      "price": 1299,
+      "speed": 300,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 50Mbps 1-Day",
+      "price": 50,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 50Mbps 3-Day",
+      "price": 180,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 3,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 50Mbps 7-Day",
+      "price": 250,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 50Mbps 30-Day",
+      "price": 699,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 100Mbps 1-Day",
+      "price": 99,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 1,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 100Mbps 3-Day",
+      "price": 250,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 3,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 100Mbps 7-Day",
+      "price": 399,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 7,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "Surf2Sawa 100Mbps 30-Day",
+      "price": 999,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "FiberX 1500",
+      "price": 1500,
+      "speed": 25,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "FiberX 2500",
+      "price": 2500,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Converge",
+      "plan": "FiberX 3500",
+      "price": 3500,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 24,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Sky",
+      "plan": "Sky Fiber 25Mbps",
+      "price": 799,
+      "speed": 25,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 12,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Sky",
+      "plan": "Sky Fiber 50Mbps",
+      "price": 999,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 12,
+      "type": "postpaid"
+    },
+    {
+      "provider": "Sky",
+      "plan": "Sky Fiber 100Mbps",
+      "price": 1499,
+      "speed": 100,
+      "speedUnit": "Mbps",
+      "data": "Unlimited",
+      "lockIn": 12,
+      "type": "postpaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Home WiFi 599",
+      "price": 599,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "15GB",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "PLDT Home",
+      "plan": "Home WiFi 999",
+      "price": 999,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "50GB",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "Home WiFi 599",
+      "price": 599,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "15GB",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "Home WiFi 999",
+      "price": 999,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "50GB",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    },
+    {
+      "provider": "Globe",
+      "plan": "Home WiFi 1299",
+      "price": 1299,
+      "speed": 50,
+      "speedUnit": "Mbps",
+      "data": "100GB",
+      "lockIn": 0,
+      "validity": 30,
+      "type": "prepaid"
+    }
+  ]
+}

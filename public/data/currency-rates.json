@@ -1,0 +1,121 @@
+{
+  "lastUpdated": "2026-08-25T08:30:41.363627",
+  "source": "Bangko Sentral ng Pilipinas (BSP)",
+  "baseCurrency": "PHP",
+  "rates": {
+    "USD": {
+      "rate": 56.25,
+      "name": "US Dollar",
+      "symbol": "$",
+      "change": -0.15
+    },
+    "EUR": {
+      "rate": 61.5,
+      "name": "Euro",
+      "symbol": "\u20ac",
+      "change": 0.22
+    },
+    "GBP": {
+      "rate": 71.8,
+      "name": "British Pound",
+      "symbol": "\u00a3",
+      "change": -0.1
+    },
+    "JPY": {
+      "rate": 0.38,
+      "name": "Japanese Yen (per \u00a5100)",
+      "symbol": "\u00a5",
+      "change": 0.01
+    },
+    "CNY": {
+      "rate": 7.75,
+      "name": "Chinese Yuan",
+      "symbol": "\u00a5",
+      "change": -0.05
+    },
+    "KRW": {
+      "rate": 0.042,
+      "name": "South Korean Won (per \u20a91000)",
+      "symbol": "\u20a9",
+      "change": 0.001
+    },
+    "SGD": {
+      "rate": 42.15,
+      "name": "Singapore Dollar",
+      "symbol": "S$",
+      "change": -0.08
+    },
+    "HKD": {
+      "rate": 7.22,
+      "name": "Hong Kong Dollar",
+      "symbol": "HK$",
+      "change": -0.03
+    },
+    "AUD": {
+      "rate": 36.8,
+      "name": "Australian Dollar",
+      "symbol": "A$",
+      "change": 0.15
+    },
+    "CAD": {
+      "rate": 41.2,
+      "name": "Canadian Dollar",
+      "symbol": "C$",
+      "change": -0.12
+    },
+    "SAR": {
+      "rate": 15.0,
+      "name": "Saudi Riyal",
+      "symbol": "\ufdfc",
+      "change": 0.0
+    },
+    "AED": {
+      "rate": 15.3,
+      "name": "UAE Dirham",
+      "symbol": "\u062f.\u0625",
+      "change": -0.02
+    },
+    "MYR": {
+      "rate": 12.8,
+      "name": "Malaysian Ringgit",
+      "symbol": "RM",
+      "change": 0.03
+    },
+    "THB": {
+      "rate": 1.68,
+      "name": "Thai Baht",
+      "symbol": "\u0e3f",
+      "change": -0.01
+    },
+    "IDR": {
+      "rate": 0.0035,
+      "name": "Indonesian Rupiah (per Rp1000)",
+      "symbol": "Rp",
+      "change": 0.0001
+    },
+    "INR": {
+      "rate": 0.67,
+      "name": "Indian Rupee",
+      "symbol": "\u20b9",
+      "change": -0.005
+    },
+    "TWD": {
+      "rate": 1.76,
+      "name": "Taiwan Dollar",
+      "symbol": "NT$",
+      "change": 0.005
+    }
+  },
+  "crypto": {
+    "BTC": {
+      "rate_php": 3350000,
+      "name": "Bitcoin",
+      "symbol": "\u20bf"
+    },
+    "ETH": {
+      "rate_php": 168000,
+      "name": "Ethereum",
+      "symbol": "\u039e"
+    }
+  }
+}
