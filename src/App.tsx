@@ -1,6 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import ErrorBoundary from './components/common/ErrorBoundary';
+import LoadingBar from './components/common/LoadingBar';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -66,10 +68,21 @@ const SellerFeeCalculator = lazy(() => import('./tools/shopping/seller-fees/Sell
 function Loading() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <div className="animate-pulse space-y-4">
-        <div className="h-6 bg-surface-alt rounded w-1/3" />
-        <div className="h-4 bg-surface-alt rounded w-2/3" />
-        <div className="h-48 bg-surface-alt rounded-xl" />
+      <div className="flex flex-col items-center justify-center py-16">
+        <div className="w-10 h-10 border-[3px] border-primary/20 border-t-primary rounded-full animate-spin mb-4" />
+        <p className="text-sm text-gray-400 dark:text-gray-500 animate-pulse">Loading...</p>
+      </div>
+    </div>
+  );
+}
+
+function ToolLoading() {
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-8">
+      <div className="flex flex-col items-center justify-center py-20">
+        <div className="w-12 h-12 border-[3px] border-primary/20 border-t-primary rounded-full animate-spin mb-4" />
+        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Loading tool...</p>
+        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">This should only take a moment</p>
       </div>
     </div>
   );
@@ -78,87 +91,90 @@ function Loading() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Suspense fallback={<Loading />}><Home /></Suspense>} />
-          <Route path="tools" element={<Suspense fallback={<Loading />}><Tools /></Suspense>} />
-          <Route path="live" element={<Suspense fallback={<Loading />}><Live /></Suspense>} />
-          <Route path="deals" element={<Suspense fallback={<Loading />}><Deals /></Suspense>} />
-          <Route path="raket" element={<Suspense fallback={<Loading />}><Raket /></Suspense>} />
-          <Route path="pricing" element={<Suspense fallback={<Loading />}><Pricing /></Suspense>} />
-          <Route path="about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
-          <Route path="privacy" element={<Suspense fallback={<Loading />}><Privacy /></Suspense>} />
-          <Route path="terms" element={<Suspense fallback={<Loading />}><Terms /></Suspense>} />
-          <Route path="disclaimer" element={<Suspense fallback={<Loading />}><Disclaimer /></Suspense>} />
+      <ErrorBoundary>
+        <LoadingBar />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Suspense fallback={<Loading />}><Home /></Suspense>} />
+            <Route path="tools" element={<Suspense fallback={<Loading />}><Tools /></Suspense>} />
+            <Route path="live" element={<Suspense fallback={<Loading />}><Live /></Suspense>} />
+            <Route path="deals" element={<Suspense fallback={<Loading />}><Deals /></Suspense>} />
+            <Route path="raket" element={<Suspense fallback={<Loading />}><Raket /></Suspense>} />
+            <Route path="pricing" element={<Suspense fallback={<Loading />}><Pricing /></Suspense>} />
+            <Route path="about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
+            <Route path="privacy" element={<Suspense fallback={<Loading />}><Privacy /></Suspense>} />
+            <Route path="terms" element={<Suspense fallback={<Loading />}><Terms /></Suspense>} />
+            <Route path="disclaimer" element={<Suspense fallback={<Loading />}><Disclaimer /></Suspense>} />
 
-          {/* Money Tools */}
-          <Route path="tools/salary-calculator" element={<Suspense fallback={<Loading />}><SalaryCalculator /></Suspense>} />
-          <Route path="tools/daily-wage-calculator" element={<Suspense fallback={<Loading />}><DailyWageCalculator /></Suspense>} />
-          <Route path="tools/ot-calculator" element={<Suspense fallback={<Loading />}><OTCalculator /></Suspense>} />
-          <Route path="tools/night-differential" element={<Suspense fallback={<Loading />}><NightDifferentialCalculator /></Suspense>} />
-          <Route path="tools/holiday-pay" element={<Suspense fallback={<Loading />}><HolidayPayCalculator /></Suspense>} />
-          <Route path="tools/thirteenth-month" element={<Suspense fallback={<Loading />}><ThirteenthMonthCalculator /></Suspense>} />
-          <Route path="tools/gcash-fee-calculator" element={<Suspense fallback={<Loading />}><GcashFeeCalculator /></Suspense>} />
-          <Route path="tools/maya-fee-calculator" element={<Suspense fallback={<Loading />}><MayaFeeCalculator /></Suspense>} />
-          <Route path="tools/loan-calculator" element={<Suspense fallback={<Loading />}><LoanCalculator /></Suspense>} />
-          <Route path="tools/installment-calculator" element={<Suspense fallback={<Loading />}><InstallmentCalculator /></Suspense>} />
-          <Route path="tools/savings-goal" element={<Suspense fallback={<Loading />}><SavingsGoalCalculator /></Suspense>} />
-          <Route path="tools/daily-budget" element={<Suspense fallback={<Loading />}><DailyBudgetCalculator /></Suspense>} />
-          <Route path="tools/percentage-calculator" element={<Suspense fallback={<Loading />}><PercentageCalculator /></Suspense>} />
-          <Route path="tools/currency-converter" element={<Suspense fallback={<Loading />}><CurrencyConverter /></Suspense>} />
+            {/* Money Tools */}
+            <Route path="tools/salary-calculator" element={<Suspense fallback={<ToolLoading />}><SalaryCalculator /></Suspense>} />
+            <Route path="tools/daily-wage-calculator" element={<Suspense fallback={<ToolLoading />}><DailyWageCalculator /></Suspense>} />
+            <Route path="tools/ot-calculator" element={<Suspense fallback={<ToolLoading />}><OTCalculator /></Suspense>} />
+            <Route path="tools/night-differential" element={<Suspense fallback={<ToolLoading />}><NightDifferentialCalculator /></Suspense>} />
+            <Route path="tools/holiday-pay" element={<Suspense fallback={<ToolLoading />}><HolidayPayCalculator /></Suspense>} />
+            <Route path="tools/thirteenth-month" element={<Suspense fallback={<ToolLoading />}><ThirteenthMonthCalculator /></Suspense>} />
+            <Route path="tools/gcash-fee-calculator" element={<Suspense fallback={<ToolLoading />}><GcashFeeCalculator /></Suspense>} />
+            <Route path="tools/maya-fee-calculator" element={<Suspense fallback={<ToolLoading />}><MayaFeeCalculator /></Suspense>} />
+            <Route path="tools/loan-calculator" element={<Suspense fallback={<ToolLoading />}><LoanCalculator /></Suspense>} />
+            <Route path="tools/installment-calculator" element={<Suspense fallback={<ToolLoading />}><InstallmentCalculator /></Suspense>} />
+            <Route path="tools/savings-goal" element={<Suspense fallback={<ToolLoading />}><SavingsGoalCalculator /></Suspense>} />
+            <Route path="tools/daily-budget" element={<Suspense fallback={<ToolLoading />}><DailyBudgetCalculator /></Suspense>} />
+            <Route path="tools/percentage-calculator" element={<Suspense fallback={<ToolLoading />}><PercentageCalculator /></Suspense>} />
+            <Route path="tools/currency-converter" element={<Suspense fallback={<ToolLoading />}><CurrencyConverter /></Suspense>} />
 
-          {/* Shopping Tools */}
-          <Route path="tools/discount-calculator" element={<Suspense fallback={<Loading />}><DiscountCalculator /></Suspense>} />
-          <Route path="tools/unit-price-comparator" element={<Suspense fallback={<Loading />}><UnitPriceComparator /></Suspense>} />
-          <Route path="tools/installment-vs-cash" element={<Suspense fallback={<Loading />}><InstallmentVsCash /></Suspense>} />
-          <Route path="tools/voucher-savings" element={<Suspense fallback={<Loading />}><VoucherSavings /></Suspense>} />
-          <Route path="tools/marketplace-fee" element={<Suspense fallback={<Loading />}><MarketplaceFeeCalculator /></Suspense>} />
-          <Route path="tools/grocery-comparator" element={<Suspense fallback={<Loading />}><GroceryComparator /></Suspense>} />
+            {/* Shopping Tools */}
+            <Route path="tools/discount-calculator" element={<Suspense fallback={<ToolLoading />}><DiscountCalculator /></Suspense>} />
+            <Route path="tools/unit-price-comparator" element={<Suspense fallback={<ToolLoading />}><UnitPriceComparator /></Suspense>} />
+            <Route path="tools/installment-vs-cash" element={<Suspense fallback={<ToolLoading />}><InstallmentVsCash /></Suspense>} />
+            <Route path="tools/voucher-savings" element={<Suspense fallback={<ToolLoading />}><VoucherSavings /></Suspense>} />
+            <Route path="tools/marketplace-fee" element={<Suspense fallback={<ToolLoading />}><MarketplaceFeeCalculator /></Suspense>} />
+            <Route path="tools/grocery-comparator" element={<Suspense fallback={<ToolLoading />}><GroceryComparator /></Suspense>} />
 
-          {/* Daily / Bills */}
-          <Route path="tools/electricity-calculator" element={<Suspense fallback={<Loading />}><ElectricityCalculator /></Suspense>} />
-          <Route path="tools/appliance-cost" element={<Suspense fallback={<Loading />}><ApplianceCostCalculator /></Suspense>} />
-          <Route path="tools/monthly-expenses" element={<Suspense fallback={<Loading />}><MonthlyExpenses /></Suspense>} />
-          <Route path="tools/savings-challenge" element={<Suspense fallback={<Loading />}><SavingsChallenge /></Suspense>} />
-          <Route path="tools/subscription-tracker" element={<Suspense fallback={<Loading />}><SubscriptionTracker /></Suspense>} />
+            {/* Daily / Bills */}
+            <Route path="tools/electricity-calculator" element={<Suspense fallback={<ToolLoading />}><ElectricityCalculator /></Suspense>} />
+            <Route path="tools/appliance-cost" element={<Suspense fallback={<ToolLoading />}><ApplianceCostCalculator /></Suspense>} />
+            <Route path="tools/monthly-expenses" element={<Suspense fallback={<ToolLoading />}><MonthlyExpenses /></Suspense>} />
+            <Route path="tools/savings-challenge" element={<Suspense fallback={<ToolLoading />}><SavingsChallenge /></Suspense>} />
+            <Route path="tools/subscription-tracker" element={<Suspense fallback={<ToolLoading />}><SubscriptionTracker /></Suspense>} />
 
-          {/* Transport */}
-          <Route path="tools/fuel-calculator" element={<Suspense fallback={<Loading />}><FuelCalculator /></Suspense>} />
-          <Route path="tools/fuel-consumption" element={<Suspense fallback={<Loading />}><FuelConsumptionCalculator /></Suspense>} />
-          <Route path="tools/commute-cost" element={<Suspense fallback={<Loading />}><CommuteCostCalculator /></Suspense>} />
+            {/* Transport */}
+            <Route path="tools/fuel-calculator" element={<Suspense fallback={<ToolLoading />}><FuelCalculator /></Suspense>} />
+            <Route path="tools/fuel-consumption" element={<Suspense fallback={<ToolLoading />}><FuelConsumptionCalculator /></Suspense>} />
+            <Route path="tools/commute-cost" element={<Suspense fallback={<ToolLoading />}><CommuteCostCalculator /></Suspense>} />
 
-          {/* Mobile */}
-          <Route path="tools/load-promo-finder" element={<Suspense fallback={<Loading />}><LoadPromoFinder /></Suspense>} />
-          <Route path="tools/promo-comparator" element={<Suspense fallback={<Loading />}><PromoComparator /></Suspense>} />
-          <Route path="tools/data-usage-calculator" element={<Suspense fallback={<Loading />}><DataUsageCalculator /></Suspense>} />
-          <Route path="tools/cost-per-gb" element={<Suspense fallback={<Loading />}><CostPerGB /></Suspense>} />
-          <Route path="tools/internet-plan-comparator" element={<Suspense fallback={<Loading />}><InternetPlanComparator /></Suspense>} />
-          <Route path="tools/mobile-data-budget" element={<Suspense fallback={<Loading />}><MobileDataBudget /></Suspense>} />
+            {/* Mobile */}
+            <Route path="tools/load-promo-finder" element={<Suspense fallback={<ToolLoading />}><LoadPromoFinder /></Suspense>} />
+            <Route path="tools/promo-comparator" element={<Suspense fallback={<ToolLoading />}><PromoComparator /></Suspense>} />
+            <Route path="tools/data-usage-calculator" element={<Suspense fallback={<ToolLoading />}><DataUsageCalculator /></Suspense>} />
+            <Route path="tools/cost-per-gb" element={<Suspense fallback={<ToolLoading />}><CostPerGB /></Suspense>} />
+            <Route path="tools/internet-plan-comparator" element={<Suspense fallback={<ToolLoading />}><InternetPlanComparator /></Suspense>} />
+            <Route path="tools/mobile-data-budget" element={<Suspense fallback={<ToolLoading />}><MobileDataBudget /></Suspense>} />
 
-          {/* Students */}
-          <Route path="tools/gwa-calculator" element={<Suspense fallback={<Loading />}><GWACalculator /></Suspense>} />
+            {/* Students */}
+            <Route path="tools/gwa-calculator" element={<Suspense fallback={<ToolLoading />}><GWACalculator /></Suspense>} />
 
-          {/* Food */}
-          <Route path="tools/bill-splitter" element={<Suspense fallback={<Loading />}><BillSplitter /></Suspense>} />
+            {/* Food */}
+            <Route path="tools/bill-splitter" element={<Suspense fallback={<ToolLoading />}><BillSplitter /></Suspense>} />
 
-          {/* Safety */}
-          <Route path="tools/url-checker" element={<Suspense fallback={<Loading />}><URLChecker /></Suspense>} />
-          <Route path="tools/website-risk" element={<Suspense fallback={<Loading />}><WebsiteRisk /></Suspense>} />
+            {/* Safety */}
+            <Route path="tools/url-checker" element={<Suspense fallback={<ToolLoading />}><URLChecker /></Suspense>} />
+            <Route path="tools/website-risk" element={<Suspense fallback={<ToolLoading />}><WebsiteRisk /></Suspense>} />
 
-          {/* New Tools */}
-          <Route path="tools/take-home-pay" element={<Suspense fallback={<Loading />}><TakeHomePayCalculator /></Suspense>} />
-          <Route path="tools/transport-fare" element={<Suspense fallback={<Loading />}><TransportFareCalculator /></Suspense>} />
-          <Route path="tools/lto-fee-calculator" element={<Suspense fallback={<Loading />}><LTOFeeCalculator /></Suspense>} />
-          <Route path="tools/weather-checker" element={<Suspense fallback={<Loading />}><WeatherChecker /></Suspense>} />
-          <Route path="tools/seller-fee-calculator" element={<Suspense fallback={<Loading />}><SellerFeeCalculator /></Suspense>} />
+            {/* New Tools */}
+            <Route path="tools/take-home-pay" element={<Suspense fallback={<ToolLoading />}><TakeHomePayCalculator /></Suspense>} />
+            <Route path="tools/transport-fare" element={<Suspense fallback={<ToolLoading />}><TransportFareCalculator /></Suspense>} />
+            <Route path="tools/lto-fee-calculator" element={<Suspense fallback={<ToolLoading />}><LTOFeeCalculator /></Suspense>} />
+            <Route path="tools/weather-checker" element={<Suspense fallback={<ToolLoading />}><WeatherChecker /></Suspense>} />
+            <Route path="tools/seller-fee-calculator" element={<Suspense fallback={<ToolLoading />}><SellerFeeCalculator /></Suspense>} />
 
-          {/* Raket */}
-          <Route path="tools/raketcheck" element={<Suspense fallback={<Loading />}><RaketCheck /></Suspense>} />
+            {/* Raket */}
+            <Route path="tools/raketcheck" element={<Suspense fallback={<ToolLoading />}><RaketCheck /></Suspense>} />
 
-          {/* 404 */}
-          <Route path="*" element={<Suspense fallback={<Loading />}><NotFound /></Suspense>} />
-        </Route>
-      </Routes>
+            {/* 404 */}
+            <Route path="*" element={<Suspense fallback={<Loading />}><NotFound /></Suspense>} />
+          </Route>
+        </Routes>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }
