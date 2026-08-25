@@ -1,0 +1,92 @@
+import type { Tool } from '../types';
+
+export const toolRegistry: Tool[] = [
+  // === MONEY ===
+  { id: 'salary-calculator', name: 'Salary Calculator', slug: 'salary-calculator', description: 'Calculate your net salary after SSS, PhilHealth, and Pag-IBIG deductions', category: 'money', keywords: ['salary', 'sweldo', 'pay', 'income', 'net', 'gross', 'deduction', 'sss', 'philhealth', 'pag-ibig'], icon: 'Banknote', status: 'active', path: '/tools/salary-calculator', requiresApi: false },
+  { id: 'daily-wage-calculator', name: 'Daily Wage Calculator', slug: 'daily-wage-calculator', description: 'Calculate your daily, hourly, and weekly wage rate', category: 'money', keywords: ['daily', 'wage', 'per', 'day', 'sweldo', 'hourly'], icon: 'Clock', status: 'active', path: '/tools/daily-wage-calculator', requiresApi: false },
+  { id: 'ot-calculator', name: 'Overtime Calculator', slug: 'ot-calculator', description: 'Calculate overtime pay at 125% (regular) or 130% (rest day)', category: 'money', keywords: ['overtime', 'ot', 'extra', 'hours', 'pay', 'rest day'], icon: 'Timer', status: 'active', path: '/tools/ot-calculator', requiresApi: false },
+  { id: 'night-differential', name: 'Night Differential Calculator', slug: 'night-differential', description: 'Calculate night differential pay (10% premium for 10PM-6AM work)', category: 'money', keywords: ['night', 'differential', 'graveyard', 'shift', 'pay', 'nd'], icon: 'Moon', status: 'active', path: '/tools/night-differential', requiresApi: false },
+  { id: 'holiday-pay', name: 'Holiday Pay Calculator', slug: 'holiday-pay', description: 'Calculate regular holiday, special holiday, and rest day pay', category: 'money', keywords: ['holiday', 'rest', 'day', 'special', 'regular', 'pay', 'christmas'], icon: 'CalendarDays', status: 'active', path: '/tools/holiday-pay', requiresApi: false },
+  { id: 'thirteenth-month', name: '13th Month Pay Estimate', slug: 'thirteenth-month', description: 'Estimate your mandatory 13th month pay', category: 'money', keywords: ['13th', 'month', 'bonus', 'estimate', 'year', 'mandatory'], icon: 'Gift', status: 'active', path: '/tools/thirteenth-month', requiresApi: false },
+  { id: 'gcash-fee-calculator', name: 'GCash Fee Calculator', slug: 'gcash-fee-calculator', description: 'Calculate GCash transfer, bank, and cash-out fees', category: 'money', keywords: ['gcash', 'fee', 'transfer', 'cashout', 'send', 'money', 'bank'], icon: 'Wallet', status: 'active', path: '/tools/gcash-fee-calculator', requiresApi: false },
+  { id: 'maya-fee-calculator', name: 'Maya Fee Calculator', slug: 'maya-fee-calculator', description: 'Calculate Maya transfer and cash-out fees', category: 'money', keywords: ['maya', 'paymaya', 'fee', 'transfer', 'cashout', 'send'], icon: 'Wallet', status: 'active', path: '/tools/maya-fee-calculator', requiresApi: false },
+  { id: 'loan-calculator', name: 'Loan Calculator', slug: 'loan-calculator', description: 'Calculate monthly amortization with full schedule breakdown', category: 'money', keywords: ['loan', 'amortization', 'monthly', 'payment', 'interest', 'utang', 'bank'], icon: 'Landmark', status: 'active', path: '/tools/loan-calculator', requiresApi: false },
+  { id: 'installment-calculator', name: 'Installment True Cost Calculator', slug: 'installment-calculator', description: 'See the real total cost of installment purchases including interest', category: 'money', keywords: ['installment', 'true', 'cost', 'interest', 'monthly', 'hulugan'], icon: 'CreditCard', status: 'active', path: '/tools/installment-calculator', requiresApi: false },
+  { id: 'savings-goal', name: 'Savings Goal Calculator', slug: 'savings-goal', description: 'Plan how much to save daily, weekly, or monthly to reach your goal', category: 'money', keywords: ['savings', 'goal', 'plan', 'save', 'target', 'ipon'], icon: 'PiggyBank', status: 'active', path: '/tools/savings-goal', requiresApi: false },
+  { id: 'daily-budget', name: 'Daily Budget Calculator', slug: 'daily-budget', description: 'Calculate your daily spending budget from monthly income', category: 'money', keywords: ['daily', 'budget', 'spend', 'allowance', 'per', 'day', 'gastos'], icon: 'Receipt', status: 'active', path: '/tools/daily-budget', requiresApi: false },
+  { id: 'percentage-calculator', name: 'Percentage Calculator', slug: 'percentage-calculator', description: 'Quick percentage, increase, and decrease calculations', category: 'money', keywords: ['percentage', '%', 'percent', 'calculate', 'increase', 'decrease'], icon: 'Percent', status: 'active', path: '/tools/percentage-calculator', requiresApi: false },
+
+  // === SHOPPING ===
+  { id: 'discount-calculator', name: 'Discount Calculator', slug: 'discount-calculator', description: 'Calculate discounts, double discounts, and final prices', category: 'shopping', keywords: ['discount', 'sale', 'promo', 'price', 'off', 'percent', 'diskwento'], icon: 'Tag', status: 'active', path: '/tools/discount-calculator', requiresApi: false },
+  { id: 'unit-price-comparator', name: 'Unit Price Comparator', slug: 'unit-price-comparator', description: 'Compare products by unit price to find the best deal', category: 'shopping', keywords: ['unit', 'price', 'compare', 'per', 'kg', 'ml', 'best', 'deal', 'sulit'], icon: 'Scale', status: 'active', path: '/tools/unit-price-comparator', requiresApi: false },
+  { id: 'installment-vs-cash', name: 'Installment vs Cash Comparator', slug: 'installment-vs-cash', description: 'Should you pay cash or installment? Compare the real cost', category: 'shopping', keywords: ['installment', 'cash', 'compare', 'versus', 'vs', 'buy', 'hulugan'], icon: 'ArrowLeftRight', status: 'active', path: '/tools/installment-vs-cash', requiresApi: false },
+  { id: 'voucher-savings', name: 'Voucher Savings Calculator', slug: 'voucher-savings', description: 'Calculate savings from vouchers and promo codes', category: 'shopping', keywords: ['voucher', 'promo', 'code', 'coupon', 'save', 'discount'], icon: 'Ticket', status: 'active', path: '/tools/voucher-savings', requiresApi: false },
+  { id: 'marketplace-fee', name: 'Marketplace Fee Calculator', slug: 'marketplace-fee', description: 'Calculate selling fees on Shopee, Lazada, and other marketplaces', category: 'shopping', keywords: ['marketplace', 'shopee', 'lazada', 'fee', 'seller', 'commission'], icon: 'Store', status: 'active', path: '/tools/marketplace-fee', requiresApi: false },
+  { id: 'grocery-comparator', name: 'Grocery Price Comparator', slug: 'grocery-comparator', description: 'Compare grocery prices by unit to save more', category: 'shopping', keywords: ['grocery', 'price', 'compare', 'groceries', 'market', 'palengke'], icon: 'ShoppingCart', status: 'active', path: '/tools/grocery-comparator', requiresApi: false },
+
+  // === DAILY / BILLS ===
+  { id: 'fuel-calculator', name: 'Fuel Cost Calculator', slug: 'fuel-calculator', description: 'Estimate daily, weekly, and monthly fuel expenses', category: 'daily', keywords: ['fuel', 'gas', 'gasoline', 'diesel', 'trip', 'cost', 'gasolina'], icon: 'Fuel', status: 'active', path: '/tools/fuel-calculator', requiresApi: false },
+  { id: 'fuel-consumption', name: 'Fuel Consumption Calculator', slug: 'fuel-consumption', description: 'Calculate your vehicle fuel efficiency (km/L)', category: 'daily', keywords: ['fuel', 'consumption', 'efficiency', 'km', 'per', 'liter', 'mpg'], icon: 'Gauge', status: 'active', path: '/tools/fuel-consumption', requiresApi: false },
+  { id: 'electricity-calculator', name: 'Electricity Cost Calculator', slug: 'electricity-calculator', description: 'Estimate monthly electricity cost from kWh usage', category: 'daily', keywords: ['electricity', 'electric', 'bill', 'kwh', 'power', 'kuryente', 'meralco'], icon: 'Zap', status: 'active', path: '/tools/electricity-calculator', requiresApi: false },
+  { id: 'appliance-cost', name: 'Appliance Electricity Cost', slug: 'appliance-cost', description: 'Calculate how much each appliance costs to run per month', category: 'daily', keywords: ['appliance', 'electricity', 'cost', 'run', 'watt', 'power', 'kuryente'], icon: 'Plug', status: 'active', path: '/tools/appliance-cost', requiresApi: false },
+  { id: 'monthly-expenses', name: 'Monthly Expense Planner', slug: 'monthly-expenses', description: 'Plan and track your monthly expenses', category: 'daily', keywords: ['monthly', 'expense', 'plan', 'track', 'budget', 'bills', 'gastos'], icon: 'ClipboardList', status: 'active', path: '/tools/monthly-expenses', requiresApi: false },
+  { id: 'savings-challenge', name: 'Savings Challenge', slug: 'savings-challenge', description: 'Follow savings challenges to build your savings', category: 'daily', keywords: ['savings', 'challenge', 'save', 'money', 'goal', 'ipon'], icon: 'Trophy', status: 'active', path: '/tools/savings-challenge', requiresApi: false },
+  { id: 'subscription-tracker', name: 'Subscription Cost Tracker', slug: 'subscription-tracker', description: 'Track all your monthly subscription costs', category: 'daily', keywords: ['subscription', 'tracker', 'monthly', 'cost', 'streaming', 'apps'], icon: 'ListChecks', status: 'active', path: '/tools/subscription-tracker', requiresApi: false },
+
+  // === MOBILE ===
+  { id: 'load-promo-finder', name: 'Load Promo Finder', slug: 'load-promo-finder', description: 'Find the best load promos for Smart, TNT, Globe, TM, DITO', category: 'mobile', keywords: ['load', 'promo', 'smart', 'globe', 'tnt', 'tm', 'dito', 'mobile', 'internet', 'prepaid'], icon: 'Smartphone', status: 'active', path: '/tools/load-promo-finder', requiresApi: false },
+  { id: 'promo-comparator', name: 'Promo Comparator', slug: 'promo-comparator', description: 'Compare mobile promos side by side to find the most sulit', category: 'mobile', keywords: ['compare', 'promo', 'side', 'side', 'best', 'sulit', 'compare'], icon: 'ArrowLeftRight', status: 'active', path: '/tools/promo-comparator', requiresApi: false },
+  { id: 'data-usage-calculator', name: 'Data Usage Calculator', slug: 'data-usage-calculator', description: 'Calculate how much mobile data you actually need per month', category: 'mobile', keywords: ['data', 'usage', 'calculator', 'gb', 'mb', 'internet', 'mobile'], icon: 'Wifi', status: 'active', path: '/tools/data-usage-calculator', requiresApi: false },
+  { id: 'cost-per-gb', name: 'Cost Per GB Calculator', slug: 'cost-per-gb', description: 'Find out how much you pay per GB of mobile data', category: 'mobile', keywords: ['cost', 'gb', 'price', 'per', 'value', 'compare', 'data'], icon: 'Calculator', status: 'active', path: '/tools/cost-per-gb', requiresApi: false },
+  { id: 'internet-plan-comparator', name: 'Internet Plan Comparator', slug: 'internet-plan-comparator', description: 'Compare home internet plans by price per Mbps', category: 'mobile', keywords: ['internet', 'plan', 'compare', 'fiber', 'home', 'broadband', 'wifi'], icon: 'Globe', status: 'active', path: '/tools/internet-plan-comparator', requiresApi: false },
+  { id: 'mobile-data-budget', name: 'Mobile Data Budget Planner', slug: 'mobile-data-budget', description: 'Plan your monthly mobile data spending', category: 'mobile', keywords: ['budget', 'plan', 'monthly', 'spending', 'data', 'load'], icon: 'Wallet', status: 'active', path: '/tools/mobile-data-budget', requiresApi: false },
+
+  // === TRANSPORT ===
+  { id: 'commute-cost', name: 'Commute Cost Calculator', slug: 'commute-cost', description: 'Compare daily commute costs: jeep, bus, train, motorcycle', category: 'daily', keywords: ['commute', 'jeep', 'bus', 'train', 'motor', 'fare', 'travel', 'biyahe'], icon: 'Bus', status: 'active', path: '/tools/commute-cost', requiresApi: false },
+
+  // === FOOD ===
+  { id: 'bill-splitter', name: 'Bill Splitter', slug: 'bill-splitter', description: 'Split restaurant bills evenly including tip', category: 'daily', keywords: ['bill', 'split', 'restaurant', 'tip', 'share', 'food', 'kaon'], icon: 'Users', status: 'active', path: '/tools/bill-splitter', requiresApi: false },
+
+  // === STUDENTS ===
+  { id: 'gwa-calculator', name: 'GWA Calculator', slug: 'gwa-calculator', description: 'Calculate your General Weighted Average (GWA) for school', category: 'money', keywords: ['gwa', 'general', 'weighted', 'average', 'grade', 'school', 'student', 'college', 'university'], icon: 'GraduationCap', status: 'active', path: '/tools/gwa-calculator', requiresApi: false },
+
+  // === SAFETY ===
+  { id: 'url-checker', name: 'Suspicious URL Checker', slug: 'url-checker', description: 'Check if a URL has suspicious characteristics', category: 'safety', keywords: ['url', 'check', 'suspicious', 'scam', 'phishing', 'link', 'fake'], icon: 'ShieldAlert', status: 'active', path: '/tools/url-checker', requiresApi: false },
+  { id: 'website-risk', name: 'Website Risk Signals', slug: 'website-risk', description: 'Identify risk signals on websites before you trust them', category: 'safety', keywords: ['website', 'risk', 'signals', 'check', 'safe', 'trust'], icon: 'ShieldCheck', status: 'active', path: '/tools/website-risk', requiresApi: false },
+
+  // === RAKET ===
+  { id: 'raketcheck', name: 'RaketCheck PH', slug: 'raketcheck', description: 'Check earning platforms, side hustles, and online jobs', category: 'raket', keywords: ['raket', 'earn', 'side', 'hustle', 'income', 'job', 'online', 'freelance'], icon: 'Briefcase', status: 'active', path: '/tools/raketcheck', requiresApi: false },
+];
+
+export const categories = [
+  { id: 'money' as const, name: 'Money', icon: 'Banknote', description: 'Salary, fees, loans, and financial calculators' },
+  { id: 'shopping' as const, name: 'Shopping', icon: 'ShoppingBag', description: 'Discounts, comparisons, and deal finders' },
+  { id: 'daily' as const, name: 'Bills & Daily', icon: 'Home', description: 'Electricity, fuel, commute, and expense tools' },
+  { id: 'mobile' as const, name: 'Mobile & Internet', icon: 'Smartphone', description: 'Load promos, data plans, and network tools' },
+  { id: 'safety' as const, name: 'Safety', icon: 'Shield', description: 'URL checks, scam reports, and trust scores' },
+  { id: 'raket' as const, name: 'Raket / Earning', icon: 'Briefcase', description: 'Side hustles, online jobs, and earning platforms' },
+] as const;
+
+export const popularTools = [
+  'salary-calculator',
+  'gwa-calculator',
+  'discount-calculator',
+  'gcash-fee-calculator',
+  'loan-calculator',
+  'fuel-calculator',
+  'data-usage-calculator',
+  'unit-price-comparator',
+  'daily-budget',
+  'bill-splitter',
+  'electricity-calculator',
+  'percentage-calculator',
+];
+
+export const quickActions = [
+  { toolId: 'salary-calculator', label: 'Calculate Salary', icon: 'Banknote' },
+  { toolId: 'gwa-calculator', label: 'Calculate GWA', icon: 'GraduationCap' },
+  { toolId: 'discount-calculator', label: 'Check Discount', icon: 'Tag' },
+  { toolId: 'fuel-calculator', label: 'Fuel Cost', icon: 'Fuel' },
+  { toolId: 'bill-splitter', label: 'Split Bill', icon: 'Users' },
+  { toolId: 'electricity-calculator', label: 'Electricity Cost', icon: 'Zap' },
+];

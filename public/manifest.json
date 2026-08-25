@@ -1,0 +1,20 @@
+{
+  "name": "SulitNow PH",
+  "short_name": "SulitNow",
+  "description": "Your Everyday Decision Toolkit — Compare promos, fees, prices, earnings, and daily expenses. Built for Filipinos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a6b3c",
+  "orientation": "portrait-primary",
+  "categories": ["finance", "utilities", "shopping"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
