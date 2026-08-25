@@ -65,6 +65,18 @@ const LTOFeeCalculator = lazy(() => import('./tools/transport/lto/LTOFeeCalculat
 const WeatherChecker = lazy(() => import('./tools/daily/weather/WeatherChecker'));
 const SellerFeeCalculator = lazy(() => import('./tools/shopping/seller-fees/SellerFeeCalculator'));
 
+// Additional tools
+const TipCalculator = lazy(() => import('./tools/daily/tip/TipCalculator'));
+const BMICalculator = lazy(() => import('./tools/daily/bmi/BMICalculator'));
+const AgeCalculator = lazy(() => import('./tools/daily/age/AgeCalculator'));
+const EmergencyFundCalculator = lazy(() => import('./tools/money/emergency-fund/EmergencyFundCalculator'));
+const DebtPayoffCalculator = lazy(() => import('./tools/money/debt-payoff/DebtPayoffCalculator'));
+const SalaryIncreaseCalculator = lazy(() => import('./tools/money/salary-increase/SalaryIncreaseCalculator'));
+const CompoundInterestCalculator = lazy(() => import('./tools/money/compound-interest/CompoundInterestCalculator'));
+const RoomAreaCalculator = lazy(() => import('./tools/daily/room-area/RoomAreaCalculator'));
+const FreightCalculator = lazy(() => import('./tools/shopping/freight/FreightCalculator'));
+const BodyFatCalculator = lazy(() => import('./tools/daily/body-fat/BodyFatCalculator'));
+
 function Loading() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
@@ -166,6 +178,18 @@ export default function App() {
             <Route path="tools/lto-fee-calculator" element={<Suspense fallback={<ToolLoading />}><LTOFeeCalculator /></Suspense>} />
             <Route path="tools/weather-checker" element={<Suspense fallback={<ToolLoading />}><WeatherChecker /></Suspense>} />
             <Route path="tools/seller-fee-calculator" element={<Suspense fallback={<ToolLoading />}><SellerFeeCalculator /></Suspense>} />
+
+            {/* Additional Tools */}
+            <Route path="tools/tip-calculator" element={<Suspense fallback={<ToolLoading />}><TipCalculator /></Suspense>} />
+            <Route path="tools/bmi-calculator" element={<Suspense fallback={<ToolLoading />}><BMICalculator /></Suspense>} />
+            <Route path="tools/age-calculator" element={<Suspense fallback={<ToolLoading />}><AgeCalculator /></Suspense>} />
+            <Route path="tools/emergency-fund" element={<Suspense fallback={<ToolLoading />}><EmergencyFundCalculator /></Suspense>} />
+            <Route path="tools/debt-payoff" element={<Suspense fallback={<ToolLoading />}><DebtPayoffCalculator /></Suspense>} />
+            <Route path="tools/salary-increase" element={<Suspense fallback={<ToolLoading />}><SalaryIncreaseCalculator /></Suspense>} />
+            <Route path="tools/compound-interest" element={<Suspense fallback={<ToolLoading />}><CompoundInterestCalculator /></Suspense>} />
+            <Route path="tools/room-area" element={<Suspense fallback={<ToolLoading />}><RoomAreaCalculator /></Suspense>} />
+            <Route path="tools/freight-calculator" element={<Suspense fallback={<ToolLoading />}><FreightCalculator /></Suspense>} />
+            <Route path="tools/body-fat" element={<Suspense fallback={<ToolLoading />}><BodyFatCalculator /></Suspense>} />
 
             {/* Raket */}
             <Route path="tools/raketcheck" element={<Suspense fallback={<ToolLoading />}><RaketCheck /></Suspense>} />
