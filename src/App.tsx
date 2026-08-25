@@ -37,8 +37,25 @@ const GWACalculator = lazy(() => import('./tools/students/gwa/GWACalculator'));
 const BillSplitter = lazy(() => import('./tools/food/bill-splitter/BillSplitter'));
 const ElectricityCalculator = lazy(() => import('./tools/bills/electricity/ElectricityCalculator'));
 const CommuteCostCalculator = lazy(() => import('./tools/transport/commute/CommuteCostCalculator'));
-const GenericTool = lazy(() => import('./components/tool/GenericTool'));
 const LoadPromoFinder = lazy(() => import('./tools/mobile/promo/LoadPromoFinder'));
+
+// New tools
+const InstallmentVsCash = lazy(() => import('./tools/shopping/installment-vs-cash/InstallmentVsCash'));
+const VoucherSavings = lazy(() => import('./tools/shopping/voucher-savings/VoucherSavings'));
+const MarketplaceFeeCalculator = lazy(() => import('./tools/shopping/marketplace-fee/MarketplaceFeeCalculator'));
+const GroceryComparator = lazy(() => import('./tools/shopping/grocery/GroceryComparator'));
+const ApplianceCostCalculator = lazy(() => import('./tools/daily/appliance/ApplianceCostCalculator'));
+const MonthlyExpenses = lazy(() => import('./tools/daily/monthly-expenses/MonthlyExpenses'));
+const SavingsChallenge = lazy(() => import('./tools/daily/savings-challenge/SavingsChallenge'));
+const SubscriptionTracker = lazy(() => import('./tools/daily/subscription/SubscriptionTracker'));
+const FuelConsumptionCalculator = lazy(() => import('./tools/daily/fuel-consumption/FuelConsumptionCalculator'));
+const MobileDataBudget = lazy(() => import('./tools/mobile/mobile-data-budget/MobileDataBudget'));
+const PromoComparator = lazy(() => import('./tools/mobile/promo-comparator/PromoComparator'));
+const CostPerGB = lazy(() => import('./tools/mobile/cost-per-gb/CostPerGB'));
+const InternetPlanComparator = lazy(() => import('./tools/mobile/internet-plan/InternetPlanComparator'));
+const URLChecker = lazy(() => import('./tools/safety/url-checker/URLChecker'));
+const WebsiteRisk = lazy(() => import('./tools/safety/website-risk/WebsiteRisk'));
+const RaketCheck = lazy(() => import('./tools/raket/raketcheck/RaketCheck'));
 
 function Loading() {
   return (
@@ -86,30 +103,30 @@ export default function App() {
           {/* Shopping Tools */}
           <Route path="tools/discount-calculator" element={<Suspense fallback={<Loading />}><DiscountCalculator /></Suspense>} />
           <Route path="tools/unit-price-comparator" element={<Suspense fallback={<Loading />}><UnitPriceComparator /></Suspense>} />
-          <Route path="tools/installment-vs-cash" element={<Suspense fallback={<Loading />}><GenericTool toolId="installment-vs-cash" /></Suspense>} />
-          <Route path="tools/voucher-savings" element={<Suspense fallback={<Loading />}><GenericTool toolId="voucher-savings" /></Suspense>} />
-          <Route path="tools/marketplace-fee" element={<Suspense fallback={<Loading />}><GenericTool toolId="marketplace-fee" /></Suspense>} />
-          <Route path="tools/grocery-comparator" element={<Suspense fallback={<Loading />}><GenericTool toolId="grocery-comparator" /></Suspense>} />
+          <Route path="tools/installment-vs-cash" element={<Suspense fallback={<Loading />}><InstallmentVsCash /></Suspense>} />
+          <Route path="tools/voucher-savings" element={<Suspense fallback={<Loading />}><VoucherSavings /></Suspense>} />
+          <Route path="tools/marketplace-fee" element={<Suspense fallback={<Loading />}><MarketplaceFeeCalculator /></Suspense>} />
+          <Route path="tools/grocery-comparator" element={<Suspense fallback={<Loading />}><GroceryComparator /></Suspense>} />
 
           {/* Daily / Bills */}
           <Route path="tools/electricity-calculator" element={<Suspense fallback={<Loading />}><ElectricityCalculator /></Suspense>} />
-          <Route path="tools/appliance-cost" element={<Suspense fallback={<Loading />}><GenericTool toolId="appliance-cost" /></Suspense>} />
-          <Route path="tools/monthly-expenses" element={<Suspense fallback={<Loading />}><GenericTool toolId="monthly-expenses" /></Suspense>} />
-          <Route path="tools/savings-challenge" element={<Suspense fallback={<Loading />}><GenericTool toolId="savings-challenge" /></Suspense>} />
-          <Route path="tools/subscription-tracker" element={<Suspense fallback={<Loading />}><GenericTool toolId="subscription-tracker" /></Suspense>} />
+          <Route path="tools/appliance-cost" element={<Suspense fallback={<Loading />}><ApplianceCostCalculator /></Suspense>} />
+          <Route path="tools/monthly-expenses" element={<Suspense fallback={<Loading />}><MonthlyExpenses /></Suspense>} />
+          <Route path="tools/savings-challenge" element={<Suspense fallback={<Loading />}><SavingsChallenge /></Suspense>} />
+          <Route path="tools/subscription-tracker" element={<Suspense fallback={<Loading />}><SubscriptionTracker /></Suspense>} />
 
           {/* Transport */}
           <Route path="tools/fuel-calculator" element={<Suspense fallback={<Loading />}><FuelCalculator /></Suspense>} />
-          <Route path="tools/fuel-consumption" element={<Suspense fallback={<Loading />}><GenericTool toolId="fuel-consumption" /></Suspense>} />
+          <Route path="tools/fuel-consumption" element={<Suspense fallback={<Loading />}><FuelConsumptionCalculator /></Suspense>} />
           <Route path="tools/commute-cost" element={<Suspense fallback={<Loading />}><CommuteCostCalculator /></Suspense>} />
 
           {/* Mobile */}
           <Route path="tools/load-promo-finder" element={<Suspense fallback={<Loading />}><LoadPromoFinder /></Suspense>} />
-          <Route path="tools/promo-comparator" element={<Suspense fallback={<Loading />}><GenericTool toolId="promo-comparator" /></Suspense>} />
+          <Route path="tools/promo-comparator" element={<Suspense fallback={<Loading />}><PromoComparator /></Suspense>} />
           <Route path="tools/data-usage-calculator" element={<Suspense fallback={<Loading />}><DataUsageCalculator /></Suspense>} />
-          <Route path="tools/cost-per-gb" element={<Suspense fallback={<Loading />}><GenericTool toolId="cost-per-gb" /></Suspense>} />
-          <Route path="tools/internet-plan-comparator" element={<Suspense fallback={<Loading />}><GenericTool toolId="internet-plan-comparator" /></Suspense>} />
-          <Route path="tools/mobile-data-budget" element={<Suspense fallback={<Loading />}><GenericTool toolId="mobile-data-budget" /></Suspense>} />
+          <Route path="tools/cost-per-gb" element={<Suspense fallback={<Loading />}><CostPerGB /></Suspense>} />
+          <Route path="tools/internet-plan-comparator" element={<Suspense fallback={<Loading />}><InternetPlanComparator /></Suspense>} />
+          <Route path="tools/mobile-data-budget" element={<Suspense fallback={<Loading />}><MobileDataBudget /></Suspense>} />
 
           {/* Students */}
           <Route path="tools/gwa-calculator" element={<Suspense fallback={<Loading />}><GWACalculator /></Suspense>} />
@@ -118,11 +135,11 @@ export default function App() {
           <Route path="tools/bill-splitter" element={<Suspense fallback={<Loading />}><BillSplitter /></Suspense>} />
 
           {/* Safety */}
-          <Route path="tools/url-checker" element={<Suspense fallback={<Loading />}><GenericTool toolId="url-checker" /></Suspense>} />
-          <Route path="tools/website-risk" element={<Suspense fallback={<Loading />}><GenericTool toolId="website-risk" /></Suspense>} />
+          <Route path="tools/url-checker" element={<Suspense fallback={<Loading />}><URLChecker /></Suspense>} />
+          <Route path="tools/website-risk" element={<Suspense fallback={<Loading />}><WebsiteRisk /></Suspense>} />
 
           {/* Raket */}
-          <Route path="tools/raketcheck" element={<Suspense fallback={<Loading />}><GenericTool toolId="raketcheck" /></Suspense>} />
+          <Route path="tools/raketcheck" element={<Suspense fallback={<Loading />}><RaketCheck /></Suspense>} />
 
           {/* 404 */}
           <Route path="*" element={<Suspense fallback={<Loading />}><NotFound /></Suspense>} />
