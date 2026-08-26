@@ -10,6 +10,7 @@ const Tools = lazy(() => import('./pages/Tools/Tools'));
 const Live = lazy(() => import('./pages/Live/Live'));
 const Deals = lazy(() => import('./pages/Deals/Deals'));
 const Raket = lazy(() => import('./pages/Raket/Raket'));
+const FreeCourses = lazy(() => import('./pages/FreeCourses/FreeCourses'));
 const Pricing = lazy(() => import('./pages/Pricing/Pricing'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -130,6 +131,7 @@ export default function App() {
             <Route path="live" element={<Suspense fallback={<Loading />}><Live /></Suspense>} />
             <Route path="deals" element={<Suspense fallback={<Loading />}><Deals /></Suspense>} />
             <Route path="raket" element={<Suspense fallback={<Loading />}><Raket /></Suspense>} />
+            <Route path="courses" element={<Suspense fallback={<Loading />}><FreeCourses /></Suspense>} />
             <Route path="pricing" element={<Suspense fallback={<Loading />}><Pricing /></Suspense>} />
             <Route path="about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
             <Route path="privacy" element={<Suspense fallback={<Loading />}><Privacy /></Suspense>} />

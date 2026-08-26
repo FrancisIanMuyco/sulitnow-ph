@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Search, ArrowRight, Zap, Shield, Smartphone, Banknote,
-  ShoppingBag, Home as HomeIcon, Briefcase,
+  ShoppingBag, Home as HomeIcon, Briefcase, GraduationCap,
   CheckCircle, ChevronRight, Clock
 } from 'lucide-react';
 import { toolRegistry, categories, popularTools, quickActions } from '../../constants/toolRegistry';
@@ -174,6 +174,22 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Free Courses CTA */}
+        <section className="py-6 border-t border-border">
+          <Link to="/courses" className="block bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-5 text-white hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                <GraduationCap size={20} />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-sm font-semibold">Free Courses</h3>
+                <p className="text-xs text-white/80">40+ free courses from Coursera, edX, Khan Academy & more</p>
+              </div>
+              <ArrowRight size={16} />
+            </div>
+          </Link>
         </section>
 
         {/* CTA */}

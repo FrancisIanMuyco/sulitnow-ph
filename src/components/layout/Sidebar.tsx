@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronRight, Star } from 'lucide-react';
+import { ChevronDown, ChevronRight, Star, GraduationCap } from 'lucide-react';
 import { toolRegistry, categories } from '../../constants/toolRegistry';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { getIcon } from '../../utils/iconMap';
@@ -36,6 +36,17 @@ export default function Sidebar() {
           >
             <Star size={16} />
             All Tools
+          </Link>
+          <Link
+            to="/courses"
+            className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+              location.pathname === '/courses'
+                ? 'bg-primary/10 text-primary'
+                : 'text-text-secondary hover:bg-surface-alt hover:text-text'
+            }`}
+          >
+            <GraduationCap size={16} />
+            Free Courses
           </Link>
         </div>
 
