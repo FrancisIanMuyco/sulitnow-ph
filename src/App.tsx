@@ -91,6 +91,9 @@ const ParkingCostCalculator = lazy(() => import('./tools/daily/parking/ParkingCo
 const GoldPriceCalculator = lazy(() => import('./tools/money/gold-price/GoldPriceCalculator'));
 const CryptoPriceChecker = lazy(() => import('./tools/money/crypto/CryptoPriceChecker'));
 const EarthquakeMonitor = lazy(() => import('./tools/safety/earthquake/EarthquakeMonitor'));
+const AirQualityChecker = lazy(() => import('./tools/daily/air-quality/AirQualityChecker'));
+const TrafficMonitor = lazy(() => import('./tools/transport/traffic/TrafficMonitor'));
+const VolcanoStatus = lazy(() => import('./tools/safety/volcano/VolcanoStatus'));
 
 function Loading() {
   return (
@@ -222,6 +225,9 @@ export default function App() {
             <Route path="tools/gold-price" element={<Suspense fallback={<ToolLoading />}><GoldPriceCalculator /></Suspense>} />
             <Route path="tools/crypto-prices" element={<Suspense fallback={<ToolLoading />}><CryptoPriceChecker /></Suspense>} />
             <Route path="tools/earthquake-monitor" element={<Suspense fallback={<ToolLoading />}><EarthquakeMonitor /></Suspense>} />
+            <Route path="tools/air-quality" element={<Suspense fallback={<ToolLoading />}><AirQualityChecker /></Suspense>} />
+            <Route path="tools/traffic-monitor" element={<Suspense fallback={<ToolLoading />}><TrafficMonitor /></Suspense>} />
+            <Route path="tools/volcano-status" element={<Suspense fallback={<ToolLoading />}><VolcanoStatus /></Suspense>} />
 
             {/* Raket */}
             <Route path="tools/raketcheck" element={<Suspense fallback={<ToolLoading />}><RaketCheck /></Suspense>} />

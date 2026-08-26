@@ -38,18 +38,20 @@ def scrape_all():
         errors.append(f"gold: {e}")
         print(f"❌ Gold: {e}")
 
-    # 3. Silver price
-    try:
-        data = fetch_json("https://api.gold-api.com/price/XAG")
-        results["silver"] = {
-            "price_usd": data.get("price"),
-            "symbol": data.get("symbol"),
-            "name": data.get("name"),
-        }
-        print(f"✅ Silver: ${data.get('price')}")
-    except Exception as e:
-        errors.append(f"silver: {e}")
-        print(f"❌ Silver: {e}")
+    # 3. All precious metals
+    for metal in ['XAG', 'XPT', 'XPD']:
+        try:
+            data = fetch_json(f"https://api.gold-api.com/price/{metal}")
+            results["metals"] = results.get("metals", {})
+            results["metals"][metal] = {
+                "price_usd": data.get("price"),
+                "symbol": data.get("symbol"),
+                "name": data.get("name"),
+            }
+            print(f"✅ {data.get('name', metal)}: ${data.get('price')}")
+        except Exception as e:
+            errors.append(f"{metal}: {e}")
+            print(f"❌ {metal}: {e}")
 
     # 4. USD/PHP exchange rate
     try:

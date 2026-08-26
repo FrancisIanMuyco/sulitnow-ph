@@ -41,6 +41,9 @@ jobs:
       - name: Check service statuses
         run: python3 scripts/scrape-status.py
 
+      - name: Scrape gold, crypto, earthquakes
+        run: python3 scripts/scrape-prices.py
+
       - name: Build
         run: npm run build
 
