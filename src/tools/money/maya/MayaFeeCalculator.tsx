@@ -8,29 +8,31 @@ import { formatPeso } from '../../../utils/format';
 interface MayaData {
   lastUpdated: string;
   source: string;
-  fees: {
-    sendMoney: {
-      mayaToMaya: { fee: number; note: string };
-      mayaToBank: {
-        instapay: { fee: number; note: string };
-        pesonet: { fee: number; note: string };
-      };
-      mayaToGCash: { fee: number; note: string };
-    };
-    cashOut: {
-      bankTransfer: { fee: number; note: string };
-      atm: { fee: number; note: string };
-    };
-    billsPayment: { fee: number; note: string };
-    buyLoad: { fee: number; note: string };
-    payQR: { fee: number; note: string };
+  sendMoney: {
+    mayaToMaya: { fee: number; note: string };
+    mayaToOtherEwallet: { fee: number; note: string };
+    mayaToBank: { fee: number; note: string };
   };
-  limits: {
-    fullyVerified: { daily: number; monthly: number; perTransaction: number };
-    partiallyVerified: { daily: number; monthly: number; perTransaction: number };
-    basic: { daily: number; monthly: number; perTransaction: number };
+  cashIn: {
+    bankTransfer: { fee: number; note: string };
+    overTheCounter: { fee: number; note: string };
+    debitCard: { fee: number; note: string };
+    creditCard: { fee: number; note: string };
   };
+  cashOut: {
+    bankTransfer: { fee: number; note: string };
+    overTheCounter: { fee: string; note: string };
+    atm: { fee: number; note: string };
+  };
+  billsPayment: { fee: number; note: string };
 }
+
+const transferTypes = [
+  { value: 'maya' as const, label: 'Maya → Maya' },
+  { value: 'bank' as const, label: 'Bank Transfer' },
+  { value: 'gcash' as const, label: 'Maya → GCash' },
+  { value: 'cashout' as const, label: 'ATM Cash-out' },
+];
 
 export default function MayaFeeCalculator() {
   const tool = toolRegistry.find((t) => t.id === 'maya-fee-calculator')!;
@@ -48,10 +50,10 @@ export default function MayaFeeCalculator() {
     if (isNaN(num) || num <= 0 || !data) return;
     let fee = 0;
     let note = '';
-    if (type === 'maya') { fee = data.fees.sendMoney.mayaToMaya.fee; note = data.fees.sendMoney.mayaToMaya.note; }
-    else if (type === 'bank') { fee = data.fees.sendMoney.mayaToBank.instapay.fee; note = data.fees.sendMoney.mayaToBank.instapay.note; }
-    else if (type === 'gcash') { fee = data.fees.sendMoney.mayaToGCash.fee; note = data.fees.sendMoney.mayaToGCash.note; }
-    else { fee = data.fees.cashOut.atm.fee; note = data.fees.cashOut.atm.note; }
+    if (type === 'maya') { fee = data.sendMoney.mayaToMaya.fee; note = data.sendMoney.mayaToMaya.note; }
+    else if (type === 'bank') { fee = data.sendMoney.mayaToBank.fee; note = data.sendMoney.mayaToBank.note; }
+    else if (type === 'gcash') { fee = data.sendMoney.mayaToOtherEwallet.fee; note = data.sendMoney.mayaToOtherEwallet.note; }
+    else { fee = data.cashOut.atm.fee; note = data.cashOut.atm.note; }
     setResult({ amount: num, fee, total: num + fee, note });
   };
 
@@ -67,16 +69,16 @@ export default function MayaFeeCalculator() {
             <p className="text-[9px] text-text-muted mb-2">Source: {data.source}</p>
             <div className="grid grid-cols-2 gap-1.5">
               {[
-                ['Maya→Maya', `₱${data.fees.sendMoney.mayaToMaya.fee}`, 'Free'],
-                ['Bank (Instapay)', `₱${data.fees.sendMoney.mayaToBank.instapay.fee}`, 'Instant'],
-                ['Bank (Pesonet)', `₱${data.fees.sendMoney.mayaToBank.pesonet.fee}`, '1 day'],
-                ['Maya→GCash', `₱${data.fees.sendMoney.mayaToGCash.fee}`, 'Via Instapay'],
-                ['ATM Cash-out', `₱${data.fees.cashOut.atm.fee}`, 'Via Euronet'],
-                ['Bills Payment', `₱${data.fees.billsPayment.fee}`, data.fees.billsPayment.note],
+                ['Maya → Maya', `${formatPeso(data.sendMoney.mayaToMaya.fee)}`, data.sendMoney.mayaToMaya.note],
+                ['Maya → Bank', `${formatPeso(data.sendMoney.mayaToBank.fee)}`, data.sendMoney.mayaToBank.note],
+                ['Maya → E-Wallet', `${formatPeso(data.sendMoney.mayaToOtherEwallet.fee)}`, data.sendMoney.mayaToOtherEwallet.note],
+                ['ATM Cash-out', `${formatPeso(data.cashOut.atm.fee)}`, data.cashOut.atm.note],
+                ['Bills Payment', `${formatPeso(data.billsPayment.fee)}`, data.billsPayment.note],
+                ['Cash-in (Bank)', `${formatPeso(data.cashIn.bankTransfer.fee)}`, data.cashIn.bankTransfer.note],
               ].map(([type2, fee, note]) => (
                 <div key={type2} className="bg-surface rounded-lg p-2 text-center">
                   <p className="text-[9px] text-text-muted">{type2}</p>
-                  <p className={`text-sm font-bold ${fee === '₱0' ? 'text-green-600' : 'text-text'}`}>{fee}</p>
+                  <p className={`text-sm font-bold ${fee === '₱0.00' ? 'text-green-600' : 'text-text'}`}>{fee}</p>
                   <p className="text-[8px] text-text-muted">{note}</p>
                 </div>
               ))}
@@ -88,12 +90,7 @@ export default function MayaFeeCalculator() {
         <div className="space-y-1.5">
           <label className="block text-sm font-medium text-text">Transfer Type</label>
           <div className="grid grid-cols-2 gap-2">
-            {[
-              { value: 'maya' as const, label: 'Maya → Maya' },
-              { value: 'bank' as const, label: 'Bank Transfer' },
-              { value: 'gcash' as const, label: 'Maya → GCash' },
-              { value: 'cashout' as const, label: 'ATM Cash-out' },
-            ].map((t) => (
+            {transferTypes.map((t) => (
               <button key={t.value} onClick={() => setType(t.value)}
                 className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${type === t.value ? 'bg-primary text-white' : 'bg-surface-alt text-text-secondary hover:bg-border'}`}>
                 {t.label}

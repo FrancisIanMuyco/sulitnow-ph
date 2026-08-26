@@ -8,34 +8,37 @@ import { formatPeso } from '../../../utils/format';
 interface GcashData {
   lastUpdated: string;
   source: string;
-  fees: {
-    sendMoney: {
-      gcashToGcash: { fee: number; note: string };
-      gcashToBank: {
-        instapay: { fee: number; note: string };
-        pesonet: { fee: number; note: string };
-      };
-    };
-    cashOut: {
-      bankTransfer: { fee: number; note: string };
-      atm: { fee: number; note: string };
-    };
-    billsPayment: { fee: number; note: string };
-    buyLoad: { fee: number; note: string };
-    payQR: { fee: number; note: string };
+  sendMoney: {
+    gcashToGCash: { fee: number; note: string };
+    gcashToOtherEwallet: { fee: number; note: string };
+    gcashToBank: { fee: number; note: string };
   };
-  limits: {
-    fullyVerified: { daily: number; monthly: number; perTransaction: number };
-    partiallyVerified: { daily: number; monthly: number; perTransaction: number };
-    basic: { daily: number; monthly: number; perTransaction: number };
+  cashIn: {
+    bankTransfer: { fee: number; note: string };
+    overTheCounter: { min: number; max: number; note: string };
+    debitCard: { fee: number; note: string };
+    creditCard: { fee: number; note: string };
   };
+  cashOut: {
+    bankTransfer: { fee: number; note: string };
+    overTheCounter: { fee: string; note: string };
+    atm: { fee: number; note: string };
+  };
+  billsPayment: { fee: number; note: string };
 }
+
+const transferTypes = [
+  { value: 'gcash' as const, label: 'GCash → GCash' },
+  { value: 'bank' as const, label: 'Bank Transfer' },
+  { value: 'ewallet' as const, label: 'GCash → E-Wallet' },
+  { value: 'cashout_atm' as const, label: 'ATM Cash-out' },
+];
 
 export default function GcashFeeCalculator() {
   const tool = toolRegistry.find((t) => t.id === 'gcash-fee-calculator')!;
   const [data, setData] = useState<GcashData | null>(null);
   const [amount, setAmount] = useState('');
-  const [transferType, setTransferType] = useState<'gcash' | 'bank_instapay' | 'bank_pesonet' | 'cashout_atm'>('gcash');
+  const [transferType, setTransferType] = useState<'gcash' | 'bank' | 'ewallet' | 'cashout_atm'>('gcash');
   const [result, setResult] = useState<{ amount: number; fee: number; total: number; note: string } | null>(null);
 
   useEffect(() => {
@@ -47,17 +50,16 @@ export default function GcashFeeCalculator() {
     if (isNaN(num) || num <= 0 || !data) return;
     let fee = 0;
     let note = '';
-    if (transferType === 'gcash') { fee = data.fees.sendMoney.gcashToGcash.fee; note = data.fees.sendMoney.gcashToGcash.note; }
-    else if (transferType === 'bank_instapay') { fee = data.fees.sendMoney.gcashToBank.instapay.fee; note = data.fees.sendMoney.gcashToBank.instapay.note; }
-    else if (transferType === 'bank_pesonet') { fee = data.fees.sendMoney.gcashToBank.pesonet.fee; note = data.fees.sendMoney.gcashToBank.pesonet.note; }
-    else { fee = data.fees.cashOut.atm.fee; note = data.fees.cashOut.atm.note; }
+    if (transferType === 'gcash') { fee = data.sendMoney.gcashToGCash.fee; note = data.sendMoney.gcashToGCash.note; }
+    else if (transferType === 'bank') { fee = data.sendMoney.gcashToBank.fee; note = data.sendMoney.gcashToBank.note; }
+    else if (transferType === 'ewallet') { fee = data.sendMoney.gcashToOtherEwallet.fee; note = data.sendMoney.gcashToOtherEwallet.note; }
+    else { fee = data.cashOut.atm.fee; note = data.cashOut.atm.note; }
     setResult({ amount: num, fee, total: num + fee, note });
   };
 
   return (
     <ToolLayout tool={tool} recommendation={result ? `Fee: ${formatPeso(result.fee)}. Recipient gets: ${formatPeso(result.amount)}. Total cost: ${formatPeso(result.total)}.` : undefined}>
       <div className="px-4 py-4 space-y-4">
-        {/* Real fee info */}
         {data && (
           <div className="bg-surface-alt rounded-xl p-3 border border-border">
             <div className="flex items-center justify-between mb-2">
@@ -67,16 +69,16 @@ export default function GcashFeeCalculator() {
             <p className="text-[9px] text-text-muted mb-2">Source: {data.source}</p>
             <div className="grid grid-cols-2 gap-1.5">
               {[
-                ['GCash→GCash', `₱${data.fees.sendMoney.gcashToGcash.fee}`, 'Free'],
-                ['Bank (Instapay)', `₱${data.fees.sendMoney.gcashToBank.instapay.fee}`, 'Instant'],
-                ['Bank (Pesonet)', `₱${data.fees.sendMoney.gcashToBank.pesonet.fee}`, '1 day'],
-                ['ATM Cash-out', `₱${data.fees.cashOut.atm.fee}`, 'Via Euronet'],
-                ['Bills Payment', `₱${data.fees.billsPayment.fee}`, data.fees.billsPayment.note],
-                ['Buy Load', `₱${data.fees.buyLoad.fee}`, data.fees.buyLoad.note],
+                ['GCash → GCash', `${formatPeso(data.sendMoney.gcashToGCash.fee)}`, data.sendMoney.gcashToGCash.note],
+                ['GCash → Bank', `${formatPeso(data.sendMoney.gcashToBank.fee)}`, data.sendMoney.gcashToBank.note],
+                ['GCash → E-Wallet', `${formatPeso(data.sendMoney.gcashToOtherEwallet.fee)}`, data.sendMoney.gcashToOtherEwallet.note],
+                ['ATM Cash-out', `${formatPeso(data.cashOut.atm.fee)}`, data.cashOut.atm.note],
+                ['Bills Payment', `${formatPeso(data.billsPayment.fee)}`, data.billsPayment.note],
+                ['Cash-in (Bank)', `${formatPeso(data.cashIn.bankTransfer.fee)}`, data.cashIn.bankTransfer.note],
               ].map(([type, fee, note]) => (
                 <div key={type} className="bg-surface rounded-lg p-2 text-center">
                   <p className="text-[9px] text-text-muted">{type}</p>
-                  <p className={`text-sm font-bold ${fee === '₱0' ? 'text-green-600' : 'text-text'}`}>{fee}</p>
+                  <p className={`text-sm font-bold ${fee === '₱0.00' ? 'text-green-600' : 'text-text'}`}>{fee}</p>
                   <p className="text-[8px] text-text-muted">{note}</p>
                 </div>
               ))}
@@ -88,12 +90,7 @@ export default function GcashFeeCalculator() {
         <div className="space-y-1.5">
           <label className="block text-sm font-medium text-text">Transfer Type</label>
           <div className="grid grid-cols-2 gap-2">
-            {[
-              { value: 'gcash' as const, label: 'GCash → GCash' },
-              { value: 'bank_instapay' as const, label: 'Bank (Instapay)' },
-              { value: 'bank_pesonet' as const, label: 'Bank (Pesonet)' },
-              { value: 'cashout_atm' as const, label: 'ATM Cash-out' },
-            ].map((type) => (
+            {transferTypes.map((type) => (
               <button key={type.value} onClick={() => setTransferType(type.value)}
                 className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${transferType === type.value ? 'bg-primary text-white' : 'bg-surface-alt text-text-secondary hover:bg-border'}`}>
                 {type.label}
