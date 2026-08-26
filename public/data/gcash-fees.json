@@ -1,23 +1,99 @@
 {
-  "lastUpdated": "2026-08-25T12:00:00",
-  "source": "GCash Help Center — July 2026",
-  "note": "InstaPay transfer fee reduced to ₱10 effective July 6, 2026",
-  "sendMoney": {
-    "gcashToGCash": { "fee": 0, "note": "Free" },
-    "gcashToOtherEwallet": { "fee": 15, "note": "InstaPay ₱15 (standard), ₱10 (promo)" },
-    "gcashToBank": { "fee": 15, "note": "InstaPay ₱15" }
+  "lastUpdated": "2026-08-26T09:56:07.196987",
+  "source": "GCash Help Center",
+  "fees": {
+    "sendMoney": {
+      "gcashToGcash": {
+        "fee": 0,
+        "note": "Free"
+      },
+      "gcashToBank": {
+        "instapay": {
+          "fee": 15,
+          "note": "Instant, up to \u20b150,000/transaction"
+        },
+        "pesonet": {
+          "fee": 0,
+          "note": "Free, next business day"
+        }
+      },
+      "gcashToRemittance": {
+        "fee": 15,
+        "note": "Cebuana, Palawan, etc."
+      },
+      "gcashToGCashOtherNetwork": {
+        "fee": 0,
+        "note": "Free"
+      }
+    },
+    "cashIn": {
+      "bankTransfer": {
+        "fee": 0,
+        "note": "Free via bank app"
+      },
+      "linkedBank": {
+        "fee": 0,
+        "note": "Free"
+      },
+      "convenienceStore": {
+        "fee": 0,
+        "note": "7-Eleven, SM, etc."
+      },
+      "overTheCounter": {
+        "fee": 0,
+        "note": "Robinsons, Puregold, etc."
+      }
+    },
+    "cashOut": {
+      "bankTransfer": {
+        "fee": 15,
+        "note": "Instapay"
+      },
+      "atm": {
+        "fee": 18,
+        "note": "Via Euronet/Eonet"
+      },
+      "convenienceStore": {
+        "fee": 0,
+        "note": "7-Eleven, SM, etc."
+      },
+      "overTheCounter": {
+        "fee": 0,
+        "note": "Minimum \u20b1500 withdrawal"
+      }
+    },
+    "billsPayment": {
+      "fee": 0,
+      "note": "Free for most billers"
+    },
+    "buyLoad": {
+      "fee": 0,
+      "note": "Free"
+    },
+    "payQR": {
+      "fee": 0,
+      "note": "Free for in-store QR"
+    },
+    "internationalRemittance": {
+      "fee": 50,
+      "note": "Via partner remittance centers"
+    }
   },
-  "cashIn": {
-    "bankTransfer": { "fee": 0, "note": "Free via bank app" },
-    "overTheCounter": { "min": 0, "max": 0, "note": "Free at partner outlets" },
-    "debitCard": { "fee": 0, "note": "Free" },
-    "creditCard": { "fee": 0, "note": "Free (but card issuer may charge)" }
-  },
-  "cashOut": {
-    "bankTransfer": { "fee": 15, "note": "InstaPay ₱15" },
-    "overTheCounter": { "fee": "varies", "note": "1.5%-2% of amount at partner outlets" },
-    "atm": { "fee": 18, "note": "₱18 per withdrawal" }
-  },
-  "billsPayment": { "fee": 0, "note": "Free for most billers" },
-  "internationalRemittance": { "fee": "varies", "note": "International remittance fees vary by partner" }
+  "limits": {
+    "fullyVerified": {
+      "daily": 100000,
+      "monthly": 500000,
+      "perTransaction": 100000
+    },
+    "partiallyVerified": {
+      "daily": 50000,
+      "monthly": 100000,
+      "perTransaction": 50000
+    },
+    "basic": {
+      "daily": 10000,
+      "monthly": 50000,
+      "perTransaction": 10000
+    }
+  }
 }

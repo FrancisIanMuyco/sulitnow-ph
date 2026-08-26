@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-08-25T17:21:22.856849",
+  "lastUpdated": "2026-08-26T09:51:17.206916",
   "source": "PAGASA",
-  "temperature": "30\u00b0C",
+  "temperature": null,
   "windSpeed": null,
   "humidity": null,
-  "forecast": "\n                                \n                                    STRONG HABAGAT BROUGHT HEAVY RAINS, TRIGGERED FLOODING IN LUZON\n                                    HABAGAT, HEAVY RAIN, FLOOD \n                                \n                                \n                                    19 August, 2026 \n                                \n                                \n                                    On August 17, 2026, Metro Manila and nearby provinces were drenched by intense ra",
-  "typhoon": "No active tropical cyclone within the Philippine Area of Responsibility."
+  "forecast": "Unable to fetch: Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.pagasa.dost.gov.ph/\", waiting until \"domcontentloaded\"\n",
+  "typhoon": null
 }
