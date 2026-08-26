@@ -201,6 +201,16 @@ if __name__ == "__main__":
     scrape_weather()
     scrape_fuel()
     
+    # Also run prices scraper (gold, crypto, earthquakes)
+    try:
+        import subprocess
+        prices_script = os.path.join(os.path.dirname(__file__), 'scrape-prices.py')
+        if os.path.exists(prices_script):
+            print("\n--- Running prices scraper ---")
+            subprocess.run([sys.executable, prices_script], timeout=60)
+    except Exception as e:
+        print(f"  ⚠️ Prices scraper failed: {e}")
+    
     elapsed = (datetime.now() - start).total_seconds()
     print("\n" + "=" * 50)
     print(f"✅ All scraping complete in {elapsed:.1f}s")

@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, X, ArrowRight, Tag } from 'lucide-react';
+import { Search, X, ArrowRight } from 'lucide-react';
 import { searchTools, type SearchResult } from '../../utils/search';
 import { toolRegistry } from '../../constants/toolRegistry';
-import * as LucideIcons from 'lucide-react';
+import { getIcon } from '../../utils/iconMap';
 
 interface SearchModalProps {
   open: boolean;
@@ -57,11 +57,6 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
   };
 
   if (!open) return null;
-
-  const getIcon = (iconName: string) => {
-    const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number }>>)[iconName];
-    return Icon ? <Icon size={16} /> : <Tag size={16} />;
-  };
 
   return (
     <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-start justify-center pt-[10vh] px-4">

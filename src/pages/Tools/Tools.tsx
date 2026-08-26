@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Filter } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
 import { toolRegistry, categories } from '../../constants/toolRegistry';
+import { getIcon } from '../../utils/iconMap';
 import type { ToolCategory, ToolStatus } from '../../types';
 import Card from '../../components/ui/Card';
 
@@ -37,11 +37,6 @@ export default function Tools() {
 
     return tools;
   }, [activeCategory, search]);
-
-  const getIcon = (iconName: string) => {
-    const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[iconName];
-    return Icon ? <Icon size={18} /> : null;
-  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">

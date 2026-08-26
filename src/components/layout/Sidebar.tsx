@@ -1,14 +1,9 @@
 import { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronRight, Star } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
 import { toolRegistry, categories } from '../../constants/toolRegistry';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-
-const getIcon = (iconName: string) => {
-  const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[iconName];
-  return Icon ? <Icon size={16} /> : null;
-};
+import { getIcon } from '../../utils/iconMap';
 
 export default function Sidebar() {
   const location = useLocation();

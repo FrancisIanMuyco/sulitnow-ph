@@ -1,10 +1,10 @@
 import { useEffect, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Share2, Flag, Info, Heart } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
 import type { Tool } from '../../types';
 import { toolRegistry } from '../../constants/toolRegistry';
 import { useRecentlyUsed, useFavorites } from '../../hooks/useLocalStorage';
+import { getIcon } from '../../utils/iconMap';
 import SEOHead, { ToolStructuredData } from '../common/SEOHead';
 
 interface ToolLayoutProps {
@@ -30,11 +30,6 @@ export default function ToolLayout({
   useEffect(() => {
     addRecent(tool.id);
   }, [tool.id, addRecent]);
-
-  const getIcon = (iconName: string) => {
-    const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[iconName];
-    return Icon ? <Icon size={20} /> : null;
-  };
 
   const relatedTools = (relatedToolIds || [])
     .map((id) => toolRegistry.find((t) => t.id === id))

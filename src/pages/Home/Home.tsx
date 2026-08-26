@@ -5,10 +5,10 @@ import {
   ShoppingBag, Home as HomeIcon, Briefcase,
   CheckCircle, ChevronRight, Clock
 } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
 import { toolRegistry, categories, popularTools, quickActions } from '../../constants/toolRegistry';
 import { searchTools } from '../../utils/search';
 import { useRecentlyUsed } from '../../hooks/useLocalStorage';
+import { getIcon } from '../../utils/iconMap';
 import Card from '../../components/ui/Card';
 import SEOHead from '../../components/common/SEOHead';
 
@@ -38,11 +38,6 @@ export default function Home() {
 
   const popularToolItems = popularTools.map((id) => toolRegistry.find((t) => t.id === id)).filter(Boolean).slice(0, 8);
   const recentTools = recent.map((id) => toolRegistry.find((t) => t.id === id)).filter(Boolean).slice(0, 5);
-
-  const getIcon = (iconName: string) => {
-    const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[iconName];
-    return Icon ? <Icon size={18} /> : null;
-  };
 
   return (
     <div>
