@@ -5,6 +5,7 @@ import * as LucideIcons from 'lucide-react';
 import type { Tool } from '../../types';
 import { toolRegistry } from '../../constants/toolRegistry';
 import { useRecentlyUsed, useFavorites } from '../../hooks/useLocalStorage';
+import SEOHead, { ToolStructuredData } from '../common/SEOHead';
 
 interface ToolLayoutProps {
   tool: Tool;
@@ -60,6 +61,18 @@ export default function ToolLayout({
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-6">
+      <SEOHead
+        title={tool.name}
+        description={tool.description}
+        url={`https://sulitnow-ph.pages.dev${tool.path}`}
+        keywords={tool.keywords?.join(', ')}
+      />
+      <ToolStructuredData
+        name={tool.name}
+        description={tool.description}
+        url={`https://sulitnow-ph.pages.dev${tool.path}`}
+        category={tool.category}
+      />
       {/* Breadcrumb */}
       <Link to="/tools" className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-primary transition-colors mb-4">
         <ArrowLeft size={14} /> All Tools

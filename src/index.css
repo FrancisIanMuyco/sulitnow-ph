@@ -21,11 +21,23 @@
 @layer base {
   :root {
     color-scheme: light dark;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f8fafc;
+    --color-surface-raised: #f1f5f9;
+    --color-border: #e2e8f0;
+    --color-text: #0f172a;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
   }
 
   body {
     @apply bg-surface text-text antialiased;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  *, *::before, *::after {
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   }
 
   .dark body,
@@ -38,6 +50,85 @@
     --color-text-secondary: #94a3b8;
     --color-text-muted: #64748b;
   }
+
+  /* Dark mode fixes for hardcoded colors */
+  .dark .bg-white { background-color: #1e293b !important; }
+  .dark .bg-gray-50, .dark .bg-gray-100 { background-color: #1e293b !important; }
+  .dark .bg-gray-200 { background-color: #334155 !important; }
+  .dark .text-gray-900, .dark .text-gray-800 { color: #f1f5f9 !important; }
+  .dark .text-gray-700, .dark .text-gray-600 { color: #cbd5e1 !important; }
+  .dark .text-gray-500, .dark .text-gray-400 { color: #94a3b8 !important; }
+  .dark .border-gray-200 { border-color: #475569 !important; }
+  .dark .border-gray-300 { border-color: #475569 !important; }
+  .dark .hover\:bg-gray-50:hover, .dark .hover\:bg-gray-100:hover { background-color: #334155 !important; }
+  .dark .hover\:bg-white:hover { background-color: #334155 !important; }
+  .dark .ring-gray-200 { --tw-ring-color: #475569 !important; }
+  .dark .placeholder-gray-400::placeholder { color: #64748b !important; }
+  .dark .placeholder-gray-500::placeholder { color: #64748b !important; }
+}
+
+/* Dark mode input fixes */
+.dark input[type="text"],
+.dark input[type="number"],
+.dark input[type="date"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark textarea,
+.dark select {
+  background-color: #1e293b !important;
+  border-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #1a6b3c !important;
+  box-shadow: 0 0 0 2px rgba(26, 107, 60, 0.3) !important;
+}
+
+/* Safe area for iPhone notch */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(26, 107, 60, 0.2);
+  color: inherit;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scrollbar dark mode */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 @layer utilities {

@@ -10,6 +10,7 @@ import { toolRegistry, categories, popularTools, quickActions } from '../../cons
 import { searchTools } from '../../utils/search';
 import { useRecentlyUsed } from '../../hooks/useLocalStorage';
 import Card from '../../components/ui/Card';
+import SEOHead from '../../components/common/SEOHead';
 
 const categoryIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Smartphone, Banknote, ShoppingBag, Home: HomeIcon, Shield, Briefcase,
@@ -45,6 +46,11 @@ export default function Home() {
 
   return (
     <div>
+      <SEOHead
+        title="SulitNow PH — Your Everyday Decision Toolkit"
+        description="Compare promos, fees, prices, earnings, and daily expenses. Built for Filipinos. 50+ free calculators and tools."
+        keywords="salary calculator, GWA calculator, fuel cost, discount calculator, load promo, Philippines, Filipino tools"
+      />
       {/* Hero */}
       <section className="sulit-gradient text-white">
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
