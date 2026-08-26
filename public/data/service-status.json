@@ -1,0 +1,167 @@
+{
+  "lastUpdated": "2026-08-26T00:28:11.008900",
+  "services": [
+    {
+      "id": "smart",
+      "name": "Smart",
+      "category": "Network",
+      "url": "https://www.smart.com.ph",
+      "status": "operational",
+      "responseTime": 1165,
+      "statusCode": 200
+    },
+    {
+      "id": "tnt",
+      "name": "TNT",
+      "category": "Network",
+      "url": "https://www.smart.com.ph",
+      "status": "operational",
+      "responseTime": 1072,
+      "statusCode": 200
+    },
+    {
+      "id": "globe",
+      "name": "Globe",
+      "category": "Network",
+      "url": "https://www.globe.com.ph",
+      "status": "operational",
+      "responseTime": 338,
+      "statusCode": 200
+    },
+    {
+      "id": "tm",
+      "name": "TM",
+      "category": "Network",
+      "url": "https://www.globe.com.ph/tm",
+      "status": "operational",
+      "responseTime": 711,
+      "statusCode": 200
+    },
+    {
+      "id": "dito",
+      "name": "DITO",
+      "category": "Network",
+      "url": "https://dito.ph",
+      "status": "operational",
+      "responseTime": 260,
+      "statusCode": 200
+    },
+    {
+      "id": "gcash",
+      "name": "GCash",
+      "category": "E-Wallet",
+      "url": "https://www.gcash.com",
+      "status": "operational",
+      "responseTime": 852,
+      "statusCode": 200
+    },
+    {
+      "id": "maya",
+      "name": "Maya",
+      "category": "E-Wallet",
+      "url": "https://www.maya.ph",
+      "status": "operational",
+      "responseTime": 725,
+      "statusCode": 200
+    },
+    {
+      "id": "bdo",
+      "name": "BDO",
+      "category": "Bank",
+      "url": "https://www.bdo.com.ph",
+      "status": "issues",
+      "responseTime": 201,
+      "statusCode": 403
+    },
+    {
+      "id": "bpi",
+      "name": "BPI",
+      "category": "Bank",
+      "url": "https://www.bpi.com.ph",
+      "status": "operational",
+      "responseTime": 264,
+      "statusCode": 200
+    },
+    {
+      "id": "landbank",
+      "name": "Landbank",
+      "category": "Bank",
+      "url": "https://www.landbank.com",
+      "status": "operational",
+      "responseTime": 425,
+      "statusCode": 200
+    },
+    {
+      "id": "securitybank",
+      "name": "Security Bank",
+      "category": "Bank",
+      "url": "https://www.securitybank.com",
+      "status": "operational",
+      "responseTime": 759,
+      "statusCode": 200
+    },
+    {
+      "id": "metrobank",
+      "name": "Metrobank",
+      "category": "Bank",
+      "url": "https://www.metrobank.com.ph",
+      "status": "operational",
+      "responseTime": 1028,
+      "statusCode": 200
+    },
+    {
+      "id": "pldt",
+      "name": "PLDT",
+      "category": "Telecom",
+      "url": "https://www.pldt.com",
+      "status": "operational",
+      "responseTime": 604,
+      "statusCode": 200
+    },
+    {
+      "id": "converge",
+      "name": "Converge",
+      "category": "Telecom",
+      "url": "https://www.convergeict.com",
+      "status": "operational",
+      "responseTime": 253,
+      "statusCode": 200
+    },
+    {
+      "id": "sky",
+      "name": "Sky Internet",
+      "category": "Telecom",
+      "url": "https://www.skybroadband.com.ph",
+      "status": "major",
+      "responseTime": null,
+      "statusCode": null
+    },
+    {
+      "id": "shopee",
+      "name": "Shopee",
+      "category": "Shopping",
+      "url": "https://shopee.ph",
+      "status": "operational",
+      "responseTime": 497,
+      "statusCode": 200
+    },
+    {
+      "id": "lazada",
+      "name": "Lazada",
+      "category": "Shopping",
+      "url": "https://www.lazada.com.ph",
+      "status": "operational",
+      "responseTime": 915,
+      "statusCode": 200
+    },
+    {
+      "id": "grab",
+      "name": "Grab",
+      "category": "Services",
+      "url": "https://www.grab.com/ph/",
+      "status": "operational",
+      "responseTime": 395,
+      "statusCode": 200
+    }
+  ]
+}

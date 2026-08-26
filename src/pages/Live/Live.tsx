@@ -1,89 +1,205 @@
-import { AlertCircle, Wifi, Clock, Info } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { Wifi, RefreshCw, AlertCircle, ExternalLink } from 'lucide-react';
+import SEOHead from '../../components/common/SEOHead';
 
-interface LiveService {
+interface ServiceStatus {
   id: string;
   name: string;
   category: string;
-  status: 'operational' | 'issues' | 'major' | 'no-data';
-  lastUpdated?: string;
-  reports: number;
+  url: string;
+  status: 'operational' | 'issues' | 'major';
+  responseTime: number | null;
+  statusCode: number | null;
 }
 
-const services: LiveService[] = [
-  { id: 'smart', name: 'Smart', category: 'Network', status: 'no-data', reports: 0 },
-  { id: 'tnt', name: 'TNT', category: 'Network', status: 'no-data', reports: 0 },
-  { id: 'globe', name: 'Globe', category: 'Network', status: 'no-data', reports: 0 },
-  { id: 'tm', name: 'TM', category: 'Network', status: 'no-data', reports: 0 },
-  { id: 'dito', name: 'DITO', category: 'Network', status: 'no-data', reports: 0 },
-  { id: 'gcash', name: 'GCash', category: 'E-Wallet', status: 'no-data', reports: 0 },
-  { id: 'maya', name: 'Maya', category: 'E-Wallet', status: 'no-data', reports: 0 },
-  { id: 'bdo', name: 'BDO', category: 'Bank', status: 'no-data', reports: 0 },
-  { id: 'bpi', name: 'BPI', category: 'Bank', status: 'no-data', reports: 0 },
-  { id: 'landbank', name: 'Landbank', category: 'Bank', status: 'no-data', reports: 0 },
-];
+interface StatusData {
+  lastUpdated: string;
+  services: ServiceStatus[];
+}
 
-const statusConfig = {
-  operational: { icon: '🟢', label: 'Operational', color: 'bg-green-50 border-green-200 text-green-800' },
-  issues: { icon: '🟡', label: 'Possible Issues', color: 'bg-yellow-50 border-yellow-200 text-yellow-800' },
-  major: { icon: '🔴', label: 'Major Reports', color: 'bg-red-50 border-red-200 text-red-800' },
-  'no-data': { icon: '⚪', label: 'No Current Data', color: 'bg-gray-50 border-gray-200 text-gray-600' },
+const statusConfig: { [key: string]: { icon: string; label: string; color: string; bg: string } } = {
+  operational: { icon: '🟢', label: 'Operational', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' },
+  issues: { icon: '🟡', label: 'Possible Issues', color: 'text-yellow-600 dark:text-yellow-400', bg: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800' },
+  major: { icon: '🔴', label: 'Major Issues', color: 'text-red-600 dark:text-red-400', bg: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800' },
+};
+
+const categoryOrder = ['Network', 'E-Wallet', 'Bank', 'Telecom', 'Shopping', 'Services'];
+const categoryEmoji: { [key: string]: string } = {
+  'Network': '📱', 'E-Wallet': '💰', 'Bank': '🏦', 'Telecom': '🌐', 'Shopping': '🛒', 'Services': '🚗',
 };
 
 export default function Live() {
+  const [data, setData] = useState<StatusData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [countdown, setCountdown] = useState(300);
+
+  const fetchStatus = useCallback(async () => {
+    try {
+      const res = await fetch('/data/service-status.json');
+      if (!res.ok) throw new Error('Failed to load');
+      const d: StatusData = await res.json();
+      setData(d);
+      setLastUpdated(new Date(d.lastUpdated));
+      setCountdown(300);
+      setLoading(false);
+      setError('');
+    } catch {
+      setError('Unable to load service status data');
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchStatus();
+  }, [fetchStatus]);
+
+  // Auto-refresh every 5 minutes
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) { fetchStatus(); return 300; }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [fetchStatus]);
+
+  const operational = data?.services.filter(s => s.status === 'operational').length || 0;
+  const issues = data?.services.filter(s => s.status === 'issues').length || 0;
+  const major = data?.services.filter(s => s.status === 'major').length || 0;
+  const categories = data ? categoryOrder.filter(cat => data.services.some(s => s.category === cat)) : [];
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
+      <SEOHead
+        title="LIVE PH — Service Status"
+        description="Real-time status check for GCash, Maya, Smart, Globe, Shopee, BPI, and popular Philippine services."
+        keywords="service status, gcash status, maya status, smart status, globe status, PH service down"
+      />
+
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-text mb-1 flex items-center gap-2">
           <Wifi size={24} className="text-primary" />
           LIVE PH
         </h1>
         <p className="text-sm text-text-secondary">
-          Check the status of networks, e-wallets, banks, and popular services
+          Real-time status of networks, e-wallets, banks, and popular services
         </p>
       </div>
 
-      {/* Notice */}
-      <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6 flex items-start gap-3">
-        <Info size={16} className="text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
-        <div className="text-sm text-blue-800 dark:text-blue-300">
-          <p className="font-medium mb-1">No live source connected yet.</p>
-          <p className="text-xs">Live status data will be available when community reports and API sources are connected. Currently showing placeholder architecture.</p>
+      {/* Live Status Bar */}
+      <div className="flex items-center justify-between px-4 py-2.5 bg-white dark:bg-slate-800 rounded-xl border border-border mb-6">
+        <div className="flex items-center gap-2">
+          <div className={`w-2.5 h-2.5 rounded-full ${data ? 'bg-green-500 animate-pulse' : 'bg-yellow-500 animate-pulse'}`} />
+          <span className="text-xs font-medium text-text-secondary">
+            {data ? 'LIVE' : 'Loading...'}
+          </span>
+          {lastUpdated && (
+            <span className="text-xs text-text-muted">
+              · Updated {lastUpdated.toLocaleTimeString('en-PH', { hour: '2-digit', minute: '2-digit' })}
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-text-muted">
+            Next: {Math.floor(countdown / 60)}:{(countdown % 60).toString().padStart(2, '0')}
+          </span>
+          <button onClick={fetchStatus}
+            className="p-1.5 rounded-lg hover:bg-surface-alt transition-colors"
+            title="Refresh now">
+            <RefreshCw size={14} className={`text-text-muted ${loading ? 'animate-spin' : ''}`} />
+          </button>
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="space-y-4">
-        {['Network', 'E-Wallet', 'Bank'].map((category) => (
-          <div key={category}>
-            <h2 className="text-sm font-semibold text-text mb-3">{category}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {services
-                .filter((s) => s.category === category)
-                .map((service) => {
+      {loading && !data ? (
+        <div className="space-y-4">
+          {[1,2,3].map(i => (
+            <div key={i} className="animate-pulse">
+              <div className="h-4 bg-surface-alt rounded w-24 mb-3" />
+              <div className="grid grid-cols-2 gap-3">
+                {[1,2].map(j => <div key={j} className="h-24 bg-surface-alt rounded-xl" />)}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : error ? (
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6 text-center">
+          <AlertCircle size={32} className="text-red-400 mx-auto mb-3" />
+          <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+          <button onClick={fetchStatus}
+            className="mt-4 px-6 py-2 bg-red-600 text-white rounded-xl text-sm font-medium hover:bg-red-700 transition-colors">
+            Retry
+          </button>
+        </div>
+      ) : data && (
+        <>
+          {/* Summary */}
+          <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-3 text-center">
+              <p className="text-2xl font-bold text-green-600">{operational}</p>
+              <p className="text-xs text-green-600 dark:text-green-400">Operational</p>
+            </div>
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-3 text-center">
+              <p className="text-2xl font-bold text-yellow-600">{issues}</p>
+              <p className="text-xs text-yellow-600 dark:text-yellow-400">Issues</p>
+            </div>
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-3 text-center">
+              <p className="text-2xl font-bold text-red-600">{major}</p>
+              <p className="text-xs text-red-600 dark:text-red-400">Major</p>
+            </div>
+          </div>
+
+          {/* Services by Category */}
+          {categories.map(cat => (
+            <div key={cat} className="mb-6">
+              <h2 className="text-sm font-semibold text-text mb-3 flex items-center gap-2">
+                <span>{categoryEmoji[cat]}</span> {cat}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {data.services.filter(s => s.category === cat).map(service => {
                   const config = statusConfig[service.status];
                   return (
-                    <div
-                      key={service.id}
-                      className={`border rounded-xl p-4 ${config.color}`}
-                    >
+                    <div key={service.id} className={`border rounded-xl p-4 ${config.bg}`}>
                       <div className="flex items-center justify-between">
-                        <span className="font-medium text-sm">{service.name}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium text-sm text-text">{service.name}</span>
+                          {service.url && (
+                            <a href={service.url} target="_blank" rel="noopener noreferrer"
+                              className="text-text-muted hover:text-primary transition-colors">
+                              <ExternalLink size={10} />
+                            </a>
+                          )}
+                        </div>
                         <span className="text-sm">{config.icon}</span>
                       </div>
-                      <p className="text-xs mt-1 opacity-80">{config.label}</p>
-                      <div className="flex items-center gap-1 mt-2 text-xs opacity-60">
-                        <Clock size={10} />
-                        <span>No data source</span>
+                      <p className={`text-xs mt-1 font-medium ${config.color}`}>{config.label}</p>
+                      <div className="flex items-center gap-3 mt-2 text-[10px] text-text-muted">
+                        {service.responseTime != null && (
+                          <span>⚡ {service.responseTime}ms</span>
+                        )}
+                        {service.statusCode != null && (
+                          <span>HTTP {service.statusCode}</span>
+                        )}
                       </div>
                     </div>
                   );
                 })}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
 
-      {/* Community Reports Section */}
+          {/* Data Source */}
+          <div className="text-center text-xs text-text-muted space-y-1 mt-4">
+            <p>📡 Health checks performed server-side · Auto-refreshes every 5 minutes</p>
+            <p>Status based on HTTP response time and availability</p>
+          </div>
+        </>
+      )}
+
+      {/* Community Reports */}
       <div className="mt-8 bg-surface-alt border border-border rounded-xl p-6 text-center">
         <AlertCircle size={32} className="text-text-muted mx-auto mb-3" />
         <h3 className="font-semibold text-sm text-text mb-1">Community Reports</h3>
