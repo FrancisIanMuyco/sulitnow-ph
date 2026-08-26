@@ -88,6 +88,11 @@ export const toolRegistry: Tool[] = [
   { id: 'income-tax-calculator', name: 'Income Tax Calculator (BIR TRAIN)', slug: 'income-tax', description: 'Calculate your income tax under the BIR TRAIN Law (2026)', category: 'money', keywords: ['income', 'tax', 'bir', 'train', 'withholding', 'taxes', 'buwis'], icon: 'FileText', status: 'active', path: '/tools/income-tax', requiresApi: false },
   { id: 'retirement-calculator', name: 'Retirement Calculator', slug: 'retirement-calculator', description: 'Plan when you can retire and how much you need to save', category: 'money', keywords: ['retirement', 'retire', 'pension', 'savings', 'future', 'old age'], icon: 'Sunset', status: 'active', path: '/tools/retirement-calculator', requiresApi: false },
   { id: 'parking-cost-calculator', name: 'Parking Cost Calculator', slug: 'parking-cost', description: 'Compare parking rates across SM, Ayala, Robinsons, airports', category: 'daily', keywords: ['parking', 'cost', 'sm', 'ayala', 'robinsons', 'mall', 'airport', 'parada'], icon: 'ParkingSquare', status: 'active', path: '/tools/parking-cost', requiresApi: false },
+
+  // === REAL-TIME TOOLS ===
+  { id: 'gold-price-calculator', name: 'Gold & Silver Price Calculator', slug: 'gold-price', description: 'Live gold and silver spot prices with weight converter', category: 'money', keywords: ['gold', 'silver', 'price', 'precious', 'metal', 'kalawakan', 'kalbero'], icon: 'CircleDollarSign', status: 'active', path: '/tools/gold-price', requiresApi: false },
+  { id: 'crypto-price-checker', name: 'Crypto Price Checker', slug: 'crypto-prices', description: 'Live cryptocurrency prices in PHP and USD', category: 'money', keywords: ['crypto', 'bitcoin', 'ethereum', 'usdt', 'solana', 'price', 'convert', 'BTC', 'ETH'], icon: 'Coins', status: 'active', path: '/tools/crypto-prices', requiresApi: false },
+  { id: 'earthquake-monitor', name: 'Earthquake Monitor (PH)', slug: 'earthquake-monitor', description: 'Live earthquake data for the Philippines from USGS', category: 'safety', keywords: ['earthquake', 'lindol', 'quake', 'seismic', 'phivolcs', 'usgs', 'alert'], icon: 'Activity', status: 'active', path: '/tools/earthquake-monitor', requiresApi: false },
 ];
 
 export const categories = [

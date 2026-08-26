@@ -1,0 +1,258 @@
+{
+  "scraped_at": "2026-08-26T01:30:36.200703Z",
+  "crypto": {
+    "bitcoin": {
+      "php": 4846986,
+      "php_market_cap": 97336079117365.14,
+      "php_24h_vol": 2551864402212.283,
+      "php_24h_change": -1.6383124953361607,
+      "usd": 78707,
+      "usd_market_cap": 1580567350037.594,
+      "usd_24h_vol": 41437805923.91217,
+      "usd_24h_change": -1.40911601137376
+    },
+    "ethereum": {
+      "php": 151034,
+      "php_market_cap": 18229963055895.273,
+      "php_24h_vol": 910996168246.0363,
+      "php_24h_change": -2.071148561757328,
+      "usd": 2452.52,
+      "usd_market_cap": 296022653262.9991,
+      "usd_24h_vol": 14792981313.772247,
+      "usd_24h_change": -1.8429606463450683
+    },
+    "tether": {
+      "php": 61.58,
+      "php_market_cap": 11282901141054.152,
+      "php_24h_vol": 4161027082769.954,
+      "php_24h_change": -0.22953521481768338,
+      "usd": 0.999907,
+      "usd_market_cap": 183214542017.34494,
+      "usd_24h_vol": 67567787908.51297,
+      "usd_24h_change": 0.0029439171713426604
+    },
+    "solana": {
+      "php": 5959.65,
+      "php_market_cap": 3477846111601.1216,
+      "php_24h_vol": 306079192864.99963,
+      "php_24h_change": -5.446530244967008,
+      "usd": 96.77,
+      "usd_market_cap": 56474126164.70652,
+      "usd_24h_vol": 4970189709.254171,
+      "usd_24h_change": -5.226207440793148
+    },
+    "binancecoin": {
+      "php": 42765,
+      "php_market_cap": 5695780430012.391,
+      "php_24h_vol": 62972850235.92479,
+      "php_24h_change": -2.42000611519942,
+      "usd": 694.43,
+      "usd_market_cap": 92489492717.34717,
+      "usd_24h_vol": 1022568732.2138381,
+      "usd_24h_change": -2.192631086660902
+    },
+    "ripple": {
+      "php": 88.39,
+      "php_market_cap": 5548197014728.189,
+      "php_24h_vol": 245846311876.3354,
+      "php_24h_change": -5.06530260451502,
+      "usd": 1.44,
+      "usd_market_cap": 90092996682.98376,
+      "usd_24h_vol": 3992113276.0069404,
+      "usd_24h_change": -4.844091486638972
+    },
+    "dogecoin": {
+      "php": 5.31,
+      "php_market_cap": 826479152559.0667,
+      "php_24h_vol": 52781362127.13868,
+      "php_24h_change": -5.798430109343705,
+      "usd": 0.086221,
+      "usd_market_cap": 13420573089.311443,
+      "usd_24h_vol": 857076825.2137551,
+      "usd_24h_change": -5.578927281053433
+    },
+    "cardano": {
+      "php": 12.94,
+      "php_market_cap": 485042511175.36304,
+      "php_24h_vol": 30088115365.63256,
+      "php_24h_change": -6.8092215452225195,
+      "usd": 0.210075,
+      "usd_market_cap": 7876240377.626343,
+      "usd_24h_vol": 488578266.1713876,
+      "usd_24h_change": -6.5920740022979265
+    },
+    "tron": {
+      "php": 20.67,
+      "php_market_cap": 1962223248604.1716,
+      "php_24h_vol": 33039469183.536324,
+      "php_24h_change": -3.148991659040037,
+      "usd": 0.335665,
+      "usd_market_cap": 31863066895.152424,
+      "usd_24h_vol": 536503080.12822247,
+      "usd_24h_change": -2.9233152687390986
+    },
+    "litecoin": {
+      "php": 3085.86,
+      "php_market_cap": 239370343906.91507,
+      "php_24h_vol": 19351120823.5198,
+      "php_24h_change": -4.251979768871124,
+      "usd": 50.11,
+      "usd_market_cap": 3886954904.8749666,
+      "usd_24h_vol": 314228290.6568338,
+      "usd_24h_change": -4.028873495076301
+    }
+  },
+  "gold": {
+    "price_usd": 4644.700195,
+    "symbol": "XAU",
+    "name": "Gold",
+    "updated": "2026-08-26T01:30:31Z"
+  },
+  "silver": {
+    "price_usd": 68.686996,
+    "symbol": "XAG",
+    "name": "Silver"
+  },
+  "exchange": {
+    "usd_php": 61.684951,
+    "eur_php": 71.9855,
+    "gbp_php": 84.1471,
+    "jpy_php": 0.3874,
+    "cny_php": 9.1561,
+    "updated": "Wed, 26 Aug 2026 00:02:31 +0000"
+  },
+  "earthquakes": [
+    {
+      "magnitude": 4.2,
+      "place": "192 km SSE of Sarangani, Philippines",
+      "time": 1787685371963,
+      "depth": 386.382,
+      "lat": 3.693,
+      "lng": 125.8069,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbtj",
+      "tsunami": 0,
+      "felt": null,
+      "alert": null
+    },
+    {
+      "magnitude": 4.7,
+      "place": "61 km ENE of Aras-asan, Philippines",
+      "time": 1787623144254,
+      "depth": 13.458,
+      "lat": 9.0329,
+      "lng": 126.8546,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tnai",
+      "tsunami": 0,
+      "felt": null,
+      "alert": null
+    },
+    {
+      "magnitude": 4.8,
+      "place": "27 km WSW of Sarangani, Philippines",
+      "time": 1787543973162,
+      "depth": 68.263,
+      "lat": 5.3312,
+      "lng": 125.2291,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn25",
+      "tsunami": 0,
+      "felt": null,
+      "alert": null
+    },
+    {
+      "magnitude": 4.7,
+      "place": "61 km ESE of Mangili, Philippines",
+      "time": 1787511458731,
+      "depth": 9.989,
+      "lat": 5.7891,
+      "lng": 126.1936,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tn0a",
+      "tsunami": 0,
+      "felt": null,
+      "alert": null
+    },
+    {
+      "magnitude": 5,
+      "place": "45 km SE of Lukatan, Philippines",
+      "time": 1787381019032,
+      "depth": 107.802,
+      "lat": 6.7397,
+      "lng": 126.7362,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmrf",
+      "tsunami": 0,
+      "felt": 2,
+      "alert": null
+    },
+    {
+      "magnitude": 5,
+      "place": "6 km S of Kitcharao, Philippines",
+      "time": 1787373848744,
+      "depth": 10,
+      "lat": 9.3981,
+      "lng": 125.5805,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmr2",
+      "tsunami": 0,
+      "felt": 2,
+      "alert": null
+    },
+    {
+      "magnitude": 5.1,
+      "place": "1 km N of Alegria, Philippines",
+      "time": 1787304156390,
+      "depth": 10,
+      "lat": 9.4833,
+      "lng": 125.5784,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmes",
+      "tsunami": 0,
+      "felt": 1,
+      "alert": null
+    },
+    {
+      "magnitude": 5.2,
+      "place": "19 km W of Jabonga, Philippines",
+      "time": 1787303540890,
+      "depth": 10,
+      "lat": 9.3382,
+      "lng": 125.342,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmer",
+      "tsunami": 0,
+      "felt": 5,
+      "alert": null
+    },
+    {
+      "magnitude": 4.8,
+      "place": "74 km SE of Pondaguitan, Philippines",
+      "time": 1787159974166,
+      "depth": 10,
+      "lat": 5.8923,
+      "lng": 126.6639,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlyi",
+      "tsunami": 0,
+      "felt": null,
+      "alert": null
+    },
+    {
+      "magnitude": 4.8,
+      "place": "18 km SSW of Balangonan, Philippines",
+      "time": 1787137297358,
+      "depth": 84.483,
+      "lat": 5.4275,
+      "lng": 125.2714,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlun",
+      "tsunami": 0,
+      "felt": 4,
+      "alert": null
+    },
+    {
+      "magnitude": 4.8,
+      "place": "62 km NNE of Namuac, Philippines",
+      "time": 1787113374144,
+      "depth": 10,
+      "lat": 19.1513,
+      "lng": 121.324,
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tlta",
+      "tsunami": 0,
+      "felt": null,
+      "alert": null
+    }
+  ]
+}

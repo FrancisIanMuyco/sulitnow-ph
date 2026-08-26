@@ -88,6 +88,9 @@ const PasswordStrengthChecker = lazy(() => import('./tools/safety/password-stren
 const IncomeTaxCalculator = lazy(() => import('./tools/money/income-tax/IncomeTaxCalculator'));
 const RetirementCalculator = lazy(() => import('./tools/money/retirement/RetirementCalculator'));
 const ParkingCostCalculator = lazy(() => import('./tools/daily/parking/ParkingCostCalculator'));
+const GoldPriceCalculator = lazy(() => import('./tools/money/gold-price/GoldPriceCalculator'));
+const CryptoPriceChecker = lazy(() => import('./tools/money/crypto/CryptoPriceChecker'));
+const EarthquakeMonitor = lazy(() => import('./tools/safety/earthquake/EarthquakeMonitor'));
 
 function Loading() {
   return (
@@ -214,6 +217,11 @@ export default function App() {
             <Route path="tools/income-tax" element={<Suspense fallback={<ToolLoading />}><IncomeTaxCalculator /></Suspense>} />
             <Route path="tools/retirement-calculator" element={<Suspense fallback={<ToolLoading />}><RetirementCalculator /></Suspense>} />
             <Route path="tools/parking-cost" element={<Suspense fallback={<ToolLoading />}><ParkingCostCalculator /></Suspense>} />
+
+            {/* Real-time Tools */}
+            <Route path="tools/gold-price" element={<Suspense fallback={<ToolLoading />}><GoldPriceCalculator /></Suspense>} />
+            <Route path="tools/crypto-prices" element={<Suspense fallback={<ToolLoading />}><CryptoPriceChecker /></Suspense>} />
+            <Route path="tools/earthquake-monitor" element={<Suspense fallback={<ToolLoading />}><EarthquakeMonitor /></Suspense>} />
 
             {/* Raket */}
             <Route path="tools/raketcheck" element={<Suspense fallback={<ToolLoading />}><RaketCheck /></Suspense>} />
