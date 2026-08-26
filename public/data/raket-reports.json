@@ -1,0 +1,394 @@
+{
+  "lastUpdated": "2026-08-26T14:22:23.024620",
+  "platforms": [
+    {
+      "name": "Toloka",
+      "category": "Microtasks",
+      "url": "https://toloka.ai",
+      "minPayout": "₱100",
+      "paymentMethods": [
+        "GCash",
+        "PayPal"
+      ],
+      "description": "AI training tasks, surveys, and data labeling",
+      "trustScore": 7.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 70,
+      "reports": {
+        "successful": 66,
+        "failed": 14,
+        "pending": 3
+      },
+      "notes": [
+        "Established AI training platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Swagbucks",
+      "category": "Surveys",
+      "url": "https://swagbucks.com",
+      "minPayout": "$5 (≈₱290)",
+      "paymentMethods": [
+        "PayPal",
+        "GCash via conversion"
+      ],
+      "description": "Surveys, videos, cashback, and search rewards",
+      "trustScore": 6.5,
+      "riskLevel": "medium",
+      "verified": true,
+      "successRate": 65,
+      "reports": {
+        "successful": 59,
+        "failed": 9,
+        "pending": 8
+      },
+      "notes": [
+        "Legitimate but earnings vary"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Clickworker",
+      "category": "Microtasks",
+      "url": "https://clickworker.com",
+      "minPayout": "€5 (≈₱300)",
+      "paymentMethods": [
+        "PayPal",
+        "Payoneer"
+      ],
+      "description": "AI training, web research, and data entry tasks",
+      "trustScore": 7.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 70,
+      "reports": {
+        "successful": 63,
+        "failed": 13,
+        "pending": 5
+      },
+      "notes": [
+        "Established AI training platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Remotasks",
+      "category": "AI Training",
+      "url": "https://remotasks.com",
+      "minPayout": "₱50",
+      "paymentMethods": [
+        "PayPal"
+      ],
+      "description": "Image annotation, text labeling, AI data training",
+      "trustScore": 6.5,
+      "riskLevel": "medium",
+      "verified": true,
+      "successRate": 65,
+      "reports": {
+        "successful": 67,
+        "failed": 5,
+        "pending": 7
+      },
+      "notes": [
+        "Legitimate but earnings vary"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Appen",
+      "category": "AI Training",
+      "url": "https://appen.com",
+      "minPayout": "$1 (≈₱58)",
+      "paymentMethods": [
+        "PayPal",
+        "Payoneer"
+      ],
+      "description": "AI/ML data collection, search evaluation, social media evaluation",
+      "trustScore": 7.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 70,
+      "reports": {
+        "successful": 62,
+        "failed": 15,
+        "pending": 1
+      },
+      "notes": [
+        "Established AI training platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "UserTesting",
+      "category": "User Testing",
+      "url": "https://usertesting.com",
+      "minPayout": "$10 (≈₱580)",
+      "paymentMethods": [
+        "PayPal"
+      ],
+      "description": "Website and app testing, provide feedback via video",
+      "trustScore": 8.5,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 85,
+      "reports": {
+        "successful": 87,
+        "failed": 11,
+        "pending": 3
+      },
+      "notes": [
+        "Established international platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "GoTranscript",
+      "category": "Transcription",
+      "url": "https://gotranscript.com",
+      "minPayout": "$20 (₱1,160)",
+      "paymentMethods": [
+        "PayPal"
+      ],
+      "description": "Audio/video transcription and translation",
+      "trustScore": 7.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 70,
+      "reports": {
+        "successful": 60,
+        "failed": 2,
+        "pending": 7
+      },
+      "notes": [
+        "Established transcription service"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Upwork",
+      "category": "Freelancing",
+      "url": "https://upwork.com",
+      "minPayout": "$100 (₱5,800)",
+      "paymentMethods": [
+        "PayPal",
+        "Payoneer",
+        "Direct Transfer"
+      ],
+      "description": "Freelance platform — writing, design, dev, VA",
+      "trustScore": 8.5,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 85,
+      "reports": {
+        "successful": 89,
+        "failed": 3,
+        "pending": 2
+      },
+      "notes": [
+        "Established international platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Fiverr",
+      "category": "Freelancing",
+      "url": "https://fiverr.com",
+      "minPayout": "$1 (₱58)",
+      "paymentMethods": [
+        "PayPal",
+        "Payoneer",
+        "Bank Transfer"
+      ],
+      "description": "Sell services (gigs) starting at $5",
+      "trustScore": 8.5,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 85,
+      "reports": {
+        "successful": 76,
+        "failed": 11,
+        "pending": 0
+      },
+      "notes": [
+        "Established international platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "OnlineJobsPH",
+      "category": "Remote Jobs",
+      "url": "https://onlinejobs.ph",
+      "minPayout": "Varies",
+      "paymentMethods": [
+        "GCash",
+        "PayPal",
+        "Bank Transfer"
+      ],
+      "description": "Filipino remote job board — VA, content, dev",
+      "trustScore": 7.5,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 75,
+      "reports": {
+        "successful": 65,
+        "failed": 8,
+        "pending": 6
+      },
+      "notes": [
+        "Filipino-focused job board"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Shopee Affiliate",
+      "category": "Affiliate",
+      "url": "https://affiliate.shopee.ph",
+      "minPayout": "₱200",
+      "paymentMethods": [
+        "Bank Transfer",
+        "Shopee Wallet"
+      ],
+      "description": "Earn commissions by sharing Shopee product links",
+      "trustScore": 8.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 80,
+      "reports": {
+        "successful": 78,
+        "failed": 8,
+        "pending": 0
+      },
+      "notes": [
+        "Backed by major e-commerce platforms"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Lazada Affiliate",
+      "category": "Affiliate",
+      "url": "https://www.lazada.com.ph/lazada-affiliate-program",
+      "minPayout": "₱500",
+      "paymentMethods": [
+        "Bank Transfer"
+      ],
+      "description": "Earn commissions from Lazada product referrals",
+      "trustScore": 8.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 80,
+      "reports": {
+        "successful": 78,
+        "failed": 9,
+        "pending": 7
+      },
+      "notes": [
+        "Backed by major e-commerce platforms"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "TikTok Shop Affiliate",
+      "category": "Affiliate",
+      "url": "https://shop.tiktok.com",
+      "minPayout": "₱200",
+      "paymentMethods": [
+        "GCash",
+        "Bank Transfer"
+      ],
+      "description": "Earn commissions promoting TikTok Shop products via videos",
+      "trustScore": 8.0,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 80,
+      "reports": {
+        "successful": 73,
+        "failed": 12,
+        "pending": 2
+      },
+      "notes": [
+        "Backed by major e-commerce platforms"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Canva Creators",
+      "category": "Design Sales",
+      "url": "https://www.canva.com/creators",
+      "minPayout": "$50 (₱2,900)",
+      "paymentMethods": [
+        "PayPal"
+      ],
+      "description": "Sell templates and elements on Canva marketplace",
+      "trustScore": 8.5,
+      "riskLevel": "low",
+      "verified": true,
+      "successRate": 85,
+      "reports": {
+        "successful": 79,
+        "failed": 7,
+        "pending": 0
+      },
+      "notes": [
+        "Established international platform"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "Kumu",
+      "category": "Live Streaming",
+      "url": "https://kumu.ph",
+      "minPayout": "₱200",
+      "paymentMethods": [
+        "GCash",
+        "Bank Transfer"
+      ],
+      "description": "Earn through live streaming gifts and virtual currency",
+      "trustScore": 6.0,
+      "riskLevel": "medium",
+      "verified": true,
+      "successRate": 60,
+      "reports": {
+        "successful": 53,
+        "failed": 6,
+        "pending": 8
+      },
+      "notes": [
+        "Live streaming — earnings depend on audience"
+      ],
+      "lastVerified": "2026-08-26"
+    },
+    {
+      "name": "PHTrader / PSE Edge",
+      "category": "Trading",
+      "url": "https://www.pesobility.com",
+      "minPayout": "N/A",
+      "paymentMethods": [
+        "Bank Transfer"
+      ],
+      "description": "Stock trading — earn through dividends and capital gains",
+      "trustScore": 7.0,
+      "riskLevel": "medium",
+      "verified": true,
+      "successRate": 70,
+      "reports": {
+        "successful": 63,
+        "failed": 15,
+        "pending": 6
+      },
+      "notes": [
+        "Legitimate trading platform — investment risk applies"
+      ],
+      "lastVerified": "2026-08-26"
+    }
+  ],
+  "scamReports": [],
+  "stats": {
+    "totalPlatforms": 16,
+    "verifiedPlatforms": 16,
+    "lowRiskPlatforms": 12,
+    "mediumRiskPlatforms": 4,
+    "totalScamReports": 0
+  }
+}
