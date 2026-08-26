@@ -1,5 +1,5 @@
 import { Component, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface State {
   error: Error | null;
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundaryInner extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false, error: null };
@@ -58,4 +58,9 @@ export default class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
+export default function ErrorBoundary({ children }: Props) {
+  const location = useLocation();
+  return <ErrorBoundaryInner key={location.pathname}>{children}</ErrorBoundaryInner>;
 }
