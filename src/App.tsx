@@ -77,6 +77,18 @@ const RoomAreaCalculator = lazy(() => import('./tools/daily/room-area/RoomAreaCa
 const FreightCalculator = lazy(() => import('./tools/shopping/freight/FreightCalculator'));
 const BodyFatCalculator = lazy(() => import('./tools/daily/body-fat/BodyFatCalculator'));
 
+// New tools batch 3
+const WaterBillCalculator = lazy(() => import('./tools/daily/water-bill/WaterBillCalculator'));
+const IdealWeightCalculator = lazy(() => import('./tools/daily/ideal-weight/IdealWeightCalculator'));
+const CalorieCalculator = lazy(() => import('./tools/daily/calorie/CalorieCalculator'));
+const TravelBudgetPlanner = lazy(() => import('./tools/daily/travel-budget/TravelBudgetPlanner'));
+const VehicleTripCostCalculator = lazy(() => import('./tools/daily/trip-cost/VehicleTripCostCalculator'));
+const TimeZoneConverter = lazy(() => import('./tools/daily/timezone/TimeZoneConverter'));
+const PasswordStrengthChecker = lazy(() => import('./tools/safety/password-strength/PasswordStrengthChecker'));
+const IncomeTaxCalculator = lazy(() => import('./tools/money/income-tax/IncomeTaxCalculator'));
+const RetirementCalculator = lazy(() => import('./tools/money/retirement/RetirementCalculator'));
+const ParkingCostCalculator = lazy(() => import('./tools/daily/parking/ParkingCostCalculator'));
+
 function Loading() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
@@ -190,6 +202,18 @@ export default function App() {
             <Route path="tools/room-area" element={<Suspense fallback={<ToolLoading />}><RoomAreaCalculator /></Suspense>} />
             <Route path="tools/freight-calculator" element={<Suspense fallback={<ToolLoading />}><FreightCalculator /></Suspense>} />
             <Route path="tools/body-fat" element={<Suspense fallback={<ToolLoading />}><BodyFatCalculator /></Suspense>} />
+
+            {/* Batch 3 Tools */}
+            <Route path="tools/water-bill" element={<Suspense fallback={<ToolLoading />}><WaterBillCalculator /></Suspense>} />
+            <Route path="tools/ideal-weight" element={<Suspense fallback={<ToolLoading />}><IdealWeightCalculator /></Suspense>} />
+            <Route path="tools/calorie-calculator" element={<Suspense fallback={<ToolLoading />}><CalorieCalculator /></Suspense>} />
+            <Route path="tools/travel-budget" element={<Suspense fallback={<ToolLoading />}><TravelBudgetPlanner /></Suspense>} />
+            <Route path="tools/vehicle-trip-cost" element={<Suspense fallback={<ToolLoading />}><VehicleTripCostCalculator /></Suspense>} />
+            <Route path="tools/time-zone-converter" element={<Suspense fallback={<ToolLoading />}><TimeZoneConverter /></Suspense>} />
+            <Route path="tools/password-strength" element={<Suspense fallback={<ToolLoading />}><PasswordStrengthChecker /></Suspense>} />
+            <Route path="tools/income-tax" element={<Suspense fallback={<ToolLoading />}><IncomeTaxCalculator /></Suspense>} />
+            <Route path="tools/retirement-calculator" element={<Suspense fallback={<ToolLoading />}><RetirementCalculator /></Suspense>} />
+            <Route path="tools/parking-cost" element={<Suspense fallback={<ToolLoading />}><ParkingCostCalculator /></Suspense>} />
 
             {/* Raket */}
             <Route path="tools/raketcheck" element={<Suspense fallback={<ToolLoading />}><RaketCheck /></Suspense>} />
