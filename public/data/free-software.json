@@ -1,0 +1,351 @@
+{
+  "lastUpdated": "2026-08-27",
+  "categories": [
+    {
+      "name": "Office & Productivity",
+      "icon": "📄",
+      "software": [
+        {
+          "paid": {"name": "Microsoft Office", "price": "₱2,499/year (Personal)", "icon": "💼"},
+          "freeAlternatives": [
+            {"name": "LibreOffice", "url": "https://libreoffice.org", "description": "Full office suite — Writer, Calc, Impress. Compatible with MS Office files.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.5},
+            {"name": "Google Workspace", "url": "https://workspace.google.com", "description": "Docs, Sheets, Slides — free with Gmail. Real-time collaboration.", "platforms": ["Web", "Android", "iOS"], "rating": 4.8},
+            {"name": "OnlyOffice", "url": "https://www.onlyoffice.com", "description": "Beautiful office suite with MS Office compatibility.", "platforms": ["Windows", "Mac", "Linux", "Web"], "rating": 4.3},
+            {"name": "WPS Office Free", "url": "https://www.wps.com", "description": "Lightweight office suite with familiar ribbon UI. MS Office look and feel.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS"], "rating": 4.2}
+          ]
+        },
+        {
+          "paid": {"name": "Microsoft OneNote", "price": "Free (Microsoft 365 for advanced features)", "icon": "📝"},
+          "freeAlternatives": [
+            {"name": "Google Keep", "url": "https://keep.google.com", "description": "Simple note-taking app with labels, reminders, and color coding.", "platforms": ["Web", "Android", "iOS"], "rating": 4.5},
+            {"name": "Notion", "url": "https://www.notion.so", "description": "All-in-one workspace — notes, docs, databases, project management. Free for students.", "platforms": ["Web", "Windows", "Mac", "Android", "iOS"], "rating": 4.7},
+            {"name": "Joplin", "url": "https://joplinapp.org", "description": "Open-source note-taking with end-to-end encryption and sync via cloud services.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.3}
+          ]
+        },
+        {
+          "paid": {"name": "Notion (Paid Plans)", "price": "₱580/month (Plus plan)", "icon": "📋"},
+          "freeAlternatives": [
+            {"name": "AppFlowy", "url": "https://appflowy.io", "description": "Open-source Notion alternative. Privacy-first, customizable, and fast.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "AnyType", "url": "https://anytype.io", "description": "Local-first workspace with knowledge graph. No vendor lock-in.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS"], "rating": 4.4},
+            {"name": "SiYuan", "url": "https://b3log.org/siyuan/", "description": "Local-first personal knowledge management with block-level references.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.1}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Design & Creative",
+      "icon": "🎨",
+      "software": [
+        {
+          "paid": {"name": "Adobe Photoshop", "price": "₱1,288/month (Photography Plan)", "icon": "🖼️"},
+          "freeAlternatives": [
+            {"name": "GIMP", "url": "https://www.gimp.org", "description": "Powerful open-source image editor. Supports layers, masks, filters, and plugins.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.4},
+            {"name": "Photopea", "url": "https://www.photopea.com", "description": "Photoshop-like editor that runs in the browser. Supports PSD files natively.", "platforms": ["Web"], "rating": 4.6},
+            {"name": "Paint.NET", "url": "https://www.getpaint.net", "description": "Simple yet powerful image editor for Windows. Great for quick edits.", "platforms": ["Windows"], "rating": 4.3},
+            {"name": "Krita", "url": "https://krita.org", "description": "Professional digital painting tool. Perfect for illustrations and concept art.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.5}
+          ]
+        },
+        {
+          "paid": {"name": "Adobe Illustrator", "price": "₱1,288/month (single app)", "icon": "✏️"},
+          "freeAlternatives": [
+            {"name": "Inkscape", "url": "https://inkscape.org", "description": "Professional vector graphics editor. Supports SVG, AI, EPS, and PDF import.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "Boxy SVG", "url": "https://boxy-svg.com", "description": "Clean, intuitive SVG editor. Great for web graphics and icons.", "platforms": ["Windows", "Mac", "Linux", "Web", "ChromeOS"], "rating": 4.1}
+          ]
+        },
+        {
+          "paid": {"name": "Adobe Premiere Pro", "price": "₱1,288/month (single app)", "icon": "🎬"},
+          "freeAlternatives": [
+            {"name": "DaVinci Resolve", "url": "https://www.blackmagicdesign.com/products/davinciresolve", "description": "Industry-grade video editor with free version. Color grading, editing, VFX, and audio.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.8},
+            {"name": "Shotcut", "url": "https://shotcut.org", "description": "Free, open-source video editor. Supports 4K, wide format support, and filters.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "OpenShot", "url": "https://www.openshot.org", "description": "Easy-to-use video editor. Drag-and-drop interface, great for beginners.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.0},
+            {"name": "Kdenlive", "url": "https://kdenlive.org", "description": "Feature-rich KDE video editor. Multi-track editing with many effects.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2}
+          ]
+        },
+        {
+          "paid": {"name": "Adobe After Effects", "price": "₱1,288/month (single app)", "icon": "✨"},
+          "freeAlternatives": [
+            {"name": "Natron", "url": "https://natrongithub.github.io", "description": "Node-based compositing software. Open-source alternative for VFX and motion graphics.", "platforms": ["Windows", "Mac", "Linux"], "rating": 3.9},
+            {"name": "Blender", "url": "https://www.blender.org", "description": "3D creation suite with powerful motion graphics and video editing capabilities.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.7}
+          ]
+        },
+        {
+          "paid": {"name": "Adobe Lightroom", "price": "₱589/month (Photography Plan)", "icon": "📷"},
+          "freeAlternatives": [
+            {"name": "Darktable", "url": "https://www.darktable.org", "description": "Virtual light-table and darkroom for photographers. RAW processing and non-destructive editing.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "RawTherapee", "url": "https://rawtherapee.com", "description": "Advanced RAW photo processing. Extensive color management and editing tools.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "Snapseed", "url": "https://snapseed.online", "description": "Professional photo editing app by Google. Intuitive touch-based controls.", "platforms": ["Android", "iOS"], "rating": 4.5}
+          ]
+        },
+        {
+          "paid": {"name": "Adobe XD", "price": "₱888/month (single app)", "icon": "🔲"},
+          "freeAlternatives": [
+            {"name": "Figma (Free Tier)", "url": "https://www.figma.com", "description": "Industry-leading collaborative design tool. Free for up to 3 projects.", "platforms": ["Windows", "Mac", "Linux", "Web"], "rating": 4.8},
+            {"name": "Penpot", "url": "https://penpot.app", "description": "Open-source design and prototyping tool. No vendor lock-in, works in browser.", "platforms": ["Web"], "rating": 4.3},
+            {"name": "Quant-UX", "url": "https://www.quant-ux.com", "description": "Open-source prototyping and user testing tool. Built-in analytics.", "platforms": ["Web"], "rating": 4.1}
+          ]
+        },
+        {
+          "paid": {"name": "Canva Pro", "price": "₱3,500/year or ₱399/month", "icon": "🎨"},
+          "freeAlternatives": [
+            {"name": "Canva Free", "url": "https://www.canva.com", "description": "Free tier with thousands of templates, photos, and design elements.", "platforms": ["Web", "Android", "iOS"], "rating": 4.5},
+            {"name": "Crello (VistaCreate)", "url": "https://create.vistacreate.com", "description": "Visual content creation tool with templates for social media, ads, and more.", "platforms": ["Web", "Android", "iOS"], "rating": 4.2},
+            {"name": "VistaCreate", "url": "https://create.vistacreate.com", "description": "Free graphic design platform with animation and video templates.", "platforms": ["Web", "Android", "iOS"], "rating": 4.2}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Development & Programming",
+      "icon": "💻",
+      "software": [
+        {
+          "paid": {"name": "JetBrains IDEs", "price": "₱12,500/year (All Products Pack)", "icon": "🔧"},
+          "freeAlternatives": [
+            {"name": "VS Code", "url": "https://code.visualstudio.com", "description": "Lightweight yet powerful code editor. Massive extension ecosystem.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.8},
+            {"name": "Eclipse", "url": "https://www.eclipse.org", "description": "Mature open-source IDE. Excellent for Java, C/C++, and web development.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.0},
+            {"name": "NetBeans", "url": "https://netbeans.apache.org", "description": "Apache IDE for Java, PHP, C++, and more. Smart code editing and debugging.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.1},
+            {"name": "Code::Blocks", "url": "https://www.codeblocks.org", "description": "Free C/C++ and Fortran IDE. Lightweight and extensible.", "platforms": ["Windows", "Mac", "Linux"], "rating": 3.9}
+          ]
+        },
+        {
+          "paid": {"name": "Sublime Text", "price": "$99 (one-time license)", "icon": "📝"},
+          "freeAlternatives": [
+            {"name": "VS Code", "url": "https://code.visualstudio.com", "description": "Feature-rich code editor with IntelliSense, debugging, and Git integration.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.8},
+            {"name": "Atom", "url": "https://github.com/atom/atom", "description": "Hackable text editor by GitHub. Customizable with themes and packages.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "Notepad++", "url": "https://notepad-plus-plus.org", "description": "Fast, lightweight text editor for Windows. Great for quick edits and coding.", "platforms": ["Windows"], "rating": 4.5},
+            {"name": "Brackets", "url": "https://brackets.io", "description": "Modern, hackable text editor designed for web development. Live preview.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.0}
+          ]
+        },
+        {
+          "paid": {"name": "GitHub Copilot", "price": "₱700/month (Individual)", "icon": "🤖"},
+          "freeAlternatives": [
+            {"name": "Codeium", "url": "https://codeium.com", "description": "Free AI-powered code completion. Supports 70+ languages and all major IDEs.", "platforms": ["Windows", "Mac", "Linux", "Web"], "rating": 4.5},
+            {"name": "Tabnine Free", "url": "https://www.tabnine.com", "description": "AI code assistant with free tier. Smart completions based on your coding patterns.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "Continue.dev", "url": "https://continue.dev", "description": "Open-source AI code assistant. Connects to local or cloud LLMs for completions.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.4}
+          ]
+        },
+        {
+          "paid": {"name": "Postman", "price": "Free tier limited (paid from $14/month)", "icon": "📡"},
+          "freeAlternatives": [
+            {"name": "Insomnia", "url": "https://insomnia.rest", "description": "Beautiful API client. Supports REST, GraphQL, and gRPC.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.4},
+            {"name": "Thunder Client", "url": "https://www.thunderclient.com", "description": "Lightweight REST API client extension for VS Code.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "Bruno", "url": "https://www.usebruno.com", "description": "Open-source API client. Stores collections as plain text files in your repo.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.5}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Video & Audio",
+      "icon": "🎥",
+      "software": [
+        {
+          "paid": {"name": "Adobe Audition", "price": "₱1,288/month (single app)", "icon": "🎙️"},
+          "freeAlternatives": [
+            {"name": "Audacity", "url": "https://www.audacityteam.org", "description": "Free, open-source audio editor. Record, edit, mix, and export in many formats.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.5},
+            {"name": "Ocenaudio", "url": "https://www.ocenaudio.com", "description": "Easy-to-use audio editor with real-time preview. Great for beginners.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "Ardour", "url": "https://ardour.org", "description": "Full-featured DAW for recording, editing, mixing, and mastering audio.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3}
+          ]
+        },
+        {
+          "paid": {"name": "Final Cut Pro", "price": "₱15,990 (one-time)", "icon": "🎞️"},
+          "freeAlternatives": [
+            {"name": "DaVinci Resolve", "url": "https://www.blackmagicdesign.com/products/davinciresolve", "description": "Professional video editor used in Hollywood. Free version is incredibly powerful.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.8}
+          ]
+        },
+        {
+          "paid": {"name": "Camtasia", "price": "₱16,000 (one-time)", "icon": "🖥️"},
+          "freeAlternatives": [
+            {"name": "OBS Studio", "url": "https://obsproject.com", "description": "Free, open-source screen recording and streaming. Highly customizable.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.7},
+            {"name": "ShareX", "url": "https://getsharex.com", "description": "Free screen capture and recording tool. Supports GIF, video, and scrolling capture.", "platforms": ["Windows"], "rating": 4.5},
+            {"name": "Kap", "url": "https://getkap.co", "description": "Beautiful, simple screen recorder for Mac. Export as GIF, MP4, or WebM.", "platforms": ["Mac"], "rating": 4.3}
+          ]
+        },
+        {
+          "paid": {"name": "Zoom Pro", "price": "₱750/month (Pro plan)", "icon": "📹"},
+          "freeAlternatives": [
+            {"name": "Zoom Free", "url": "https://zoom.us", "description": "Free plan includes 40-min group meetings and unlimited 1-on-1 calls.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.3},
+            {"name": "Google Meet", "url": "https://meet.google.com", "description": "Free video meetings for Google account holders. Up to 100 participants.", "platforms": ["Web", "Android", "iOS"], "rating": 4.4},
+            {"name": "Jitsi Meet", "url": "https://jitsi.org", "description": "Fully free, open-source video conferencing. No account required, no time limits.", "platforms": ["Web", "Android", "iOS"], "rating": 4.2},
+            {"name": "Discord", "url": "https://discord.com", "description": "Free voice, video, and text chat. Screen sharing, streaming, and community features.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.6}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Communication & Collaboration",
+      "icon": "💬",
+      "software": [
+        {
+          "paid": {"name": "Slack (Paid Plans)", "price": "₱800/user/month (Pro plan)", "icon": "💬"},
+          "freeAlternatives": [
+            {"name": "Discord", "url": "https://discord.com", "description": "Free chat and voice platform. Unlimited messages, voice channels, and screen sharing.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.6},
+            {"name": "Mattermost", "url": "https://mattermost.com", "description": "Open-source messaging platform. Self-hosted alternative to Slack.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.2},
+            {"name": "Rocket.Chat", "url": "https://rocket.chat", "description": "Open-source team communication. Channels, direct messages, and integrations.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.1}
+          ]
+        },
+        {
+          "paid": {"name": "Microsoft Teams (Paid)", "price": "₱350/user/month (Essentials)", "icon": "👥"},
+          "freeAlternatives": [
+            {"name": "Google Meet", "url": "https://meet.google.com", "description": "Free video meetings with screen sharing and recording. Simple and reliable.", "platforms": ["Web", "Android", "iOS"], "rating": 4.4},
+            {"name": "Zoom Free", "url": "https://zoom.us", "description": "Free video conferencing with breakout rooms and whiteboard.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.3},
+            {"name": "Jitsi Meet", "url": "https://jitsi.org", "description": "Completely free, no sign-up needed. End-to-end encryption available.", "platforms": ["Web", "Android", "iOS"], "rating": 4.2}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Security & Privacy",
+      "icon": "🔒",
+      "software": [
+        {
+          "paid": {"name": "Norton / McAfee", "price": "₱1,500–₱2,500/year", "icon": "🛡️"},
+          "freeAlternatives": [
+            {"name": "Windows Defender", "url": "https://www.microsoft.com/en-us/security", "description": "Built into Windows 10/11. Real-time protection, firewall, and ransomware defense.", "platforms": ["Windows"], "rating": 4.3},
+            {"name": "Avast Free", "url": "https://www.avast.com/free-antivirus", "description": "Free antivirus with malware protection, network scanning, and browser security.", "platforms": ["Windows", "Mac", "Android", "iOS"], "rating": 4.1},
+            {"name": "Bitdefender Free", "url": "https://www.bitdefender.com/consumer/free-antivirus", "description": "Lightweight free antivirus with top-rated malware detection.", "platforms": ["Windows"], "rating": 4.4}
+          ]
+        },
+        {
+          "paid": {"name": "LastPass (Paid)", "price": "₱160/month (Premium)", "icon": "🔐"},
+          "freeAlternatives": [
+            {"name": "Bitwarden", "url": "https://bitwarden.com", "description": "Open-source password manager. Unlimited passwords, devices, and vault sharing on free plan.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.7},
+            {"name": "KeePass", "url": "https://keepass.info", "description": "Offline, open-source password database. Complete control over your data.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "Proton Pass", "url": "https://proton.me/pass", "description": "Password manager from Proton. End-to-end encrypted with built-in email aliasing.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.5}
+          ]
+        },
+        {
+          "paid": {"name": "NordVPN / ExpressVPN", "price": "₱400–₱700/month", "icon": "🌐"},
+          "freeAlternatives": [
+            {"name": "Proton VPN Free", "url": "https://protonvpn.com", "description": "Free VPN with unlimited data. No ads, no logs, based in Switzerland.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS"], "rating": 4.5},
+            {"name": "Windscribe", "url": "https://windscribe.com", "description": "Free VPN with 10GB/month. Ad blocker and browser extension included.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.2},
+            {"name": "Cloudflare WARP", "url": "https://1.1.1.1", "description": "Free VPN by Cloudflare. Fast, unlimited data, and privacy-focused.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS"], "rating": 4.3}
+          ]
+        },
+        {
+          "paid": {"name": "1Password", "price": "₱180/month (Individual)", "icon": "🔑"},
+          "freeAlternatives": [
+            {"name": "Bitwarden", "url": "https://bitwarden.com", "description": "Cross-platform password manager with free tier. Family and organization sharing available.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.7},
+            {"name": "KeePassXC", "url": "https://keepassxc.org", "description": "Modern KeePass fork. Browser integration, TOTP support, and cross-platform.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.5}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AI Tools",
+      "icon": "🤖",
+      "software": [
+        {
+          "paid": {"name": "ChatGPT Plus", "price": "₱1,100/month ($20 USD)", "icon": "🧠"},
+          "freeAlternatives": [
+            {"name": "ChatGPT Free", "url": "https://chat.openai.com", "description": "GPT-4o mini access for free. Great for writing, coding, and research.", "platforms": ["Web", "Android", "iOS"], "rating": 4.6},
+            {"name": "Gemini", "url": "https://gemini.google.com", "description": "Google's AI assistant. Free with Google account. Multimodal capabilities.", "platforms": ["Web", "Android", "iOS"], "rating": 4.4},
+            {"name": "Claude Free", "url": "https://claude.ai", "description": "Anthropic's AI assistant. Free tier with generous daily usage limits.", "platforms": ["Web", "Android", "iOS"], "rating": 4.5},
+            {"name": "Microsoft Copilot", "url": "https://copilot.microsoft.com", "description": "AI-powered assistant with GPT-4 access. Free to use.", "platforms": ["Web", "Android", "iOS"], "rating": 4.3}
+          ]
+        },
+        {
+          "paid": {"name": "Midjourney", "price": "₱560/month ($10 USD)", "icon": "🖼️"},
+          "freeAlternatives": [
+            {"name": "Stable Diffusion", "url": "https://stability.ai", "description": "Open-source AI image generation. Run locally or use free online platforms.", "platforms": ["Windows", "Mac", "Linux", "Web"], "rating": 4.4},
+            {"name": "Bing Image Creator", "url": "https://www.bing.com/images/create", "description": "Free AI image generation powered by DALL-E. 15 boosts per day.", "platforms": ["Web"], "rating": 4.3},
+            {"name": "Leonardo AI", "url": "https://leonardo.ai", "description": "AI image generation with free tier. Great for game assets and creative work.", "platforms": ["Web"], "rating": 4.2}
+          ]
+        },
+        {
+          "paid": {"name": "Jasper AI", "price": "₱2,400/month ($39 USD)", "icon": "✍️"},
+          "freeAlternatives": [
+            {"name": "ChatGPT", "url": "https://chat.openai.com", "description": "Free AI writing assistant for content creation, marketing copy, and more.", "platforms": ["Web", "Android", "iOS"], "rating": 4.6},
+            {"name": "Claude", "url": "https://claude.ai", "description": "Excellent for long-form writing, analysis, and creative content generation.", "platforms": ["Web", "Android", "iOS"], "rating": 4.5},
+            {"name": "Gemini", "url": "https://gemini.google.com", "description": "Google's AI for writing, brainstorming, and content creation. Integrated with Google services.", "platforms": ["Web", "Android", "iOS"], "rating": 4.4}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud Storage",
+      "icon": "☁️",
+      "software": [
+        {
+          "paid": {"name": "Google One (100GB)", "price": "₱130/month", "icon": "☁️"},
+          "freeAlternatives": [
+            {"name": "Google Drive Free", "url": "https://drive.google.com", "description": "15GB free storage shared across Drive, Gmail, and Photos. Easy sharing.", "platforms": ["Web", "Windows", "Mac", "Android", "iOS"], "rating": 4.7},
+            {"name": "pCloud", "url": "https://www.pcloud.com", "description": "10GB free cloud storage. Lifetime plans available. Media player built-in.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.3},
+            {"name": "MEGA", "url": "https://mega.nz", "description": "20GB free encrypted cloud storage. Zero-knowledge encryption for privacy.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.4}
+          ]
+        },
+        {
+          "paid": {"name": "Dropbox Plus", "price": "₱480/month ($11.99 USD)", "icon": "📦"},
+          "freeAlternatives": [
+            {"name": "Google Drive Free", "url": "https://drive.google.com", "description": "15GB free. Excellent integration with Google Workspace. Link sharing and collaboration.", "platforms": ["Web", "Windows", "Mac", "Android", "iOS"], "rating": 4.7},
+            {"name": "OneDrive Free", "url": "https://onedrive.live.com", "description": "5GB free with Microsoft account. Integrates with Windows and Office Online.", "platforms": ["Web", "Windows", "Mac", "Android", "iOS"], "rating": 4.4},
+            {"name": "MEGA", "url": "https://mega.nz", "description": "20GB free with end-to-end encryption. Best free storage amount.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.4}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Music & Audio Streaming",
+      "icon": "🎵",
+      "software": [
+        {
+          "paid": {"name": "Spotify Premium", "price": "₱149/month (Individual)", "icon": "🎶"},
+          "freeAlternatives": [
+            {"name": "Spotify Free", "url": "https://www.spotify.com", "description": "Free tier with ads. Full music library access with shuffle play on mobile.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.3},
+            {"name": "YouTube Music Free", "url": "https://music.youtube.com", "description": "Free music streaming with ads. Huge catalog including live performances and covers.", "platforms": ["Web", "Android", "iOS"], "rating": 4.1},
+            {"name": "SoundCloud", "url": "https://soundcloud.com", "description": "Stream and discover new artists. Free tier with ads. Great for indie music.", "platforms": ["Web", "Android", "iOS"], "rating": 4.0}
+          ]
+        },
+        {
+          "paid": {"name": "Apple Music", "price": "₱179/month (Individual)", "icon": "🍎"},
+          "freeAlternatives": [
+            {"name": "Spotify Free", "url": "https://www.spotify.com", "description": "Free music streaming with the largest podcast library. Discover weekly playlists.", "platforms": ["Windows", "Mac", "Linux", "Android", "iOS", "Web"], "rating": 4.3},
+            {"name": "YouTube Music Free", "url": "https://music.youtube.com", "description": "Free streaming with music videos, live performances, and remixes.", "platforms": ["Web", "Android", "iOS"], "rating": 4.1}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Students Special",
+      "icon": "🎓",
+      "software": [
+        {
+          "paid": {"name": "MATLAB", "price": "₱100,000+/year (Campus License)", "icon": "📐"},
+          "freeAlternatives": [
+            {"name": "GNU Octave", "url": "https://www.gnu.org/software/octave", "description": "High-level language for numerical computations. Compatible with most MATLAB code.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "Scilab", "url": "https://www.scilab.org", "description": "Open-source numerical computation. Great for signal processing and control systems.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.0},
+            {"name": "Python (NumPy/SciPy)", "url": "https://www.python.org", "description": "Python with NumPy and SciPy for numerical computing. Massive community support.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.8}
+          ]
+        },
+        {
+          "paid": {"name": "SPSS", "price": "₱12,000/year (Student License)", "icon": "📊"},
+          "freeAlternatives": [
+            {"name": "JASP", "url": "https://jasp-stats.org", "description": "Free, user-friendly statistics software. Bayesian and frequentist analysis.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.4},
+            {"name": "jamovi", "url": "https://www.jamovi.org", "description": "Open-source statistics platform. Spreadsheet-like interface, great for students.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.3},
+            {"name": "PSPP", "url": "https://www.gnu.org/software/pspp", "description": "GNU alternative to SPSS. Supports descriptive statistics, T-tests, and regression.", "platforms": ["Windows", "Mac", "Linux"], "rating": 3.8}
+          ]
+        },
+        {
+          "paid": {"name": "AutoCAD", "price": "₱1,600/month (Student: ₱1,400/year)", "icon": "🏗️"},
+          "freeAlternatives": [
+            {"name": "FreeCAD", "url": "https://www.freecad.org", "description": "Open-source parametric 3D CAD modeler. Great for engineering and architecture.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "LibreCAD", "url": "https://www.librecad.org", "description": "2D CAD application. Supports DXF and DWG formats. Lightweight and fast.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.0},
+            {"name": "Tinkercad", "url": "https://www.tinkercad.com", "description": "Free browser-based 3D design tool by Autodesk. Perfect for beginners.", "platforms": ["Web"], "rating": 4.4}
+          ]
+        },
+        {
+          "paid": {"name": "SolidWorks", "price": "₱100,000+/year (Professional)", "icon": "⚙️"},
+          "freeAlternatives": [
+            {"name": "FreeCAD", "url": "https://www.freecad.org", "description": "Parametric 3D CAD with Part Design, Assembly, and FEM workbenches.", "platforms": ["Windows", "Mac", "Linux"], "rating": 4.2},
+            {"name": "Fusion 360 (Student)", "url": "https://www.autodesk.com/products/fusion-360/personal", "description": "Free for students and hobbyists. Full-featured CAD/CAM/CAE from Autodesk.", "platforms": ["Windows", "Mac"], "rating": 4.5}
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "totalPaidSoftware": 28,
+    "totalFreeAlternatives": 78,
+    "categories": 10,
+    "estimatedAnnualSavings": "₱500,000+"
+  }
+}
