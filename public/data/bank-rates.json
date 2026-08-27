@@ -1,0 +1,178 @@
+{
+  "lastUpdated": "2026-08-27T02:08:26.701364",
+  "banks": [
+    {
+      "name": "BDO",
+      "products": [
+        {
+          "name": "Time Deposit",
+          "rates": [
+            {
+              "tenor": "30-59 days",
+              "rate": 0.25,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "60-89 days",
+              "rate": 0.375,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "90-179 days",
+              "rate": 0.5,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "180-359 days",
+              "rate": 0.625,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "360 days",
+              "rate": 1.0,
+              "minDeposit": 10000
+            }
+          ],
+          "notes": "Rates as of early 2026. Subject to 20% withholding tax on interest."
+        }
+      ]
+    },
+    {
+      "name": "BPI",
+      "products": [
+        {
+          "name": "Time Deposit",
+          "rates": [
+            {
+              "tenor": "30-59 days",
+              "rate": 0.125,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "60-119 days",
+              "rate": 0.25,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "120-359 days",
+              "rate": 0.375,
+              "minDeposit": 10000
+            },
+            {
+              "tenor": "360 days",
+              "rate": 0.625,
+              "minDeposit": 10000
+            }
+          ],
+          "notes": "Rates as of early 2026. Subject to 20% withholding tax on interest."
+        }
+      ]
+    },
+    {
+      "name": "Maya",
+      "products": [
+        {
+          "name": "Savings",
+          "rates": [
+            {
+              "tenor": "Up to ₱100,000",
+              "rate": 3.5,
+              "minDeposit": 0
+            },
+            {
+              "tenor": "₱100,001 - ₱200,000",
+              "rate": 2.5,
+              "minDeposit": 0
+            },
+            {
+              "tenor": "Above ₱200,000",
+              "rate": 1.5,
+              "minDeposit": 0
+            }
+          ],
+          "notes": "Tiered interest based on balance. No lock-in period."
+        }
+      ]
+    },
+    {
+      "name": "Tonik",
+      "products": [
+        {
+          "name": "Time Deposit",
+          "rates": [
+            {
+              "tenor": "1 month",
+              "rate": 4.0,
+              "minDeposit": 5000
+            },
+            {
+              "tenor": "3 months",
+              "rate": 5.5,
+              "minDeposit": 5000
+            },
+            {
+              "tenor": "6 months",
+              "rate": 6.0,
+              "minDeposit": 5000
+            }
+          ],
+          "notes": "Lock-in period required. Rates are promotional and may change."
+        },
+        {
+          "name": "Stash",
+          "rates": [
+            {
+              "tenor": "Up to ₱100,000",
+              "rate": 4.0,
+              "minDeposit": 0
+            },
+            {
+              "tenor": "₱100,001 - ₱500,000",
+              "rate": 3.0,
+              "minDeposit": 0
+            },
+            {
+              "tenor": "Above ₱500,000",
+              "rate": 2.0,
+              "minDeposit": 0
+            }
+          ],
+          "notes": "No lock-in. Tiered interest based on total balance."
+        }
+      ]
+    },
+    {
+      "name": "GoTyme",
+      "products": [
+        {
+          "name": "Save",
+          "rates": [
+            {
+              "tenor": "Up to ₱50,000",
+              "rate": 5.0,
+              "minDeposit": 0
+            },
+            {
+              "tenor": "₱50,001 - ₱100,000",
+              "rate": 3.5,
+              "minDeposit": 0
+            },
+            {
+              "tenor": "Above ₱100,000",
+              "rate": 2.5,
+              "minDeposit": 0
+            }
+          ],
+          "notes": "No lock-in. Tiered interest based on balance. GSave via GCash also available."
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "totalBanks": 5,
+    "totalProducts": 6,
+    "totalRateTiers": 21,
+    "scrapedSuccessfully": 0,
+    "usedFallback": 5
+  }
+}

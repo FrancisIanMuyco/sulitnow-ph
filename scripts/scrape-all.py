@@ -211,6 +211,28 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"  ⚠️ Prices scraper failed: {e}")
     
+    # === NEW SCRAPERS (v2) ===
+    new_scrapers = [
+        ('scrape-bank-rates.py', 'Bank Rates'),
+        ('scrape-toll-fees.py', 'Toll Fees'),
+        ('scrape-remittance.py', 'Remittance Rates'),
+        ('scrape-medicine-prices.py', 'Medicine Prices'),
+        ('scrape-pse-stocks.py', 'PSE Stocks'),
+        ('scrape-salary-data.py', 'Salary Data'),
+        ('scrape-bir-deadlines.py', 'BIR Deadlines'),
+    ]
+    
+    for script_name, label in new_scrapers:
+        try:
+            script_path = os.path.join(os.path.dirname(__file__), script_name)
+            if os.path.exists(script_path):
+                print(f"\n--- Running {label} scraper ---")
+                subprocess.run([sys.executable, script_path], timeout=120)
+            else:
+                print(f"\n⚠️ {script_name} not found, skipping")
+        except Exception as e:
+            print(f"  ⚠️ {label} scraper failed: {e}")
+    
     elapsed = (datetime.now() - start).total_seconds()
     print("\n" + "=" * 50)
     print(f"✅ All scraping complete in {elapsed:.1f}s")

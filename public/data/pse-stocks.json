@@ -1,0 +1,147 @@
+{
+  "lastUpdated": "2026-08-27T02:07:23.924323",
+  "source": "PSE / Manual Research",
+  "index": {
+    "name": "PSEi",
+    "value": 6500,
+    "change": 45.2,
+    "changePercent": 0.7
+  },
+  "stocks": [
+    {
+      "symbol": "SM",
+      "name": "SM Investments Corp",
+      "sector": "Holding",
+      "price": 951.91,
+      "change": 12.53,
+      "changePercent": 1.33,
+      "volume": 931406
+    },
+    {
+      "symbol": "BDO",
+      "name": "BDO Unibank",
+      "sector": "Finance",
+      "price": 145.74,
+      "change": -2.11,
+      "changePercent": -1.44,
+      "volume": 1629945
+    },
+    {
+      "symbol": "AC",
+      "name": "Ayala Corp",
+      "sector": "Holding",
+      "price": 773.11,
+      "change": 7.93,
+      "changePercent": 1.03,
+      "volume": 1395837
+    },
+    {
+      "symbol": "TEL",
+      "name": "PLDT Inc",
+      "sector": "Telecom",
+      "price": 1679.83,
+      "change": 25.45,
+      "changePercent": 1.57,
+      "volume": 1620244
+    },
+    {
+      "symbol": "BPI",
+      "name": "Bank of the Philippine Islands",
+      "sector": "Finance",
+      "price": 119.11,
+      "change": -1.49,
+      "changePercent": -1.22,
+      "volume": 3597115
+    },
+    {
+      "symbol": "JFC",
+      "name": "Jollibee Foods Corp",
+      "sector": "Consumer",
+      "price": 263.3,
+      "change": 3.18,
+      "changePercent": 1.21,
+      "volume": 4278811
+    },
+    {
+      "symbol": "URC",
+      "name": "Universal Robina Corp",
+      "sector": "Consumer",
+      "price": 142.28,
+      "change": -0.78,
+      "changePercent": -0.54,
+      "volume": 3462618
+    },
+    {
+      "symbol": "SECB",
+      "name": "Security Bank Corp",
+      "sector": "Finance",
+      "price": 178.74,
+      "change": 2.48,
+      "changePercent": 1.4,
+      "volume": 4710137
+    },
+    {
+      "symbol": "ALI",
+      "name": "Ayala Land Inc",
+      "sector": "Property",
+      "price": 32.33,
+      "change": 0.51,
+      "changePercent": 1.61,
+      "volume": 1749252
+    },
+    {
+      "symbol": "SMPH",
+      "name": "SM Prime Holdings",
+      "sector": "Property",
+      "price": 37.42,
+      "change": -0.3,
+      "changePercent": -0.77,
+      "volume": 4457619
+    },
+    {
+      "symbol": "GLO",
+      "name": "Globe Telecom",
+      "sector": "Telecom",
+      "price": 2134.07,
+      "change": 15.24,
+      "changePercent": 0.73,
+      "volume": 1427377
+    },
+    {
+      "symbol": "MBT",
+      "name": "Metropolitan Bank",
+      "sector": "Finance",
+      "price": 71.71,
+      "change": 1.2,
+      "changePercent": 1.68,
+      "volume": 4075564
+    },
+    {
+      "symbol": "MONDE",
+      "name": "Monde Nissin Corp",
+      "sector": "Consumer",
+      "price": 12.2,
+      "change": -0.2,
+      "changePercent": -1.67,
+      "volume": 3833400
+    },
+    {
+      "symbol": "ICT",
+      "name": "International Container Terminal",
+      "sector": "Industrials",
+      "price": 211.79,
+      "change": 4.03,
+      "changePercent": 1.96,
+      "volume": 1035026
+    },
+    {
+      "symbol": "AGI",
+      "name": "Alliance Global Group",
+      "sector": "Holding",
+      "price": 8.61,
+      "change": 0.3,
+      "changePercent": 3.71,
+      "volume": 2407163
+    }
+  ]
+}

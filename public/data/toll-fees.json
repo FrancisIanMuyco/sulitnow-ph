@@ -1,0 +1,215 @@
+{
+  "lastUpdated": "2026-08-27T02:07:54.144522+00:00",
+  "expressways": [
+    {
+      "name": "NLEX",
+      "fullName": "North Luzon Expressway",
+      "operator": "MPTC",
+      "class1": [
+        {
+          "entry": "Balintawak",
+          "exit": "San Fernando",
+          "fee": 115
+        },
+        {
+          "entry": "Balintawak",
+          "exit": "Dau",
+          "fee": 143
+        },
+        {
+          "entry": "Balintawak",
+          "exit": "San Simon",
+          "fee": 150
+        },
+        {
+          "entry": "Balintawak",
+          "exit": "Tabang",
+          "fee": 169
+        },
+        {
+          "entry": "Balintawak",
+          "exit": "Pulilan",
+          "fee": 185
+        },
+        {
+          "entry": "Balintawak",
+          "exit": "San Miguel",
+          "fee": 218
+        },
+        {
+          "entry": "Balintawak",
+          "exit": "Cabanatuan",
+          "fee": 264
+        },
+        {
+          "entry": "Valenzuela",
+          "exit": "San Fernando",
+          "fee": 103
+        },
+        {
+          "entry": "Valenzuela",
+          "exit": "Dau",
+          "fee": 131
+        },
+        {
+          "entry": "Marilao",
+          "exit": "San Fernando",
+          "fee": 89
+        },
+        {
+          "entry": "Marilao",
+          "exit": "Dau",
+          "fee": 117
+        }
+      ],
+      "class2_multiplier": 2.0,
+      "class3_multiplier": 3.0
+    },
+    {
+      "name": "SLEX",
+      "fullName": "South Luzon Expressway",
+      "operator": "SLEx Corp",
+      "class1": [
+        {
+          "entry": "Magallanes",
+          "exit": "Calamba",
+          "fee": 188
+        },
+        {
+          "entry": "Magallanes",
+          "exit": "Los Baños",
+          "fee": 202
+        },
+        {
+          "entry": "Magallanes",
+          "exit": "Lucena",
+          "fee": 322
+        },
+        {
+          "entry": "Bicutan",
+          "exit": "Calamba",
+          "fee": 176
+        },
+        {
+          "entry": "Bicutan",
+          "exit": "Los Baños",
+          "fee": 190
+        },
+        {
+          "entry": "Sucat",
+          "exit": "Calamba",
+          "fee": 163
+        },
+        {
+          "entry": "Susana Heights",
+          "exit": "Calamba",
+          "fee": 145
+        },
+        {
+          "entry": "Calamba",
+          "exit": "Lucena",
+          "fee": 134
+        }
+      ],
+      "class2_multiplier": 2.0,
+      "class3_multiplier": 3.0
+    },
+    {
+      "name": "TPLEX",
+      "fullName": "Tarlac-Pangasinan-La Union Expressway",
+      "operator": "TPLEX Corp",
+      "class1": [
+        {
+          "entry": "Tarla City",
+          "exit": "Ramon",
+          "fee": 45
+        },
+        {
+          "entry": "Tarla City",
+          "exit": "Cuyapo",
+          "fee": 75
+        },
+        {
+          "entry": "Tarla City",
+          "exit": "Paniqui",
+          "fee": 54
+        },
+        {
+          "entry": "Ramon",
+          "exit": "Rosales",
+          "fee": 83
+        },
+        {
+          "entry": "Ramon",
+          "exit": "Urdaneta",
+          "fee": 115
+        },
+        {
+          "entry": "Ramon",
+          "exit": "Rosario",
+          "fee": 150
+        }
+      ],
+      "class2_multiplier": 2.0,
+      "class3_multiplier": 3.0
+    },
+    {
+      "name": "CALAX",
+      "fullName": "Cavite-Laguna Expressway",
+      "operator": "MPTC",
+      "class1": [
+        {
+          "entry": "Kawit",
+          "exit": "Lagrang",
+          "fee": 85
+        },
+        {
+          "entry": "Kawit",
+          "exit": "Silang",
+          "fee": 105
+        },
+        {
+          "entry": "Kawit",
+          "exit": "Governor's Drive",
+          "fee": 65
+        }
+      ],
+      "class2_multiplier": 2.0,
+      "class3_multiplier": 3.0
+    },
+    {
+      "name": "Skyway",
+      "fullName": "Skyway Stage 3",
+      "operator": "SSS",
+      "class1": [
+        {
+          "entry": "Bicutan",
+          "exit": "Balintawak",
+          "fee": 198
+        },
+        {
+          "entry": "Bicutan",
+          "exit": "Quezon Ave",
+          "fee": 158
+        },
+        {
+          "entry": "Bicutan",
+          "exit": "Santa Rosa",
+          "fee": 145
+        },
+        {
+          "entry": "NAIA",
+          "exit": "Balintawak",
+          "fee": 225
+        },
+        {
+          "entry": "NAIA",
+          "exit": "Quezon Ave",
+          "fee": 185
+        }
+      ],
+      "class2_multiplier": 2.0,
+      "class3_multiplier": 3.0
+    }
+  ]
+}

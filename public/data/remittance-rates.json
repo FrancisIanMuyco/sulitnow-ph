@@ -1,0 +1,208 @@
+{
+  "lastUpdated": "2026-08-27T02:07:24.108674",
+  "providers": [
+    {
+      "name": "Wise",
+      "logo": "💸",
+      "feeStructure": "0.42% + ₱40",
+      "rate": "Mid-market rate - 0.42%",
+      "speed": "1-2 business days",
+      "methods": [
+        "Bank transfer",
+        "GCash",
+        "Maya"
+      ],
+      "minAmount": "No minimum",
+      "maxAmount": "₱1,000,000",
+      "pros": [
+        "Best exchange rate",
+        "Transparent fees",
+        "Fast"
+      ],
+      "cons": [
+        "Requires bank account or e-wallet",
+        "Verification needed"
+      ]
+    },
+    {
+      "name": "Remitly",
+      "logo": "📮",
+      "feeStructure": "Varies by corridor, ₱0-₱250",
+      "rate": "Mid-market rate - 0.5%-1.5%",
+      "speed": "Express: minutes, Economy: 3-5 days",
+      "methods": [
+        "Bank transfer",
+        "GCash",
+        "Cash pickup"
+      ],
+      "minAmount": "₱500",
+      "maxAmount": "₱500,000",
+      "pros": [
+        "Fast express option",
+        "Cash pickup available",
+        "First transfer free promos"
+      ],
+      "cons": [
+        "Higher fees on express",
+        "Exchange rate varies by corridor"
+      ]
+    },
+    {
+      "name": "Palawan Express",
+      "logo": "🏠",
+      "feeStructure": "1.5-2.5% markup",
+      "rate": "Mid-market rate - 1.5% to -2.5%",
+      "speed": "Minutes for cash pickup",
+      "methods": [
+        "Cash pickup",
+        "Bank transfer"
+      ],
+      "minAmount": "₱100",
+      "maxAmount": "₱200,000",
+      "pros": [
+        "Wide branch network",
+        "No bank account needed",
+        "Quick cash pickup"
+      ],
+      "cons": [
+        "Higher markup",
+        "Limited online options",
+        "Queues at branches"
+      ]
+    },
+    {
+      "name": "Cebuana Lhuillier",
+      "logo": "🏪",
+      "feeStructure": "2-3% markup",
+      "rate": "Mid-market rate - 2% to -3%",
+      "speed": "Minutes for cash pickup",
+      "methods": [
+        "Cash pickup"
+      ],
+      "minAmount": "₱100",
+      "maxAmount": "₱200,000",
+      "pros": [
+        "Extensive nationwide branches",
+        "Quick payout",
+        "No account needed"
+      ],
+      "cons": [
+        "Higher markup",
+        "Cash pickup only",
+        "Branch hours limited"
+      ]
+    },
+    {
+      "name": "Western Union",
+      "logo": "🌍",
+      "feeStructure": "3-5% markup",
+      "rate": "Mid-market rate - 3% to -5%",
+      "speed": "Minutes for cash pickup",
+      "methods": [
+        "Cash pickup",
+        "Bank transfer",
+        "GCash"
+      ],
+      "minAmount": "No minimum",
+      "maxAmount": "₱500,000",
+      "pros": [
+        "Global network",
+        "Multiple payout options",
+        "Trusted brand"
+      ],
+      "cons": [
+        "Highest fees",
+        "Poor exchange rates",
+        "Variable service quality"
+      ]
+    },
+    {
+      "name": "GCash International",
+      "logo": "📱",
+      "feeStructure": "~1.5% fee",
+      "rate": "Mid-market rate - 1% to -1.5%",
+      "speed": "Minutes to hours",
+      "methods": [
+        "GCash wallet"
+      ],
+      "minAmount": "₱100",
+      "maxAmount": "₱500,000",
+      "pros": [
+        "Instant to GCash wallet",
+        "Low fees",
+        "Convenient for GCash users"
+      ],
+      "cons": [
+        "Requires GCash account",
+        "Send limits may apply",
+        "Partner-dependent"
+      ]
+    },
+    {
+      "name": "PayMaya International",
+      "logo": "💳",
+      "feeStructure": "~2% fee",
+      "rate": "Mid-market rate - 1% to -2%",
+      "speed": "Minutes to hours",
+      "methods": [
+        "Maya wallet",
+        "Bank transfer"
+      ],
+      "minAmount": "₱100",
+      "maxAmount": "₱500,000",
+      "pros": [
+        "Instant to Maya wallet",
+        "Growing corridor support",
+        "Easy mobile app"
+      ],
+      "cons": [
+        "Requires Maya account",
+        "Fewer payout options",
+        "Newer service"
+      ]
+    }
+  ],
+  "corridors": [
+    {
+      "from": "USD",
+      "to": "PHP",
+      "country": "United States"
+    },
+    {
+      "from": "EUR",
+      "to": "PHP",
+      "country": "Europe"
+    },
+    {
+      "from": "GBP",
+      "to": "PHP",
+      "country": "United Kingdom"
+    },
+    {
+      "from": "SGD",
+      "to": "PHP",
+      "country": "Singapore"
+    },
+    {
+      "from": "AED",
+      "to": "PHP",
+      "country": "UAE"
+    },
+    {
+      "from": "SAR",
+      "to": "PHP",
+      "country": "Saudi Arabia"
+    },
+    {
+      "from": "JPY",
+      "to": "PHP",
+      "country": "Japan"
+    },
+    {
+      "from": "KRW",
+      "to": "PHP",
+      "country": "South Korea"
+    }
+  ],
+  "note": "Live rates unavailable, using estimated fee structures"
+}
