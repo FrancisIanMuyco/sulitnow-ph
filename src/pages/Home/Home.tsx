@@ -13,6 +13,7 @@ import { getIcon } from '../../utils/iconMap';
 import Card from '../../components/ui/Card';
 import SEOHead from '../../components/common/SEOHead';
 import AdBanner from '../../components/ads/AdBanner';
+import VisitorCounter from '../../components/ui/VisitorCounter';
 
 const categoryIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Smartphone, Banknote, ShoppingBag, Home: HomeIcon, Shield, Briefcase,
@@ -92,9 +93,10 @@ export default function Home() {
             </h1>
           </div>
           <div className="animate-fade-in-up delay-100">
-            <p className="text-sm md:text-base text-white/80 mb-8 max-w-lg mx-auto">
+            <p className="text-sm md:text-base text-white/80 mb-4 max-w-lg mx-auto">
               Compare promos, fees, prices, earnings, and daily expenses — built for Filipinos.
             </p>
+            <VisitorCounter className="mx-auto mb-4" />
           </div>
 
           {/* Search */}
