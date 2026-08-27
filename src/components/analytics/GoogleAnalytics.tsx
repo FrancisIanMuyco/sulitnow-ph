@@ -3,36 +3,6 @@ import { useLocation } from 'react-router-dom';
 
 const GA_MEASUREMENT_ID = 'G-R1Z7FCFNTG';
 
-export function initGA() {
-  if (typeof window === 'undefined') return;
-  
-  // Load gtag.js
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
-    window.dataLayer.push(args);
-  }
-  window.gtag = gtag;
-  
-  gtag('js', new Date());
-  gtag('config', GA_MEASUREMENT_ID, {
-    page_title: document.title,
-    page_location: window.location.href,
-  });
-}
-
-export function trackPageView(url: string, title?: string) {
-  if (typeof window === 'undefined' || !window.gtag) return;
-  window.gtag('config', GA_MEASUREMENT_ID, {
-    page_path: url,
-    page_title: title || document.title,
-  });
-}
-
 export function trackEvent(eventName: string, params?: Record<string, any>) {
   if (typeof window === 'undefined' || !window.gtag) return;
   window.gtag('event', eventName, params);
@@ -67,13 +37,16 @@ export default function GoogleAnalytics() {
   const location = useLocation();
 
   useEffect(() => {
-    trackPageView(location.pathname + location.search);
+    if (typeof window === 'undefined' || !window.gtag) return;
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_path: location.pathname + location.search,
+      page_title: document.title,
+    });
   }, [location]);
 
   return null;
 }
 
-// Add to global Window type
 declare global {
   interface Window {
     dataLayer: any[];

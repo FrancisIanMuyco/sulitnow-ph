@@ -1,9 +1,9 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import LoadingBar from './components/common/LoadingBar';
-import GoogleAnalytics, { initGA } from './components/analytics/GoogleAnalytics';
+import GoogleAnalytics from './components/analytics/GoogleAnalytics';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -126,10 +126,6 @@ function ToolLoading() {
 }
 
 export default function App() {
-  useEffect(() => {
-    initGA();
-  }, []);
-
   return (
     <BrowserRouter>
       <ErrorBoundary>
