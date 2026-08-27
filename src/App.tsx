@@ -20,6 +20,8 @@ const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Disclaimer = lazy(() => import('./pages/Disclaimer'));
+const DMCA = lazy(() => import('./pages/DMCA'));
+const AffiliateDisclosurePage = lazy(() => import('./pages/AffiliateDisclosure'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Lazy load tools
@@ -149,6 +151,8 @@ export default function App() {
             <Route path="privacy" element={<Suspense fallback={<Loading />}><Privacy /></Suspense>} />
             <Route path="terms" element={<Suspense fallback={<Loading />}><Terms /></Suspense>} />
             <Route path="disclaimer" element={<Suspense fallback={<Loading />}><Disclaimer /></Suspense>} />
+            <Route path="dmca" element={<Suspense fallback={<Loading />}><DMCA /></Suspense>} />
+            <Route path="affiliate-disclosure" element={<Suspense fallback={<Loading />}><AffiliateDisclosurePage /></Suspense>} />
 
             {/* Money Tools */}
             <Route path="tools/salary-calculator" element={<Suspense fallback={<ToolLoading />}><SalaryCalculator /></Suspense>} />

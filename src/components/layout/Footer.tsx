@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
+import AffiliateBanner from '../ads/AffiliateBanner';
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-surface-alt">
       <div className="max-w-6xl mx-auto px-4 py-8">
+        <AffiliateBanner />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
           <div>
             <h4 className="font-semibold text-sm text-text mb-3">Money</h4>
@@ -41,6 +43,8 @@ export default function Footer() {
               <li><Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-primary transition-colors">Terms of Use</Link></li>
               <li><Link to="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
+              <li><Link to="/dmca" className="hover:text-primary transition-colors">DMCA</Link></li>
+              <li><Link to="/affiliate-disclosure" className="hover:text-primary transition-colors">Affiliate Disclosure</Link></li>
             </ul>
           </div>
         </div>
