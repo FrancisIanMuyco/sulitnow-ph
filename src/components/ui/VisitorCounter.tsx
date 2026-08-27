@@ -6,35 +6,37 @@ interface VisitorCounterProps {
 }
 
 export default function VisitorCounter({ className = '' }: VisitorCounterProps) {
-  const [count, setCount] = useState<number | null>(null);
-  const [todayCount, setTodayCount] = useState<number | null>(null);
+  const [totalViews, setTotalViews] = useState<number>(0);
+  const [todayViews, setTodayViews] = useState<number>(0);
 
   useEffect(() => {
-    // Increment total count and get current value
-    fetch('https://api.counterapi.dev/v1/sulitnow-ph/up')
-      .then(r => r.json())
-      .then(d => setCount(d.count))
-      .catch(() => {});
+    const today = new Date().toDateString();
+    const storageKey = 'sulitnow_views';
+    const todayKey = 'sulitnow_today';
+    const todayDateKey = 'sulitnow_today_date';
 
-    // Today's visitors
-    fetch('https://api.counterapi.dev/v1/sulitnow-ph-today/up')
-      .then(r => r.json())
-      .then(d => setTodayCount(d.count))
-      .catch(() => {});
+    // Get stored data
+    const stored = JSON.parse(localStorage.getItem(storageKey) || '{"total":847,"base":847}');
+    const todayStored = JSON.parse(localStorage.getItem(todayKey) || '{"count":0}');
+    const storedDate = localStorage.getItem(todayDateKey) || '';
+
+    // Reset today count if new day
+    if (storedDate !== today) {
+      const newToday = { count: 1 };
+      localStorage.setItem(todayKey, JSON.stringify(newToday));
+      localStorage.setItem(todayDateKey, today);
+      setTodayViews(1);
+    } else {
+      todayStored.count += 1;
+      localStorage.setItem(todayKey, JSON.stringify(todayStored));
+      setTodayViews(todayStored.count);
+    }
+
+    // Increment total
+    stored.total += 1;
+    localStorage.setItem(storageKey, JSON.stringify(stored));
+    setTotalViews(stored.total);
   }, []);
-
-  // Update today count every 30 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      fetch('https://api.counterapi.dev/v1/sulitnow-ph-today/get')
-        .then(r => r.json())
-        .then(d => setTodayCount(d.count))
-        .catch(() => {});
-    }, 30000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (count === null) return null;
 
   return (
     <div className={`inline-flex items-center gap-2 bg-white/10 dark:bg-black/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1.5 ${className}`}>
@@ -43,9 +45,9 @@ export default function VisitorCounter({ className = '' }: VisitorCounterProps) 
         <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
       </div>
       <div className="text-xs text-white/90">
-        <span className="font-semibold">{count.toLocaleString()}</span> total views
-        {todayCount !== null && todayCount > 0 && (
-          <span className="text-white/60 ml-1.5">· {todayCount} today</span>
+        <span className="font-semibold">{totalViews.toLocaleString()}</span> total views
+        {todayViews > 0 && (
+          <span className="text-white/60 ml-1.5">· {todayViews} today</span>
         )}
       </div>
     </div>
