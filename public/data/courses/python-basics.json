@@ -1,0 +1,157 @@
+{
+  "id": "python-basics",
+  "title": "Python Basics",
+  "subtitle": "Your First Steps in Programming",
+  "description": "Learn the fundamentals of Python programming from scratch. This course covers variables, control flow, functions, and lists — everything you need to start writing your own programs.",
+  "category": "Programming",
+  "level": "Beginner",
+  "duration": "3 hours",
+  "icon": "code",
+  "modules": [
+    {
+      "id": "python-intro",
+      "title": "What is Python & How to Set It Up",
+      "content": "<h3>Why Python?</h3><p>Python is one of the most popular programming languages in the world. It's known for being <strong>easy to read</strong> and <strong>beginner-friendly</strong>. If you've ever wanted to learn programming, Python is a fantastic place to start.</p><p>Python is used everywhere — from building websites, automating boring tasks, analyzing data, to creating AI models. Many companies in the Philippines and around the world use Python for their projects.</p><h3>Installing Python</h3><p>Go to <strong>python.org/downloads</strong> and download the latest version. During installation, make sure to check the box that says <em>\"Add Python to PATH\"</em> — this is important!</p><p>After installing, open your terminal (Command Prompt on Windows, Terminal on Mac/Linux) and type:</p><pre><code>python --version</code></pre><p>You should see something like <code>Python 3.12.0</code>. That means it's working!</p><h3>Your First Program</h3><p>Open any text editor (VS Code is recommended — it's free) and create a file called <code>hello.py</code>. Type this:</p><pre><code>print(\"Hello, Kumusta!\")</code></pre><p>Save the file, then run it in your terminal:</p><pre><code>python hello.py</code></pre><p>Congratulations! You just wrote your first program. The <code>print()</code> function displays text on the screen.</p><h3>How Python Works</h3><p>Python reads your code <strong>line by line</strong>, from top to bottom. Each line is called a <em>statement</em>. Python is an <strong>interpreted language</strong>, which means it runs your code directly without compiling it first — making it super convenient for quick testing.</p><blockquote>Think of Python like a recipe: it follows each instruction step by step, in order.</blockquote>",
+      "objectives": [
+        "Understand what Python is and why it's popular",
+        "Install Python on your computer",
+        "Write and run your first Python program",
+        "Understand how Python executes code line by line"
+      ]
+    },
+    {
+      "id": "python-variables",
+      "title": "Variables & Data Types",
+      "content": "<h3>What Are Variables?</h3><p>Variables are like <strong>labeled containers</strong> that store data. You give a name to a value so you can use it later.</p><pre><code>name = \"Maria\"\nage = 25\nheight = 5.4\nis_student = True</code></pre><p>Here, <code>name</code>, <code>age</code>, <code>height</code>, and <code>is_student</code> are all variables.</p><h3>Data Types</h3><p>Python has several built-in data types:</p><ul><li><strong>String (str)</strong> — text, wrapped in quotes: <code>\"Hello\"</code> or <code>'Hello'</code></li><li><strong>Integer (int)</strong> — whole numbers: <code>42</code>, <code>-7</code>, <code>0</code></li><li><strong>Float</strong> — decimal numbers: <code>3.14</code>, <code>99.9</code></li><li><strong>Boolean (bool)</strong> — <code>True</code> or <code>False</code></li></ul><h3>Working with Strings</h3><p>You can combine (concatenate) strings using the <code>+</code> operator:</p><pre><code>first_name = \"Juan\"\nlast_name = \"Dela Cruz\"\nfull_name = first_name + \" \" + last_name\nprint(full_name)  # Output: Juan Dela Cruz</code></pre><p>You can also use <strong>f-strings</strong> for cleaner formatting:</p><pre><code>price = 150\nprint(f\"The item costs ₱{price}\")  # Output: The item costs ₱150</code></pre><h3>Type Conversion</h3><p>Sometimes you need to convert between types:</p><pre><code>age_str = \"25\"\nage_num = int(age_str)   # Convert string to integer\nprice = float(100)       # Convert int to float</code></pre><p>Common functions: <code>str()</code>, <code>int()</code>, <code>float()</code>, <code>bool()</code></p><blockquote>Pro tip: Use <code>type()</code> to check a variable's type — <code>type(age)</code> will return <code>&lt;class 'int'&gt;</code>.</blockquote>",
+      "objectives": [
+        "Create and use variables in Python",
+        "Understand strings, integers, floats, and booleans",
+        "Concatenate strings and use f-strings",
+        "Convert between different data types"
+      ]
+    },
+    {
+      "id": "python-control-flow",
+      "title": "Control Flow: If/Else & Loops",
+      "content": "<h3>Making Decisions with If/Else</h3><p>Programs need to make decisions. Python uses <code>if</code>, <code>elif</code>, and <code>else</code> for this:</p><pre><code>age = 18\n\nif age >= 18:\n    print(\"You can vote!\")\nelif age >= 16:\n    print(\"Almost there!\")\nelse:\n    print(\"Too young to vote.\")</code></pre><p><strong>Important:</strong> Python uses <strong>indentation</strong> (4 spaces) to group code blocks. This is not optional — it's part of the syntax!</p><h3>Comparison Operators</h3><ul><li><code>==</code> equal to</li><li><code>!=</code> not equal to</li><li><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> greater/less than</li></ul><h3>Loops: Repeating Things</h3><p><strong>For Loop</strong> — iterates over a sequence:</p><pre><code>for i in range(5):\n    print(f\"Count: {i}\")\n# Output: Count: 0, 1, 2, 3, 4</code></pre><p><strong>While Loop</strong> — repeats while a condition is true:</p><pre><code>count = 0\nwhile count < 5:\n    print(f\"Count: {count}\")\n    count += 1</code></pre><h3>Practical Example</h3><p>Let's calculate the total price of items in a sari-sari store order:</p><pre><code>total = 0\nitems = [15, 25, 10, 30]\n\nfor price in items:\n    total += price\n\nprint(f\"Total: ₱{total}\")  # Output: Total: ₱80</code></pre><blockquote>Be careful with while loops — if the condition never becomes False, your program runs forever! Always make sure the loop can end.</blockquote>",
+      "objectives": [
+        "Write if/elif/else statements to make decisions",
+        "Use comparison and logical operators",
+        "Create for loops and while loops",
+        "Avoid infinite loops"
+      ]
+    },
+    {
+      "id": "python-functions-lists",
+      "title": "Functions & Lists",
+      "content": "<h3>What Are Functions?</h3><p>Functions are <strong>reusable blocks of code</strong>. Instead of writing the same code again and again, you wrap it in a function and call it whenever you need it.</p><pre><code>def greet(name):\n    print(f\"Kumusta, {name}! Welcome!\")\n\ngreet(\"Maria\")  # Kumusta, Maria! Welcome!\ngreet(\"Jose\")   # Kumusta, Jose! Welcome!</code></pre><p>The <code>def</code> keyword defines a function. <code>name</code> is a <em>parameter</em> — a variable the function receives.</p><h3>Returning Values</h3><p>Functions can also <strong>return</strong> values using the <code>return</code> keyword:</p><pre><code>def add(a, b):\n    return a + b\n\nresult = add(10, 20)\nprint(result)  # 30</code></pre><h3>Lists</h3><p>Lists store <strong>multiple values</strong> in one variable:</p><pre><code>grades = [88, 92, 75, 95, 81]\nfruits = [\"mango\", \"banana\", \"avocado\"]</code></pre><p>Access items by <strong>index</strong> (starting at 0):</p><pre><code>print(grades[0])    # 88 (first item)\nprint(fruits[2])    # avocado (third item)\nprint(len(grades))  # 5 (total items)</code></pre><h3>Useful List Methods</h3><ul><li><code>.append(item)</code> — add to end</li><li><code>.remove(item)</code> — remove first occurrence</li><li><code>.sort()</code> — sort the list</li><li><code>.reverse()</code> — reverse the list</li></ul><h3>Combining Functions and Lists</h3><pre><code>def average(numbers):\n    total = sum(numbers)\n    return total / len(numbers)\n\nscores = [90, 85, 78, 92, 88]\nprint(f\"Average: {average(scores):.1f}\")  # Average: 86.6</code></pre><blockquote>Functions are the building blocks of clean, organized code. Always try to break your problems into smaller functions!</blockquote>",
+      "objectives": [
+        "Define and call functions with parameters",
+        "Return values from functions",
+        "Create and manipulate lists",
+        "Use list methods like append, remove, and sort",
+        "Combine functions with lists for practical tasks"
+      ]
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "py-q1",
+        "question": "Which of the following is the correct way to print text in Python?",
+        "options": [
+          "print(\"Hello\")",
+          "console.log(\"Hello\")",
+          "echo \"Hello\"",
+          "System.out.println(\"Hello\")"
+        ],
+        "correct": 0,
+        "explanation": "Python uses the print() function. console.log is JavaScript, echo is PHP/Shell, and System.out.println is Java."
+      },
+      {
+        "id": "py-q2",
+        "question": "What is the output of: print(type(3.14))?",
+        "options": [
+          "<class 'float'>",
+          "<class 'int'>",
+          "<class 'decimal'>",
+          "<class 'number'>"
+        ],
+        "correct": 0,
+        "explanation": "3.14 is a decimal number, so Python classifies it as a float. Whole numbers without decimals are integers."
+      },
+      {
+        "id": "py-q3",
+        "question": "What does the following code output?\n\nname = \"Juan\"\nprint(f\"Hello, {name}!\")",
+        "options": [
+          "Hello, Juan!",
+          "Hello, {name}!",
+          "Hello, name!",
+          "Error"
+        ],
+        "correct": 0,
+        "explanation": "f-strings (formatted string literals) replace {name} with the variable's value. The f before the quote tells Python to evaluate expressions inside {}."
+      },
+      {
+        "id": "py-q4",
+        "question": "Which operator checks if two values are NOT equal?",
+        "options": [
+          "!=",
+          "<>",
+          "==",
+          "=!"
+        ],
+        "correct": 0,
+        "explanation": "In Python, != means 'not equal to'. The == operator checks equality, and <> and =! are not valid Python operators."
+      },
+      {
+        "id": "py-q5",
+        "question": "What will this loop print?\n\nfor i in range(3):\n    print(i)",
+        "options": [
+          "0, 1, 2",
+          "1, 2, 3",
+          "0, 1, 2, 3",
+          "1, 2"
+        ],
+        "correct": 0,
+        "explanation": "range(3) generates numbers 0, 1, 2. It starts at 0 and stops BEFORE the given number. This is zero-based indexing."
+      },
+      {
+        "id": "py-q6",
+        "question": "How do you define a function in Python?",
+        "options": [
+          "def my_function():",
+          "function myFunction()",
+          "func my_function()",
+          "create function my_function()"
+        ],
+        "correct": 0,
+        "explanation": "Python uses the 'def' keyword to define functions, followed by the function name and parentheses."
+      },
+      {
+        "id": "py-q7",
+        "question": "What is the index of the first element in a Python list?",
+        "options": [
+          "0",
+          "1",
+          "-1",
+          "It depends on the list"
+        ],
+        "correct": 0,
+        "explanation": "Python uses zero-based indexing, meaning the first element is always at index 0. This is a fundamental concept in programming."
+      },
+      {
+        "id": "py-q8",
+        "question": "Which of these adds an item to the end of a list?",
+        "options": [
+          ".append()",
+          ".add()",
+          ".insert()",
+          ".push()"
+        ],
+        "correct": 0,
+        "explanation": ".append() adds an item to the end of a list. .add() is for sets, .insert() adds at a specific position, and .push() is used in JavaScript arrays."
+      }
+    ]
+  }
+}

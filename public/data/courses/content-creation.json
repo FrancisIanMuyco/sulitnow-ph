@@ -1,0 +1,156 @@
+{
+  "id": "content-creation",
+  "title": "Content Creation for Freelancers",
+  "subtitle": "Learn to create blogs, videos, and social media content that earns",
+  "description": "Discover how to create engaging content across blogs, YouTube, and social media platforms. This beginner-friendly course covers writing, basic video editing, and practical monetization strategies tailored for Filipino creators.",
+  "category": "Freelancing",
+  "level": "Beginner",
+  "duration": "2 hours",
+  "icon": "pen-tool",
+  "modules": [
+    {
+      "id": "content-creation-m1",
+      "title": "Types of Content Creation (Blog, YouTube, Social Media)",
+      "content": "<h3>What is Content Creation?</h3>\n<p>Content creation is the process of producing digital material — articles, videos, images, podcasts, and social media posts — that informs, entertains, or persuades an audience. As a freelancer, content creation is one of the most versatile and in-demand services you can offer.</p>\n\n<h3>Blog Writing</h3>\n<p>Blogs remain a powerful medium for businesses and individuals. Companies hire freelance writers to create articles that rank on Google and drive organic traffic to their websites. Here's what makes blog writing attractive:</p>\n<ul>\n<li><strong>Consistent demand</strong> — Businesses always need fresh content.</li>\n<li><strong>Flexible schedule</strong> — You can write anytime, anywhere.</li>\n<li><strong>Good pay</strong> — Filipino blog writers typically earn ₱500–₱3,000 per article, with SEO-optimized long-form content paying even more.</li>\n<li><strong>Portfolio building</strong> — Published articles can serve as strong portfolio pieces.</li>\n</ul>\n<p>Popular blog niches include technology, health, finance, travel, and food — all of which have strong audiences in the Philippines and globally.</p>\n\n<h3>YouTube Content</h3>\n<p>YouTube is the second-largest search engine in the world. Filipino YouTubers have built entire businesses around channels covering topics like budget travel, cooking, tech reviews, and personal finance. As a freelancer, you can create YouTube content for yourself or produce videos for clients. Key aspects include:</p>\n<ul>\nli><strong>Scripting</strong> — Writing engaging scripts that keep viewers watching.</li>\n<li><strong>Filming</strong> — Even a smartphone is enough to start. Many successful YouTubers started with phone cameras.</li>\n<li><strong>Editing</strong> — Clean, engaging edits keep audiences coming back.</li>\n<li><strong>Thumbnails & Titles</strong> — These determine whether people click on your video.</li>\n</ul>\n\n<h3>Social Media Content</h3>\n<p>Social media is where most Filipinos spend their time online. Facebook, Instagram, TikTok, and X (formerly Twitter) are all platforms where content creators thrive. As a freelancer, you can create:</p>\n<ul>\n<li><strong>Short-form videos</strong> — TikToks and Reels that go viral and build brand awareness.</li>\n<li><strong>Carousel posts</strong> — Educational or entertaining multi-image posts on Instagram.</li>\n<li><strong>Copywriting</strong> — Captions and text posts that drive engagement.</li>\n<li><strong>Community management</strong> — Responding to comments and building audience relationships.</li>\n</ul>\n\n<h3>Choosing Your Content Type</h3>\n<p>You don't have to do everything. Start with one format that suits your strengths:</p>\n<ul>\n<li>Love writing? Start with blogging.</li>\n<li>Comfortable on camera? Try YouTube or TikTok.</li>\n<li>Visually creative? Focus on Instagram or graphic-based content.</li>\n</ul>\n\n<blockquote>The best content creators pick a lane, master it, and expand later. Don't spread yourself too thin when you're starting out.</blockquote>",
+      "objectives": [
+        "Understand what content creation involves as a freelance service",
+        "Compare blogging, YouTube, and social media as content formats",
+        "Identify the earning potential for each content type",
+        "Choose a starting content format based on your strengths"
+      ]
+    },
+    {
+      "id": "content-creation-m2",
+      "title": "Writing Engaging Content",
+      "content": "<h3>The Fundamentals of Good Writing</h3>\n<p>Whether you're writing a blog post, a social media caption, or a YouTube script, the principles of engaging writing are the same. Your goal is to capture attention, deliver value, and keep the reader (or viewer) engaged from start to finish.</p>\n\n<h3>Start with a Hook</h3>\nThe first sentence or two determines whether someone keeps reading. Effective hooks include:</p>\n<ul>\n<li><strong>A surprising statistic</strong> — \"70% of Filipino freelancers earn more than the average office worker.\"</li>\n<li><strong>A question</strong> — \"Have you ever wondered how some people make a full-time income working from their phone?\"</li>\n<li><strong>A bold statement</strong> — \"You don't need a degree to start freelancing.\"</li>\n<li><strong>A relatable problem</strong> — \"Struggling to find your first client? You're not alone.\"</li>\n</ul>\n\n<h3>Structure Your Content</h3>\n<p>Organized content is easier to read and more likely to hold attention. Follow these structures:</p>\n<ul>\n<li><strong>Blog posts</strong> — Use headings (H2, H3) to break up sections. Keep paragraphs short — 2–3 sentences max.</li>\n<li><strong>Social media</strong> — Lead with the most interesting point. Use line breaks for readability.</li>\n<li><strong>YouTube scripts</strong> — Open with the hook, preview what's coming, deliver value, and end with a call to action.</li>\n</ul>\n\n<h3>Write Like You Talk</h3>\n<p>The best content feels conversational. Avoid overly formal language unless the context demands it. Instead of writing \"It is imperative that one utilizes effective time management strategies,\" write \"Here's a simple way to manage your time better.\" Your readers should feel like they're having a conversation with a knowledgeable friend.</p>\n\n<h3>Use the \"So What?\" Test</h3>\n<p>Before publishing any piece of content, ask yourself: \"So what? Why should the reader care?\" Every section should answer a question the reader has or solve a problem they face. If a paragraph doesn't pass the \"so what\" test, cut it.</p>\n\n<h3>Editing and Proofreading</h3>\n<p>Great writing is really great rewriting. After writing your first draft:</p>\n<ul>\n<li>Take a break before editing — even 15 minutes helps.</li>\n<li>Read it out loud to catch awkward phrasing.</li>\n<li>Use tools like Grammarly (free version works well) to catch grammar mistakes.</li>\n<li>Check that your content is free of typos — especially important for client work.</li>\n</ul>\n\n<h3>Content Ideas When You're Stuck</h3>\n<p>Writer's block is real. Here are ways to generate ideas:</p>\n<ul>\n<li>Check \"People Also Ask\" on Google for your topic.</li>\n<li>Look at what competitors are writing about.</li>\n<li>Browse Reddit or Facebook groups in your niche for common questions.</li>\n<li>Repurpose old content with a fresh angle.</li>\n</ul>\n\n<blockquote>Writing is a skill that improves with practice. Write every day, even if it's just a social media post or a short journal entry. Consistency beats perfection.</blockquote>",
+      "objectives": [
+        "Write compelling hooks that capture reader attention",
+        "Structure content using headings, short paragraphs, and clear organization",
+        "Adopt a conversational tone that connects with audiences",
+        "Apply editing techniques to polish and refine your content"
+      ]
+    },
+    {
+      "id": "content-creation-m3",
+      "title": "Basic Video Editing for Beginners",
+      "content": "<h3>Why Video Editing Matters</h3>\n<p>Video content is dominating the internet. From TikTok to YouTube, businesses and creators need video editors more than ever. As a freelancer, learning basic video editing opens up a huge market of potential clients. You don't need expensive equipment or years of experience to start.</p>\n\n<h3>Choosing Your Editing Software</h3>\n<p>Here are the best tools for beginners, ranging from free to affordable:</p>\n<ul>\n<li><strong>CapCut</strong> (Free) — Perfect for short-form content like TikToks and Reels. It's mobile-friendly and has tons of built-in effects.</li>\n<li><strong>DaVinci Resolve</strong> (Free) — A professional-grade editor with a free version. Steeper learning curve but incredibly powerful.</li>\n<li><strong>Shotcut</strong> (Free) — Open-source and lightweight. Great for basic edits without the bloat.</li>\n<li><strong>Adobe Premiere Rush</strong> (₱500/month) — Simplified version of Premiere Pro, great for social media content.</li>\n<li><strong>CapCut Pro</strong> (₱200–₱400/month) — Unlocks more advanced features and templates.</li>\n</ul>\n<p>For most Filipino freelancers starting out, <strong>CapCut</strong> is the recommended choice. It's free, intuitive, and handles both mobile and desktop editing.</p>\n\n<h3>Essential Editing Skills</h3>\n<p>Focus on mastering these core techniques first:</p>\n<ul>\nli><strong>Cutting and trimming</strong> — Removing dead air and unnecessary pauses keeps viewers engaged.</li>\n<li><strong>Transitions</strong> — Simple cuts, fades, and zooms between clips. Don't overdo it — clean transitions look more professional.</li>\n<li><strong>Text and captions</strong> — Adding subtitles makes your content accessible and boosts engagement, especially on social media where many watch without sound.</li>\n<li><strong>Music and sound</strong> — Background music sets the mood. Use royalty-free music from YouTube Audio Library or Pixabay to avoid copyright issues.</li>\n<li><strong>Color correction</strong> — Basic color adjustments can make your video look more polished. Don't go overboard with filters.</li>\n</ul>\n\n<h3>The Editing Workflow</h3>\n<p>Follow this step-by-step process:</p>\n<ol>\n<li><strong>Import and organize</strong> — Sort your clips and identify the best takes.</li>\n<li><strong>Rough cut</strong> — Assemble the clips in order and trim the fat.</li>\n<li><strong>Fine cut</strong> — Add transitions, text, music, and effects.</li>\n<li><strong>Review</strong> — Watch the full video from start to finish. Does it flow naturally?</li>\n<li><strong>Export</strong> — Use the right resolution (1080p for YouTube, 1080x1920 for vertical short-form).</li>\n</ol>\n\n<h3>Building a Video Editing Portfolio</h3>\n<p>Start by editing sample projects:</p>\n<ul>\nli>Create a 60-second TikTok-style video on a topic you're passionate about.</li>\n<li>Edit a \"before and after\" transformation video.</li>\n<li>Offer to edit one video for free for a friend's YouTube channel to get a testimonial.</li>\n</ul>\n\n<blockquote>You don't need to master every effect or technique. Focus on clean, well-paced edits that tell a story. That's what clients pay for.</blockquote>",
+      "objectives": [
+        "Select appropriate video editing software for your needs and budget",
+        "Learn essential editing techniques including cutting, transitions, and captions",
+        "Follow a structured editing workflow from import to export",
+        "Create sample projects to build a video editing portfolio"
+      ]
+    },
+    {
+      "id": "content-creation-m4",
+      "title": "Monetizing Your Content",
+      "content": "<h3>Ways to Earn from Content Creation</h3>\n<p>Content creation isn't just a skill you offer to clients — it's also a way to build your own income streams. Here are the main ways Filipino content creators monetize their work:</p>\n\n<h3>Freelance Content Services</h3>\n<p>The most straightforward path: offer content creation as a service. Here are typical rates in the Philippines:</p>\n<ul>\n<li><strong>Blog writing</strong> — ₱500–₱3,000 per article (1,000–2,500 words)</li>\n<li><strong>Social media management</strong> — ₱15,000–₱40,000/month for 3–5 accounts</li>\n<li><strong>Video editing</strong> — ₱1,000–₱5,000 per video for short-form; ₱5,000–₱15,000+ for YouTube videos</li>\n<li><strong>Copywriting</strong> — ₱2,000–₱10,000 per sales page or landing page</li>\n</ul>\n\n<h3>Ad Revenue</h3>\n<p>Once you build an audience, ad revenue becomes a passive income stream:</p>\n<ul>\nli><strong>YouTube Partner Program</strong> — After reaching 1,000 subscribers and 4,000 watch hours, you can earn from ads. Filipino YouTubers typically earn ₱50–₱200 per 1,000 views depending on niche.</li>\n<li><strong>Blog ad networks</strong> — Google AdSense, Mediavine (for higher-traffic blogs), and Ezoic display ads on your website.</li>\n<li><strong>TikTok Creator Fund</strong> — Pays based on views, though rates are lower in the Philippines (roughly ₱0.50–₱5 per 1,000 views).</li>\n</ul>\n\n<h3>Brand Partnerships & Sponsorships</h3>\n<p>Brands pay creators to promote their products. Even micro-influencers (1,000–10,000 followers) can land sponsored posts. Here's how to attract brand deals:</p>\n<ul>\nli>Build a consistent posting schedule and niche down.</li>\n<li>Engage with your audience — high engagement rates matter more than follower count.</li>\n<li>Create a media kit with your stats, demographics, and pricing.</li>\n<li>Reach out to local brands directly — many Filipino brands are open to working with content creators.</li>\n</ul>\n\n<h3>Affiliate Marketing</h3>\n<p>Earn commissions by recommending products and services you genuinely use. Popular affiliate programs for Filipino creators include:</p>\n<ul>\nli><strong>Lazada & Shopee Affiliate Programs</strong> — Earn 1–10% commission on products sold through your links.</li>\n<li><strong>Amazon Associates</strong> — Earn commissions on Amazon products referred through your blog or social media.</li>\n<li><strong>Software affiliate programs</strong> — Tools like Canva, Notion, and hosting companies offer generous commissions (₱500–₱5,000+ per referral).</li>\n</ul>\n\n<h3>Digital Products</h3>\n<p>Once you've built expertise, create and sell digital products:</p>\n<ul>\nli><strong>E-books and guides</strong> — Write about your expertise. Sell on Gumroad or your own website for ₱200–₱1,000.</li>\n<li><strong>Online courses</strong> — Platforms like Udemy or Skillshare let you monetize your knowledge.</li>\n<li><strong>Templates and presets</strong> — Sell Canva templates, Lightroom presets, or Notion setups on Etsy or Gumroad.</li>\n<li><strong>Stock content</strong> — Sell photos, videos, or music on Shutterstock or Adobe Stock.</li>\n</ul>\n\n<h3>Payment & Financial Tips</h3>\n<p>When receiving payments for your content work:</p>\n<ul>\nli>Use <strong>GCash</strong> or <strong>Maya</strong> for quick local transfers.</li>\n<li>Set up a <strong>Wise</strong> account for receiving international payments at better rates.</li>\n<li>Track all income and expenses — apps like <strong>Money Manager</strong> or a simple spreadsheet work great.</li>\n<li>Set aside 10–20% of your earnings for taxes (BIR registration is recommended for freelancers earning above ₱250,000/year).</li>\n</ul>\n\n<blockquote>The key to monetization is consistency. Build your skills, grow your audience, and provide value — the money will follow. Start with one income stream and add more as you grow.</blockquote>",
+      "objectives": [
+        "Identify the main ways content creators earn money",
+        "Understand typical rates for freelance content services in the Philippines",
+        "Explore ad revenue, sponsorships, and affiliate marketing opportunities",
+        "Plan digital product creation as a passive income strategy"
+      ]
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "content-creation-q1",
+        "question": "Which of the following is a popular free video editing tool recommended for beginners?",
+        "options": [
+          "Adobe Premiere Pro",
+          "CapCut",
+          "Final Cut Pro",
+          "Avid Media Composer"
+        ],
+        "correct": 1,
+        "explanation": "CapCut is free, mobile-friendly, and beginner-friendly — making it the top recommendation for new video editors, especially for short-form content."
+      },
+      {
+        "id": "content-creation-q2",
+        "question": "What is the 'So What?' test in content writing?",
+        "options": [
+          "A tool to check grammar mistakes",
+          "A way to measure how many people read your content",
+          "Asking whether your content provides value the reader cares about",
+          "A method to count word count in your articles"
+        ],
+        "correct": 2,
+        "explanation": "The 'So What?' test helps you evaluate if every section of your content answers a real question or solves a real problem for the reader."
+      },
+      {
+        "id": "content-creation-q3",
+        "question": "How much do Filipino blog writers typically earn per article?",
+        "options": [
+          "₱50–₱100",
+          "₱500–₱3,000",
+          "₱10,000–₱50,000",
+          "Blog writing is unpaid in the Philippines"
+        ],
+        "correct": 1,
+        "explanation": "Filipino blog writers typically earn ₱500–₱3,000 per article, with SEO-optimized long-form content commanding higher rates."
+      },
+      {
+        "id": "content-creation-q4",
+        "question": "What are the requirements for the YouTube Partner Program?",
+        "options": [
+          "100 subscribers and 100 watch hours",
+          "1,000 subscribers and 4,000 watch hours",
+          "10,000 subscribers and 100,000 views",
+          "No requirements — anyone can monetize immediately"
+        ],
+        "correct": 1,
+        "explanation": "YouTube requires at least 1,000 subscribers and 4,000 watch hours in the past 12 months to qualify for the Partner Program and start earning from ads."
+      },
+      {
+        "id": "content-creation-q5",
+        "question": "Which of the following is NOT a way to monetize content?",
+        "options": [
+          "Affiliate marketing",
+          "Ad revenue",
+          "Ignoring your audience",
+          "Selling digital products"
+        ],
+        "correct": 2,
+        "explanation": "Ignoring your audience prevents growth. Monetization requires consistent engagement and providing value to your audience."
+      },
+      {
+        "id": "content-creation-q6",
+        "question": "What is a good starting tip for someone who doesn't know which type of content to create?",
+        "options": [
+          "Try all types at once to find what works",
+          "Pick one format that suits your strengths and master it first",
+          "Only create content that your friends like",
+          "Wait until you have expensive equipment"
+        ],
+        "correct": 1,
+        "explanation": "The best approach is to pick one content type that matches your strengths, master it, and expand later. Spreading yourself too thin leads to burnout."
+      },
+      {
+        "id": "content-creation-q7",
+        "question": "Why are captions/subtitles important in video content?",
+        "options": [
+          "They make videos longer",
+          "They're required by law",
+          "Many viewers watch without sound and they boost engagement",
+          "They replace the need for good audio"
+        ],
+        "correct": 2,
+        "explanation": "A large percentage of viewers watch videos on social media without sound. Captions make content accessible and significantly boost engagement and watch time."
+      },
+      {
+        "id": "content-creation-q8",
+        "question": "Which payment method is recommended for receiving international freelance payments in the Philippines?",
+        "options": [
+          "Cash only",
+          "GCash only",
+          "Wise (TransferWise)",
+          "Physical checks"
+        ],
+        "correct": 2,
+        "explanation": "Wise offers better exchange rates and lower fees than traditional banks for receiving international USD payments, making it ideal for Filipino freelancers."
+      }
+    ]
+  }
+}

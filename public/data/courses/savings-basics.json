@@ -1,0 +1,156 @@
+{
+  "id": "savings-basics",
+  "title": "Savings Basics",
+  "subtitle": "Build Your Financial Foundation",
+  "description": "Learn the fundamentals of saving money and building financial security. This course covers budgeting methods, where to save in the Philippines, and how to build an emergency fund.",
+  "category": "Financial Literacy",
+  "level": "Beginner",
+  "duration": "1.5 hours",
+  "icon": "piggy-bank",
+  "modules": [
+    {
+      "id": "sav-why",
+      "title": "Why Save Money?",
+      "content": "<h3>The Reality of Saving in the Philippines</h3><p>Many Filipinos live paycheck to paycheck. According to a BSP (Bangko Sentral ng Pilipinas) survey, only about <strong>1 in 3 Filipino adults</strong> have savings. But saving — even a small amount — can change your life dramatically.</p><h3>Why Saving Matters</h3><p><strong>1. Financial Security</strong></p><p>Life is unpredictable. A medical emergency, a typhoon damaging your home, or losing your job can happen without warning. Savings give you a <strong>safety net</strong> so you don't have to borrow money at high interest rates or rely on others.</p><p><strong>2. Achieving Goals</strong></p><p>Whether it's buying a motorcycle, funding your education, traveling, or starting a business — savings make your goals achievable. Without saving, these remain just wishes.</p><p><strong>3. Avoiding Debt Traps</strong></p><p>When you have no savings, unexpected expenses force you into debt. Credit card interest in the Philippines can be as high as <strong>3-3.5% per month</strong> (36-42% per year!). A ₱10,000 credit card balance can balloon quickly.</p><p><strong>4. Building Wealth Over Time</strong></p><p>Thanks to <strong>compound interest</strong>, money saved early grows exponentially. ₱1,000 saved monthly at 6% annual interest becomes:</p><pre><code>After 5 years:  ₱69,770\nAfter 10 years: ₱164,700\nAfter 20 years: ₱463,000\nAfter 30 years: ₱1,004,515</code></pre><p>That's over <strong>1 million pesos</strong> from saving just ₱1,000 a month!</p><h3>Starting is the Hardest Part</h3><p>Many people think they need to save a lot before it's worth it. That's not true. Even ₱50 or ₱100 per day adds up:</p><ul><li>₱50/day = ₱1,500/month = ₱18,000/year</li><li>₱100/day = ₱3,000/month = ₱36,000/year</li></ul><blockquote>The best time to start saving was yesterday. The second best time is today. Don't wait for the \"right\" salary — start with what you have.</blockquote>",
+      "objectives": [
+        "Understand why saving money is important",
+        "See how compound interest grows your money over time",
+        "Recognize how small daily savings add up significantly",
+        "Overcome the belief that you need to earn more before saving"
+      ]
+    },
+    {
+      "id": "sav-budget",
+      "title": "Budgeting Methods: 50-30-20 & Envelope",
+      "content": "<h3>What is a Budget?</h3><p>A budget is simply a <strong>plan for your money</strong>. It tells your money where to go instead of wondering where it went. Without a budget, it's easy to spend more than you earn — especially with so many online shopping sales and impulse buys.</p><h3>The 50-30-20 Rule</h3><p>This is the simplest budgeting method. Divide your <strong>after-tax income</strong> into three buckets:</p><pre><code>┌─────────────────────────────────────┐\n│         YOUR INCOME (100%)          │\n├──────────────┬──────────┬───────────┤\n│  NEEDS (50%) │WANTS(30%)│SAVE (20%) │\n│  Rent        │ Netflix  │ Emergency │\n│  Food        │ Shopping │  Fund     │\n│  Transport   │ Eating   │ Investments│\n│  Bills       │  Out     │           │\n└──────────────┴──────────┴───────────┘</code></pre><p><strong>Example for a ₱20,000 salary:</strong></p><ul><li><strong>50% Needs (₱10,000):</strong> Rent, food, electricity, water, internet, transportation</li><li><strong>30% Wants (₱6,000):</strong> Dining out, clothes, entertainment, gadgets</li><li><strong>20% Savings (₱4,000):</strong> Emergency fund, MP2, investments</li></ul><h3>The Envelope Method</h3><p>This is perfect if you tend to overspend. After receiving your salary, physically divide cash into envelopes labeled for each category:</p><ul><li>Envelope 1: Groceries — ₱4,000</li><li>Envelope 2: Transportation — ₱2,000</li><li>Envelope 3: Food/Allowance — ₱2,000</li><li>Envelope 4: Bills — ₱2,000</li><li>Envelope 5: Savings — ₱3,000</li></ul><p><strong>The rule:</strong> When an envelope is empty, you're done spending in that category until next payday. No borrowing from other envelopes!</p><h3>Tracking Your Spending</h3><p>You can't budget if you don't know where your money goes. Try these methods:</p><ul><li><strong>Notebook:</strong> Simple pen and paper — write every expense</li><li><strong>Spreadsheet:</strong> Google Sheets is free and accessible</li><li><strong>Apps:</strong> Wallet (free), Money Manager, or even just your Notes app</li></ul><blockquote>The 50-30-20 rule is a starting point. If your needs take up 70% of your income (common in Metro Manila), adjust accordingly — maybe 70-10-20. The important thing is to always save <em>something</em>.</blockquote>",
+      "objectives": [
+        "Understand the 50-30-20 budgeting rule",
+        "Apply the envelope method to control spending",
+        "Track daily expenses to identify spending patterns",
+        "Create a realistic budget based on actual income"
+      ]
+    },
+    {
+      "id": "sav-where",
+      "title": "Where to Save: Banks, Digital Banks & MP2",
+      "content": "<h3>Not All Savings Are Equal</h3><p>Keeping money under your pillow (or in a hidden drawer) is common in the Philippines, but it's actually <strong>losing value</strong> due to inflation. At 4-6% inflation and 0.25% typical savings interest, your ₱10,000 becomes worth less each year.</p><h3>Traditional Banks</h3><p>Big banks like <strong>BDO, BPI, Metrobank, and Landbank</strong> offer savings accounts. Benefits include:</p><ul><li>Physical branches for in-person banking</li><li>Wide ATM networks</li><li>Security and PDIC insurance (up to ₱500,000)</li></ul><p><strong>Downsides:</strong> Low interest rates (0.25% per year), minimum maintaining balance requirements, and sometimes long lines.</p><h3>Digital Banks (Higher Interest!)</h3><p>Digital banks have exploded in the Philippines and offer <strong>much higher interest rates</strong>:</p><ul><li><strong>Maya Savings</strong> — up to 2.5% per year (with conditions)</li><li><strong>GoTyme</strong> — 5% per year for the first 3 months</li><li><strong>Tonik</strong> — up to 4% per year</li><li><strong>UNO Digital Bank</strong> — up to 4.25% per year</li><li><strong>SeaBank</strong> — up to 3% per year</li></ul><p>All digital banks are BSP-regulated and PDIC-insured — your money is just as safe as in traditional banks.</p><h3>MP2 (Modified Pag-IBIG II)</h3><p>If you're a Pag-IBIG member, <strong>MP2 is one of the best savings options in the Philippines</strong>:</p><ul><li><strong>5-year lock-in period</strong></li><li><strong>Historical dividends: 6-7% per year</strong> (tax-free!)</li><li>Minimum ₱500 contribution</li><li>Government-backed — very safe</li></ul><p>Example: ₱1,000/month for 5 years at 6% annual dividend:</p><pre><code>Total saved:  ₱60,000\nWith dividends: ~₱69,000\nFree money:    ~₱9,000 (just for saving!)</code></pre><p>You can open an MP2 account at any Pag-IBIG branch or online through their Virtual Pag-IBIG platform.</p><h3>The Right Strategy</h3><p><strong>Keep separate accounts for different purposes:</strong></p><ol><li><strong>Checking account</strong> — for daily transactions (at a traditional bank)</li><li><strong>Emergency fund</strong> — in a high-interest digital bank (easy to withdraw)</li><li><strong>Long-term savings</strong> — in MP2 (higher returns, 5-year commitment)</li></ol><blockquote>Start with a digital bank savings account — you can open one from your phone in minutes. Then explore MP2 for longer-term savings with higher returns.</blockquote>",
+      "objectives": [
+        "Compare traditional banks vs digital banks",
+        "Understand PDIC insurance and how it protects savings",
+        "Evaluate MP2 as a savings and investment vehicle",
+        "Choose the right type of savings for different goals"
+      ]
+    },
+    {
+      "id": "sav-emergency",
+      "title": "Building an Emergency Fund",
+      "content": "<h3>What is an Emergency Fund?</h3><p>An emergency fund is money set aside <strong>specifically for unexpected expenses</strong>. It's not for shopping, vacations, or gadgets — it's your financial safety net.</p><h3>How Much Do You Need?</h3><p>The standard rule is <strong>3 to 6 months of essential expenses</strong>:</p><pre><code>Monthly essential expenses:\n  Rent/Housing:     ₱5,000\n  Food:             ₱4,000\n  Transportation:   ₱2,000\n  Utilities:        ₱1,500\n  Insurance:        ₱1,000\n  Phone/Internet:   ₱1,000\n  ─────────────────────────\n  Total:           ₱14,500\n\nEmergency fund target:\n  3 months:  ₱43,500\n  6 months:  ₱87,000</code></pre><p><strong>Start small.</strong> Your first goal should be ₱10,000 — enough to cover a minor emergency like a phone repair or unexpected medical visit. Then build from there.</p><h3>Where to Keep It</h3><p>Your emergency fund should be:</p><ul><li><strong>Accessible</strong> — you can withdraw it quickly (within 1-2 days)</li><li><strong>Separate</strong> — not in your regular spending account</li><li><strong>Earning interest</strong> — in a digital bank with at least 2-4% annual interest</li></ul><p>Don't invest your emergency fund in stocks or MP2 — you might not be able to withdraw it when you need it most.</p><h3>How to Build It</h3><p><strong>Method 1: Pay Yourself First</strong></p><p>Before spending anything, transfer your savings amount immediately after receiving your salary:</p><pre><code>Salary arrives: ₱20,000\nImmediately transfer ₱3,000 to savings account\nNow operate with ₱17,000 for the month</code></pre><p><strong>Method 2: The 52-Week Challenge (Filipino version)</strong></p><ul><li>Week 1: Save ₱50</li><li>Week 2: Save ₱100</li><li>Week 3: Save ₱150</li><li>...and so on, adding ₱50 each week</li></ul><p>By week 52, you'll have saved <strong>₱68,900</strong>!</p><p><strong>Method 3: Round-Up Savings</strong></p><p>Round up every expense to the nearest ₱100 and save the difference:</p><pre><code>Groceries: ₱347 → Round to ₱400, save ₱53\nCoffee: ₱85 → Round to ₱100, save ₱15\nTransport: ₱45 → Round to ₱100, save ₱55</code></pre><h3>When to Use It (and When Not To)</h3><p><strong>Valid emergencies:</strong></p><ul><li>Medical emergency or hospitalization</li><li>Urgent home repair (typhoon damage, plumbing)</li><li>Job loss (covers expenses while job hunting)</li><li>Car/vehicle repair for work</li></ul><p><strong>NOT emergencies:</strong></p><ul><li>Sale at the mall</li><li>New phone launch</li><li>Vacation deals</li><li>Birthday gifts</li></ul><blockquote>The peace of mind that comes from having an emergency fund is priceless. You'll sleep better knowing that unexpected expenses won't destroy your finances.</blockquote>",
+      "objectives": [
+        "Calculate how much emergency fund they need",
+        "Choose the right place to keep emergency savings",
+        "Apply practical methods to build savings consistently",
+        "Distinguish between real emergencies and non-essential spending"
+      ]
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "sav-q1",
+        "question": "If you save ₱1,000 per month at 6% annual interest, approximately how much will you have after 30 years?",
+        "options": [
+          "About ₱1,004,515 (over 1 million pesos)",
+          "About ₱360,000 (just the total saved)",
+          "About ₱200,000",
+          "About ₱500,000"
+        ],
+        "correct": 0,
+        "explanation": "Compound interest is powerful. While you only put in ₱360,000 (₱1,000 × 12 months × 30 years), compound interest turns it into over ₱1 million. This is why starting early matters so much."
+      },
+      {
+        "id": "sav-q2",
+        "question": "Using the 50-30-20 rule, how much should someone earning ₱25,000/month save?",
+        "options": [
+          "₱5,000 (20% of income)",
+          "₱12,500 (50% of income)",
+          "₱2,500 (10% of income)",
+          "₱7,500 (30% of income)"
+        ],
+        "correct": 0,
+        "explanation": "The 50-30-20 rule allocates 20% to savings. 20% of ₱25,000 = ₱5,000. The remaining amounts are: 50% for needs (₱12,500) and 30% for wants (₱7,500)."
+      },
+      {
+        "id": "sav-q3",
+        "question": "What is the main advantage of digital banks (like Maya, Tonik, GoTyme) over traditional banks?",
+        "options": [
+          "Higher interest rates on savings",
+          "More physical branches",
+          "Better ATM network",
+          "Lower technology requirements"
+        ],
+        "correct": 0,
+        "explanation": "Digital banks typically offer 2-5% annual interest on savings, compared to the 0.25% of traditional banks. They achieve this by having lower overhead costs (no physical branches to maintain)."
+      },
+      {
+        "id": "sav-q4",
+        "question": "What makes MP2 a good savings option for Filipinos?",
+        "options": [
+          "Government-backed with 6-7% annual dividends that are tax-free",
+          "It has no lock-in period",
+          "You can withdraw anytime without penalty",
+          "It requires no Pag-IBIG membership"
+        ],
+        "correct": 0,
+        "explanation": "MP2 (Modified Pag-IBIG II) offers tax-free dividends historically around 6-7% per year — higher than most bank savings. It is government-backed (very safe) but requires a 5-year lock-in period and Pag-IBIG membership."
+      },
+      {
+        "id": "sav-q5",
+        "question": "How many months of essential expenses should an emergency fund cover?",
+        "options": [
+          "3 to 6 months",
+          "1 month",
+          "12 months",
+          "10 years"
+        ],
+        "correct": 0,
+        "explanation": "Financial experts recommend saving 3-6 months of essential expenses. This covers most short-term emergencies like job loss, medical issues, or urgent home repairs while you recover."
+      },
+      {
+        "id": "sav-q6",
+        "question": "What is the \"Pay Yourself First\" method?",
+        "options": [
+          "Transferring savings to a separate account immediately after receiving your salary",
+          "Paying all bills first, then saving whatever is left",
+          "Only saving when you have extra money at the end of the month",
+          "Investing all your salary in stocks"
+        ],
+        "correct": 0,
+        "explanation": "Pay Yourself First means prioritizing savings by transferring your target amount the moment your salary arrives — before spending on anything else. This ensures you always save, rather than hoping there's money left over."
+      },
+      {
+        "id": "sav-q7",
+        "question": "Where is the BEST place to keep your emergency fund?",
+        "options": [
+          "A digital bank savings account (accessible and earns higher interest)",
+          "Under your mattress at home",
+          "Invested in the stock market",
+          "Locked in MP2 for 5 years"
+        ],
+        "correct": 0,
+        "explanation": "An emergency fund needs to be accessible (withdrawable quickly) and safe. Digital banks offer 2-4% interest with easy mobile withdrawals. MP2 locks money for 5 years, stocks can lose value, and cash at home loses value to inflation."
+      },
+      {
+        "id": "sav-q8",
+        "question": "Using the envelope method, your groceries envelope has ₱4,000 for the month. It's the 20th and you have ₱300 left. What should you do?",
+        "options": [
+          "Adjust your meal plan to stay within the remaining ₱300",
+          "Borrow from your savings envelope",
+          "Use your credit card to cover the difference",
+          "Ignore the budget and spend what you need"
+        ],
+        "correct": 0,
+        "explanation": "The envelope method's power comes from sticking to its limits. Adjusting your meal plan (buying cheaper ingredients, cooking simpler meals) teaches discipline and prevents overspending. Borrowing from other envelopes defeats the purpose of the system."
+      }
+    ]
+  }
+}

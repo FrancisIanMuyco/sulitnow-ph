@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
 SulitNow PH — Free Courses Deep Scraper
-Scrapes detailed course data from Coursera, edX, Khan Academy, freeCodeCamp, YouTube.
+Scrapes detailed course data from Coursera, edX, freeCodeCamp.
+Merges with existing curated data (Khan Academy, YouTube).
 Stores everything locally on our site.
 """
 
 import json
 import os
 import re
-import time
+import random
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
@@ -29,8 +30,15 @@ PROXIES = [
 ]
 
 def get_proxy():
-    import random
     return random.choice(PROXIES)
+
+def load_existing():
+    """Load existing free-courses.json to preserve curated data."""
+    path = os.path.join(OUTPUT_DIR, 'free-courses.json')
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            return json.load(f)
+    return {"courses": [], "categories": [], "platforms": [], "stats": {}}
 
 def write_json(filename, data):
     path = os.path.join(OUTPUT_DIR, filename)
@@ -51,26 +59,27 @@ def scrape_coursera(browser):
     page = ctx.new_page()
     
     try:
-        # Search free courses
         page.goto("https://www.coursera.org/search?query=&productTypeDescription=Courses&price=Free&sortBy=BEST_MATCH", 
                   timeout=30000, wait_until="domcontentloaded")
         page.wait_for_timeout(4000)
         
-        # Get all course cards
+        # Scroll to load more
+        for _ in range(3):
+            page.evaluate("window.scrollBy(0, 1500)")
+            page.wait_for_timeout(2000)
+        
         cards = page.query_selector_all('[data-testid="product-card"], .cds-ProductCard-gridCard, [class*="product-card"]')
         print(f"  Found {len(cards)} cards on page")
         
-        for card in cards[:30]:
+        for card in cards[:40]:
             try:
                 text = card.inner_text()
                 lines = [l.strip() for l in text.split('\n') if l.strip()]
                 
-                # Extract link
                 link_el = card.query_selector('a[href*="/learn/"], a[href*="/specializations/"]')
                 href = link_el.get_attribute('href') if link_el else None
                 url = f"https://www.coursera.org{href}" if href and href.startswith('/') else (href or "https://www.coursera.org")
                 
-                # Parse title - usually first meaningful line
                 title = ""
                 for line in lines:
                     if len(line) > 10 and line not in ['New', 'Free', 'Bestseller', 'Popular', 'Part of Google', 'Instructor:', 'Level:', 'Duration:']:
@@ -80,26 +89,22 @@ def scrape_coursera(browser):
                 if not title or len(title) < 5:
                     continue
                 
-                # Extract provider
                 provider = ""
                 for line in lines:
                     if any(p in line for p in ['Google', 'IBM', 'Meta', 'Amazon', 'Microsoft', 'Stanford', 'Yale', 'Johns Hopkins', 'Duke', 'University', 'DeepLearning.AI', 'Offered by']):
                         provider = line.replace('Offered by ', '').replace('Instructor: ', '').strip()[:60]
                         break
                 
-                # Extract rating
                 rating = None
                 rating_match = re.search(r'(\d\.\d)\s*\(', text)
                 if rating_match:
                     rating = float(rating_match.group(1))
                 
-                # Extract students count
                 students = None
                 stud_match = re.search(r'([\d,.]+[KMB]?)\s*(?:learners?|students?|enrolled)', text, re.IGNORECASE)
                 if stud_match:
                     students = stud_match.group(1)
                 
-                # Extract level
                 level = "All Levels"
                 for l in lines:
                     ll = l.lower()
@@ -107,19 +112,15 @@ def scrape_coursera(browser):
                     elif 'intermediate' in ll: level = "Intermediate"
                     elif 'advanced' in ll: level = "Advanced"
                 
-                # Extract duration
                 duration = "Self-paced"
                 dur_match = re.search(r'(\d+\s*(?:weeks?|months?|hours?|days?))', text, re.IGNORECASE)
                 if dur_match:
                     duration = dur_match.group(1).strip()
                 
-                # Extract skills/tags
                 skills = []
-                for line in lines:
-                    if any(kw in line.lower() for kw in ['skills:', 'you\'ll learn', 'what you']):
-                        # Next lines are likely skills
-                        idx = lines.index(line)
-                        for sl in lines[idx+1:idx+6]:
+                for i, line in enumerate(lines):
+                    if any(kw in line.lower() for kw in ['skills:', "you'll learn", 'what you']):
+                        for sl in lines[i+1:i+6]:
                             if len(sl) > 3 and len(sl) < 50 and sl not in ['Show more', 'Show less', 'Enroll']:
                                 skills.append(sl)
                 
@@ -144,7 +145,7 @@ def scrape_coursera(browser):
                     "lastVerified": datetime.now().isoformat(),
                 })
                 
-            except Exception as e:
+            except Exception:
                 continue
         
         print(f"  ✅ Scraped {len(courses)} Coursera courses")
@@ -156,7 +157,7 @@ def scrape_coursera(browser):
     return courses
 
 def scrape_edx(browser):
-    """Deep scrape edX free courses."""
+    """Scrape edX free courses using text-based parsing."""
     courses = []
     print("\n🎓 [edX] Scraping free courses...")
     
@@ -168,135 +169,83 @@ def scrape_edx(browser):
     
     try:
         page.goto("https://www.edx.org/search?price=Free&tab=course", timeout=30000, wait_until="domcontentloaded")
-        page.wait_for_timeout(4000)
+        page.wait_for_timeout(5000)
         
-        cards = page.query_selector_all('[class*="product-card"], [class*="course-card"], [data-testid*="course"], [class*="search-result"]')
-        print(f"  Found {len(cards)} cards on page")
+        # Scroll to load more courses
+        for _ in range(8):
+            page.evaluate("window.scrollBy(0, 1500)")
+            page.wait_for_timeout(2000)
         
-        for card in cards[:30]:
-            try:
-                text = card.inner_text()
-                lines = [l.strip() for l in text.split('\n') if l.strip()]
-                
-                link_el = card.query_selector('a[href*="/course"]')
-                href = link_el.get_attribute('href') if link_el else None
-                url = f"https://www.edx.org{href}" if href and href.startswith('/') else (href or "https://www.edx.org")
-                
-                title = ""
-                for line in lines:
-                    if len(line) > 10 and not any(x in line.lower() for x in ['free', 'new', 'enroll', 'view']):
-                        title = line[:120]
-                        break
-                
-                if not title or len(title) < 5:
-                    continue
-                
-                provider = ""
-                for line in lines:
-                    if any(p in line.lower() for p in ['university', 'institute', 'harvard', 'mit', 'columbia', 'michigan', 'stanford', 'georgia', 'boston', 'offer']):
-                        provider = line.replace('Offered by ', '').strip()[:60]
-                        break
-                
-                level = "All Levels"
-                for l in lines:
-                    ll = l.lower()
-                    if 'beginner' in ll: level = "Beginner"
-                    elif 'intermediate' in ll: level = "Intermediate"
-                    elif 'advanced' in ll: level = "Advanced"
-                
-                duration = "Self-paced"
-                dur_match = re.search(r'(\d+\s*(?:weeks?|months?|hours?|days?))', text, re.IGNORECASE)
-                if dur_match:
-                    duration = dur_match.group(1).strip()
-                
-                courses.append({
-                    "id": f"edx-{len(courses)}",
-                    "platform": "edX",
-                    "title": title,
-                    "provider": provider or "edX",
-                    "description": f"Free course on edX by {provider or 'edX'}. {duration} duration.",
-                    "rating": None,
-                    "students": None,
-                    "url": url,
-                    "category": categorize(title + " " + provider),
-                    "level": level,
-                    "duration": duration,
-                    "certificate": True,
-                    "skills": [],
-                    "free": True,
-                    "modules": [],
-                    "lastVerified": datetime.now().isoformat(),
-                })
-            except:
+        body = page.inner_text("body")
+        lines = [l.strip() for l in body.split('\n') if l.strip()]
+        
+        # Parse courses from text: pattern is Title, Provider, Duration, Level
+        i = 0
+        while i < len(lines) - 2:
+            line = lines[i]
+            next_line = lines[i+1] if i+1 < len(lines) else ''
+            
+            # Skip navigation/promo text
+            if any(skip in line.lower() for skip in [
+                'register', 'save', 'code', 'close', 'filter', 'result',
+                'back to', 'achievement', 'professional cert', 'benefit',
+                'financial', 'bachelor', 'master', 'online mba',
+                'edx for business', 'get back', 'all filters',
+                'learning type', 'course language', 'availability',
+            ]):
+                i += 1
                 continue
+            
+            # Check if next line looks like a university/provider
+            if re.search(r'(University|Institute|College|School|Harvard|MIT|Stanford|IBM|Google|Microsoft|Georgia)', next_line, re.IGNORECASE):
+                if len(line) > 10 and len(line) < 120:
+                    duration = ""
+                    level = ""
+                    for j in range(i+2, min(i+5, len(lines))):
+                        if re.search(r'\d+\s*(week|month|hour|day)', lines[j], re.IGNORECASE):
+                            duration = lines[j]
+                        if re.search(r'(beginner|intermediate|advanced|introductory)', lines[j], re.IGNORECASE):
+                            level = lines[j]
+                    
+                    # Create slug for URL
+                    slug = re.sub(r'[^a-z0-9]+', '-', line.lower()).strip('-')
+                    provider_slug = re.sub(r'[^a-z0-9]+', '-', next_line.lower()).strip('-')
+                    url = f"https://www.edx.org/learn/{slug}/{provider_slug}-{slug}"
+                    
+                    # Normalize level
+                    norm_level = "All Levels"
+                    if level:
+                        ll = level.lower()
+                        if 'beginner' in ll or 'introductory' in ll or 'intro' in ll:
+                            norm_level = "Beginner"
+                        elif 'intermediate' in ll:
+                            norm_level = "Intermediate"
+                        elif 'advanced' in ll:
+                            norm_level = "Advanced"
+                    
+                    courses.append({
+                        "id": f"edx-{len(courses)}",
+                        "platform": "edX",
+                        "title": line,
+                        "provider": next_line,
+                        "description": f"Free course on edX by {next_line}. {duration} duration.",
+                        "rating": None,
+                        "students": None,
+                        "url": url,
+                        "category": categorize(line + " " + next_line),
+                        "level": norm_level,
+                        "duration": duration or "Self-paced",
+                        "certificate": True,
+                        "skills": extract_skills_from_title(line),
+                        "free": True,
+                        "modules": [],
+                        "lastVerified": datetime.now().isoformat(),
+                    })
+            i += 1
         
         print(f"  ✅ Scraped {len(courses)} edX courses")
     except Exception as e:
         print(f"  ⚠️ edX error: {e}")
-    
-    ctx.close()
-    return courses
-
-def scrape_khan_academy(browser):
-    """Deep scrape Khan Academy."""
-    courses = []
-    print("\n🎓 [Khan Academy] Scraping courses...")
-    
-    ctx = browser.new_context(
-        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        viewport={"width": 1920, "height": 1080}
-    )
-    page = ctx.new_page()
-    
-    subjects = [
-        ("Math", "https://www.khanacademy.org/math", "Math"),
-        ("Science", "https://www.khanacademy.org/science", "Science"),
-        ("Computing", "https://www.khanacademy.org/computing", "Programming"),
-        ("Economics", "https://www.khanacademy.org/economics-finance-domain", "Business"),
-        ("Arts & Humanities", "https://www.khanacademy.org/humanities", "Humanities"),
-        ("Test Prep", "https://www.khanacademy.org/test-prep", "Test Prep"),
-    ]
-    
-    try:
-        for subject_name, url, category in subjects:
-            try:
-                page.goto(url, timeout=20000, wait_until="domcontentloaded")
-                page.wait_for_timeout(2000)
-                
-                # Get topic links
-                links = page.query_selector_all('a[href*="/a/"]')
-                for link in links[:12]:
-                    try:
-                        title = link.inner_text().strip()
-                        href = link.get_attribute('href')
-                        if title and 5 < len(title) < 80:
-                            full_url = f"https://www.khanacademy.org{href}" if href and href.startswith('/') else href
-                            courses.append({
-                                "id": f"khan-{len(courses)}",
-                                "platform": "Khan Academy",
-                                "title": title,
-                                "provider": "Khan Academy",
-                                "description": f"Free {subject_name} course on Khan Academy. Self-paced learning with practice exercises.",
-                                "rating": None,
-                                "students": None,
-                                "url": full_url or url,
-                                "category": category,
-                                "level": "All Levels",
-                                "duration": "Self-paced",
-                                "certificate": False,
-                                "skills": [],
-                                "free": True,
-                                "modules": [],
-                                "lastVerified": datetime.now().isoformat(),
-                            })
-                    except:
-                        continue
-            except:
-                continue
-        
-        print(f"  ✅ Scraped {len(courses)} Khan Academy courses")
-    except Exception as e:
-        print(f"  ⚠️ Khan Academy error: {e}")
     
     ctx.close()
     return courses
@@ -316,10 +265,9 @@ def scrape_freecodecamp(browser):
         page.goto("https://www.freecodecamp.org/learn", timeout=25000, wait_until="domcontentloaded")
         page.wait_for_timeout(3000)
         
-        # Get all certification links
         links = page.query_selector_all('a[href*="/learn/"]')
         
-        for link in links[:25]:
+        for link in links[:30]:
             try:
                 title = link.inner_text().strip()
                 href = link.get_attribute('href')
@@ -359,114 +307,28 @@ def scrape_freecodecamp(browser):
     ctx.close()
     return courses
 
-def scrape_youtube_playlists(browser):
-    """Scrape popular free course playlists from YouTube."""
-    print("\n🎓 [YouTube] Scraping free course playlists...")
-    
-    channels = [
-        ("freeCodeCamp", "https://www.youtube.com/@freecodecamp/playlists", "View all"),
-        ("Programming with Mosh", "https://www.youtube.com/@programmingwithmosh/playlists", "View all"),
-        ("Traversy Media", "https://www.youtube.com/@TraversyMedia/playlists", "View all"),
-        ("Bro Code", "https://www.youtube.com/@BroCodez/playlists", "View all"),
-        ("TechWorld with Nana", "https://www.youtube.com/@TechWorldwithNana/playlists", "View all"),
-        ("Fireship", "https://www.youtube.com/@Fireship/playlists", None),
-    ]
-    
-    courses = []
-    ctx = browser.new_context(
-        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        viewport={"width": 1920, "height": 1080}
-    )
-    page = ctx.new_page()
-    
-    for channel_name, url, view_all in channels:
-        try:
-            page.goto(url, timeout=20000, wait_until="domcontentloaded")
-            page.wait_for_timeout(3000)
-            
-            # Get playlist items
-            items = page.query_selector_all('ytd-grid-playlist-renderer, ytd-rich-item-renderer, [id="content"] ytd-grid-renderer ytd-rich-grid-row')
-            
-            for item in items[:15]:
-                try:
-                    text = item.inner_text()
-                    lines = [l.strip() for l in text.split('\n') if l.strip()]
-                    
-                    title = ""
-                    video_count = ""
-                    
-                    for line in lines:
-                        if len(line) > 5 and not any(x in line.lower() for x in ['updated', 'views', 'ago', 'playlist', 'video']):
-                            if not title:
-                                title = line[:100]
-                            elif not video_count and re.search(r'\d+\s*video', line, re.IGNORECASE):
-                                vc_match = re.search(r'(\d+)\s*video', line, re.IGNORECASE)
-                                if vc_match:
-                                    video_count = f"{vc_match.group(1)} videos"
-                    
-                    if not title or len(title) < 5:
-                        continue
-                    
-                    # Skip non-tutorial playlists
-                    skip_words = ['live stream', 'podcast', 'reaction', 'interview', 'vlog', 'day in', 'my life']
-                    if any(w in title.lower() for w in skip_words):
-                        continue
-                    
-                    link_el = item.query_selector('a[href*="playlist?list="]')
-                    href = link_el.get_attribute('href') if link_el else None
-                    url_final = href if href and 'http' in href else f"https://www.youtube.com{href}" if href else f"https://www.youtube.com/results?search_query={title.replace(' ', '+')}"
-                    
-                    courses.append({
-                        "id": f"yt-{len(courses)}",
-                        "platform": "YouTube",
-                        "title": title,
-                        "provider": channel_name,
-                        "description": f"Free full course by {channel_name} on YouTube. {video_count} of video content.",
-                        "rating": None,
-                        "students": None,
-                        "url": url_final,
-                        "category": categorize(title),
-                        "level": "Beginner",
-                        "duration": video_count or "Various",
-                        "certificate": False,
-                        "skills": extract_skills_from_title(title),
-                        "free": True,
-                        "modules": [],
-                        "lastVerified": datetime.now().isoformat(),
-                    })
-                except:
-                    continue
-            
-            print(f"  📺 {channel_name}: found {sum(1 for c in courses if c['provider'] == channel_name)} playlists")
-        except Exception as e:
-            print(f"  ⚠️ {channel_name} error: {e}")
-    
-    ctx.close()
-    print(f"  ✅ Scraped {len(courses)} YouTube courses total")
-    return courses
-
 def categorize(text):
     """Auto-categorize based on text content."""
     t = text.lower()
-    if any(w in t for w in ['python', 'java', 'c++', 'javascript', 'coding', 'programming', 'software', 'developer', 'git', 'react', 'angular', 'vue', 'node', 'typescript', 'swift', 'kotlin', 'rust', 'go ', 'ruby', 'php', 'django', 'flask', 'spring']):
+    if any(w in t for w in ['python', 'java', 'c++', 'javascript', 'coding', 'programming', 'software', 'developer', 'git', 'react', 'angular', 'vue', 'node', 'typescript', 'swift', 'kotlin', 'rust', 'go ', 'ruby', 'php', 'django', 'flask', 'spring', 'scratch', 'cybersecurity', 'cyber']):
         return 'Programming'
     elif any(w in t for w in ['data', 'machine learning', 'ai', 'artificial intelligence', 'deep learning', 'statistics', 'analytics', 'neural', 'nlp', 'pandas', 'numpy']):
         return 'Data Science & AI'
     elif any(w in t for w in ['design', 'ui', 'ux', 'figma', 'photoshop', 'illustrator', 'canva', 'graphic', 'sketch', 'adobe']):
         return 'Design'
-    elif any(w in t for w in ['business', 'marketing', 'entrepreneur', 'startup', 'management', 'leadership', 'finance', 'accounting', 'excel', 'project management', 'product']):
+    elif any(w in t for w in ['business', 'marketing', 'entrepreneur', 'startup', 'management', 'leadership', 'finance', 'accounting', 'excel', 'project management', 'product', 'architecture']):
         return 'Business'
     elif any(w in t for w in ['web', 'html', 'css', 'frontend', 'backend', 'full stack', 'website', 'responsive', 'bootstrap', 'tailwind', 'wordpress']):
         return 'Web Development'
     elif any(w in t for w in ['math', 'algebra', 'calculus', 'geometry', 'statistics', 'probability', 'trigonometry']):
         return 'Math'
-    elif any(w in t for w in ['science', 'physics', 'chemistry', 'biology', 'earth', 'astronomy']):
+    elif any(w in t for w in ['science', 'physics', 'chemistry', 'biology', 'earth', 'astronomy', 'neuroscience']):
         return 'Science'
-    elif any(w in t for w in ['security', 'cyber', 'network', 'cloud', 'aws', 'azure', 'devops', 'docker', 'kubernetes', 'linux']):
+    elif any(w in t for w in ['security', 'cyber', 'network', 'cloud', 'aws', 'azure', 'devops', 'docker', 'kubernetes', 'linux', 'database', 'sql']):
         return 'IT & Security'
-    elif any(w in t for w in ['language', 'english', 'spanish', 'writing', 'communication', 'grammar']):
+    elif any(w in t for w in ['language', 'english', 'spanish', 'writing', 'communication', 'grammar', 'rhetoric', 'argument']):
         return 'Languages'
-    elif any(w in t for w in ['humanities', 'history', 'philosophy', 'art history', 'music', 'literature']):
+    elif any(w in t for w in ['humanities', 'history', 'philosophy', 'art history', 'music', 'literature', 'contract law', 'leadership']):
         return 'Humanities'
     elif any(w in t for w in ['test prep', 'sat', 'gre', 'gmat', 'toefl', 'ielts']):
         return 'Test Prep'
@@ -485,7 +347,9 @@ def extract_skills_from_title(title):
         'photoshop': 'Photoshop', 'excel': 'Excel', 'tableau': 'Tableau',
         'typescript': 'TypeScript', 'vue': 'Vue.js', 'angular': 'Angular',
         'django': 'Django', 'flask': 'Flask', 'swift': 'Swift', 'kotlin': 'Kotlin',
-        'rust': 'Rust', 'go ': 'Go', 'ruby': 'Ruby', 'php': 'PHP',
+        'rust': 'Rust', 'ruby': 'Ruby', 'php': 'PHP', 'cybersecurity': 'Cybersecurity',
+        'neuroscience': 'Neuroscience', 'algorithms': 'Algorithms',
+        'rhetoric': 'Rhetoric', 'writing': 'Writing',
     }
     for keyword, skill in skill_map.items():
         if keyword in t:
@@ -501,6 +365,27 @@ def cat_icon(cat):
     }
     return icons.get(cat, '📚')
 
+def merge_courses(existing_courses, scraped_courses):
+    """Merge scraped courses with existing, avoiding duplicates by title similarity."""
+    existing_keys = set()
+    for c in existing_courses:
+        key = c['title'].lower().strip()[:50]
+        existing_keys.add(key)
+    
+    merged = list(existing_courses)
+    added = 0
+    for c in scraped_courses:
+        key = c['title'].lower().strip()[:50]
+        # Also check URL match
+        url_match = any(c.get('url', '') == ex.get('url', '') for ex in existing_courses if ex.get('url'))
+        if key not in existing_keys and not url_match:
+            existing_keys.add(key)
+            merged.append(c)
+            added += 1
+    
+    print(f"  📊 Merged: {len(existing_courses)} existing + {added} new = {len(merged)} total")
+    return merged
+
 if __name__ == "__main__":
     start = datetime.now()
     print("=" * 60)
@@ -508,57 +393,62 @@ if __name__ == "__main__":
     print(f"⏰ Started: {start.strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
     
-    all_courses = []
+    # Load existing curated data
+    existing = load_existing()
+    existing_courses = existing.get("courses", [])
+    print(f"\n📦 Loaded {len(existing_courses)} existing curated courses")
+    
+    all_scraped = []
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=['--no-sandbox', '--disable-dev-shm-usage'])
         
-        all_courses += scrape_coursera(browser)
-        all_courses += scrape_edx(browser)
-        all_courses += scrape_khan_academy(browser)
-        all_courses += scrape_freecodecamp(browser)
-        all_courses += scrape_youtube_playlists(browser)
+        all_scraped += scrape_coursera(browser)
+        all_scraped += scrape_edx(browser)
+        all_scraped += scrape_freecodecamp(browser)
+        # Khan Academy & YouTube kept from curated data (SPA/dynamic loading issues)
         
         browser.close()
     
-    # Deduplicate by title similarity
-    seen = set()
-    unique = []
-    for c in all_courses:
-        key = c['title'].lower().strip()[:40]
-        if key not in seen:
-            seen.add(key)
-            unique.append(c)
+    # Merge scraped with existing
+    merged = merge_courses(existing_courses, all_scraped)
     
-    # Sort
-    unique.sort(key=lambda x: (x['platform'], x['category'], x['title']))
+    # Re-assign IDs
+    for i, c in enumerate(merged):
+        prefix = c['platform'].lower().replace(' ', '')[:3]
+        c['id'] = f"{prefix}-{i+1:03d}"
     
-    # Stats
+    # Sort by platform, then category, then title
+    merged.sort(key=lambda x: (x['platform'], x['category'], x['title']))
+    
+    # Recalculate stats
     categories = {}
     platforms = {}
-    for c in unique:
+    for c in merged:
         cat = c['category']
         plat = c['platform']
         categories[cat] = categories.get(cat, 0) + 1
         platforms[plat] = platforms.get(plat, 0) + 1
     
-    write_json("free-courses.json", {
+    output = {
         "lastUpdated": datetime.now().isoformat(),
-        "courses": unique,
+        "courses": merged,
         "categories": [{"name": k, "count": v, "icon": cat_icon(k)} for k, v in sorted(categories.items(), key=lambda x: -x[1])],
         "platforms": [{"name": k, "count": v} for k, v in sorted(platforms.items(), key=lambda x: -x[1])],
         "stats": {
-            "totalCourses": len(unique),
+            "totalCourses": len(merged),
             "platforms": len(platforms),
             "totalCategories": len(categories),
-            "withCertificate": sum(1 for c in unique if c.get('certificate')),
+            "withCertificate": sum(1 for c in merged if c.get('certificate')),
         }
-    })
+    }
+    
+    write_json("free-courses.json", output)
     
     elapsed = (datetime.now() - start).total_seconds()
     print(f"\n{'=' * 60}")
     print(f"✅ Complete in {elapsed:.1f}s")
-    print(f"   📚 {len(unique)} courses | {len(platforms)} platforms | {len(categories)} categories")
+    print(f"   📚 {len(merged)} courses | {len(platforms)} platforms | {len(categories)} categories")
     for plat, count in sorted(platforms.items(), key=lambda x: -x[1]):
         print(f"      • {plat}: {count}")
     print(f"{'=' * 60}")

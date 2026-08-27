@@ -1,0 +1,156 @@
+{
+  "id": "internet-safety",
+  "title": "Internet Safety",
+  "subtitle": "Protect Yourself Online",
+  "description": "Learn how to stay safe in the digital world. This course covers common scams in the Philippines, password security, safe digital payments, and social media privacy.",
+  "category": "Digital Literacy",
+  "level": "Beginner",
+  "duration": "1.5 hours",
+  "icon": "shield",
+  "modules": [
+    {
+      "id": "is-scams",
+      "title": "Common Online Scams in the Philippines",
+      "content": "<h3>Why This Matters</h3><p>The Philippines has one of the highest social media usage rates in the world. With millions of Filipinos online daily, scammers have become increasingly sophisticated. In 2024 alone, the Philippine National Police reported thousands of cybercrime cases — and many go unreported.</p><h3>Types of Scams to Watch Out For</h3><p><strong>1. Phishing Messages</strong></p><p>You receive a text or email that looks like it's from GCash, BDO, or another trusted company. It says your account is \"locked\" and asks you to click a link. The link leads to a fake website that steals your login details.</p><p><strong>Red flags:</strong></p><ul><li>Urgent language: \"Your account will be DEACTIVATED in 24 hours!\"</li><li>Generic greeting: \"Dear Customer\" instead of your name</li><li>Suspicious URLs that look almost right (e.g., gcash-secure.com instead of gcash.com)</li></ul><p><strong>2. Online Shopping Scams</strong></p><p>You see an amazing deal on Facebook Marketplace or a random website — \"iPhone 15 for only ₱5,000!\" After sending payment via GCash, the seller disappears.</p><p><strong>Red flags:</strong></p><ul><li>Prices way too good to be true</li><li>Seller only accepts GCash/bank transfer (no meetup)</li><li>No reviews or verifiable business history</li></ul><p><strong>3. Job/Work-from-Home Scams</strong></p><p>These target Filipinos looking for online work. They promise high pay for simple tasks ( liking social media posts, rating products). You're asked to pay an \"activation fee\" first, or they steal your personal information.</p><p><strong>Red flags:</strong></p><ul><li>You need to pay money to start working</li><li>Income is unrealistically high for minimal effort</li><li>No formal interview or company verification</li></ul><p><strong>4. Romance Scams (\"Scam-romance\" or \"Pig Butchering\")</strong></p><p>Someone you met online builds a romantic relationship, then asks you to invest in a fake crypto platform or send money for an emergency.</p><blockquote><strong>Golden rule:</strong> If someone asks you for money online — pause, think, and verify. Never send money to people you haven't met in person.</blockquote>",
+      "objectives": [
+        "Identify common online scams targeting Filipinos",
+        "Recognize red flags in phishing messages and fake deals",
+        "Understand how work-from-home scams operate",
+        "Know what to do when you encounter a potential scam"
+      ]
+    },
+    {
+      "id": "is-passwords",
+      "title": "Password Security & Two-Factor Authentication",
+      "content": "<h3>Why Passwords Matter</h3><p>Your password is the <strong>front door to your digital life</strong>. A weak password means anyone can walk in — accessing your GCash, email, social media, and more. In the Philippines, many people reuse the same password everywhere. If one account gets hacked, all of them are at risk.</p><h3>Creating Strong Passwords</h3><p>Bad passwords (don't use these!):</p><ul><li><code>password123</code></li><li><code>123456</code></li><li><code>qwerty</code></li><li>Your birthday or name</li></ul><p>Good password strategy — use a <strong>passphrase</strong>:</p><pre><code>Mango#Trees2024!Fly\nCebu$Rice4Fun_No</code></pre><p>This is much stronger than <code>Password123!</code> and easier to remember.</p><p><strong>Key rules:</strong></p><ul><li>At least <strong>12 characters</strong> long</li><li>Mix uppercase, lowercase, numbers, and symbols</li><li>Never reuse passwords across different accounts</li><li>Never share your password with anyone</li></ul><h3>Use a Password Manager</h3><p>It's hard to remember dozens of unique passwords. A <strong>password manager</strong> stores all your passwords securely in one place. You only need to remember one master password.</p><p>Recommended (free options):</p><ul><li><strong>Bitwarden</strong> — free, open-source, excellent</li><li><strong>Google Password Manager</strong> — built into Chrome</li></ul><h3>Two-Factor Authentication (2FA)</h3><p>2FA adds a <strong>second layer of security</strong>. Even if someone steals your password, they can't log in without the second factor.</p><p>How it works:</p><ol><li>Enter your password (something you know)</li><li>Enter a code from your phone (something you have)</li></ol><p><strong>Enable 2FA on these accounts immediately:</strong></p><ul><li>GCash and Maya</li><li>Email (Gmail, Yahoo)</li><li>Facebook, Instagram</li><li>Banking apps (BDO, BPI, etc.)</li></ul><p>Best 2FA apps (better than SMS):</p><ul><li><strong>Google Authenticator</strong></li><li><strong>Authy</strong></li></ul><blockquote>SMS-based 2FA can be intercepted through SIM swapping attacks, which are common in the Philippines. Use an authenticator app instead whenever possible.</blockquote>",
+      "objectives": [
+        "Create strong, memorable passwords using passphrases",
+        "Understand why password reuse is dangerous",
+        "Set up a password manager",
+        "Enable and use two-factor authentication"
+      ]
+    },
+    {
+      "id": "is-shopping",
+      "title": "Safe Online Shopping & GCash/Maya Security",
+      "content": "<h3>Digital Payments in the Philippines</h3><p>Filipinos increasingly use <strong>GCash</strong>, <strong>Maya (formerly PayMaya)</strong>, and bank transfer for daily transactions. These tools are incredibly convenient, but they also attract scammers.</p><h3>Safe Online Shopping Practices</h3><p><strong>Before buying:</strong></p><ul><li>Research the seller — check reviews, their Facebook page history, or look them up on the SEC Philippines website</li><li>Compare prices — if it's significantly cheaper than everywhere else, it's likely a scam</li><li>Prefer platforms with buyer protection: Lazada, Shopee, or established stores</li></ul><p><strong>During payment:</strong></p><ul><li>Use credit cards over debit cards when possible — credit cards have better fraud protection</li><li>Never send GCash screenshots with your full account number visible</li><li>Double-check the recipient's name and number before sending money</li></ul><p><strong>Save your receipts:</strong> Take screenshots of transaction confirmations for dispute resolution.</p><h3>Securing Your GCash & Maya</h3><p><strong>Essential security steps:</strong></p><ol><li><strong>Set a strong MPIN</strong> — not your birthday, not 1234</li><li><strong>Enable biometric login</strong> (fingerprint/face ID)</li><li><strong>Turn on transaction notifications</strong> — know immediately if someone uses your account</li><li><strong>Never share your OTP</strong> — legitimate companies will never ask for it</li></ol><p><strong>Report suspicious activity immediately:</strong></p><ul><li>GCash: In-app help → Report a Problem, or call their hotline</li><li>Maya: In-app support chat</li><li>Also file a report with the <strong>National Privacy Commission</strong> if your data was compromised</li></ul><h3>SIM Card Safety</h3><p>SIM swapping is a real threat in the Philippines. A scammer convinces your telco to transfer your number to their SIM. To protect yourself:</p><ul><li>Register your SIM under the <strong>SIM Registration Act</strong></li><li>Don't share your number publicly on social media</li><li>Set a PIN/password with your Globe, Smart, or DITO account</li></ul><blockquote>If you receive an unexpected OTP or verification code you didn't request, someone may be trying to access your account. Change your password immediately and contact customer support.</blockquote>",
+      "objectives": [
+        "Practice safe online shopping habits",
+        "Secure GCash and Maya accounts with proper settings",
+        "Understand OTP protection and why sharing it is dangerous",
+        "Know how to report fraud and suspicious transactions"
+      ]
+    },
+    {
+      "id": "is-social",
+      "title": "Social Media Privacy",
+      "content": "<h3>Your Digital Footprint</h3><p>Filipinos spend an average of <strong>4+ hours daily</strong> on social media — among the highest in the world. Every post, like, and comment creates a digital footprint that can be seen by others.</p><h3>Privacy Settings to Configure Right Now</h3><p><strong>Facebook:</strong></p><ul><li>Go to Settings & Privacy → Privacy</li><li>Set \"Who can see your future posts?\" to <strong>Friends</strong></li><li>Turn off \"Public\" profile visibility</li><li>Limit who can search your phone number/email</li><li>Review and remove old apps connected to your account</li></ul><p><strong>Instagram:</strong></p><ul><li>Set your account to <strong>Private</strong> if you don't want strangers seeing your posts</li><li>Turn off activity status if you don't want people seeing when you're online</li><li>Review tagged photos before they appear on your profile</li></ul><h3>What NOT to Share Publicly</h3><p>Never post these publicly (even in \"Close Friends\" stories):</p><ul><li>Your exact home address</li><li>Boarding passes or plane tickets (barcodes contain personal data)</li><li>ID documents (driver's license, PhilHealth, etc.)</li><li>Photos of your kids' school (reveals location and schedule)</li><li>Vacation plans in real-time (tells people your home is empty)</li></ul><h3>Dealing with Online Harassment</h3><p>If you experience cyberbullying or online threats:</p><ol><li><strong>Don't engage</strong> — respond calmly or not at all</li><li><strong>Screenshot everything</strong> — save evidence before they delete it</li><li><strong>Block and report</strong> — use the platform's reporting tools</li><li><strong>Tell someone</strong> — talk to family, friends, or authorities</li><li><strong>Report to the PNP Anti-Cybercrime Group</strong> (ACG) if threats are serious</li></ol><h3>Online Identity Verification</h3><p>Before trusting someone online (especially for business or dating), verify their identity:</p><ul><li>Reverse image search their profile picture on Google Images</li><li>Check if their account history seems natural (old posts, real interactions)</li><li>Video call before meeting in person</li></ul><blockquote>Your social media profile is like your digital home. Just as you lock your front door, you should lock down your online privacy settings.</blockquote>",
+      "objectives": [
+        "Configure privacy settings on major social media platforms",
+        "Identify what personal information to keep private",
+        "Handle online harassment appropriately",
+        "Verify the identity of people you meet online"
+      ]
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "is-q1",
+        "question": "You receive a text saying \"GCASH: Your account is locked! Click here to verify: gcash-secure.xyz\". What should you do?",
+        "options": [
+          "Ignore it — GCash will never ask for verification through random links",
+          "Click the link to check if your account is really locked",
+          "Forward it to all your friends so they can check too",
+          "Reply with your account details so GCash can help"
+        ],
+        "correct": 0,
+        "explanation": "This is a classic phishing scam. GCash will never ask you to verify through a random link. The URL gcash-secure.xyz is not the official GCash website (gcash.com). Never click suspicious links or share personal information."
+      },
+      {
+        "id": "is-q2",
+        "question": "Which of these is the strongest password?",
+        "options": [
+          "Mango#Cebu2024!Fly",
+          "Password123!",
+          "qwerty123456",
+          "mybirthday0101"
+        ],
+        "correct": 0,
+        "explanation": "A passphrase with mixed characters (uppercase, lowercase, numbers, symbols) is strongest. 'Password123!' looks complex but is actually a common password that hackers try first."
+      },
+      {
+        "id": "is-q3",
+        "question": "What is Two-Factor Authentication (2FA)?",
+        "options": [
+          "A second layer of security requiring both a password and a second verification step",
+          "Having two different passwords for the same account",
+          "Logging into your account from two devices at once",
+          "Using two different email addresses"
+        ],
+        "correct": 0,
+        "explanation": "2FA adds an extra security layer. After entering your password, you need to provide a second factor (like a code from an authenticator app) to verify your identity."
+      },
+      {
+        "id": "is-q4",
+        "question": "Someone on Facebook Marketplace offers an iPhone 15 for ₱5,000. They only accept GCash payment and can't meet up. What should you do?",
+        "options": [
+          "Refuse — this is almost certainly a scam",
+          "Send the payment quickly before someone else buys it",
+          "Ask them to lower the price to ₱3,000 first",
+          "Send half now and half after delivery"
+        ],
+        "correct": 0,
+        "explanation": "An iPhone 15 for ₱5,000 is far below market value, GCash-only payment with no meetup is a major red flag. This is a common online shopping scam. If a deal seems too good to be true, it is."
+      },
+      {
+        "id": "is-q5",
+        "question": "What should you do if someone asks for your GCash OTP (One-Time Password)?",
+        "options": [
+          "Never share it — no legitimate company will ever ask for your OTP",
+          "Share it if they claim to be from GCash customer support",
+          "Share it but only if they also give you their OTP",
+          "Send it through a private message instead of SMS"
+        ],
+        "correct": 0,
+        "explanation": "Your OTP is meant for YOU to enter into the app. No one from GCash, your bank, or any legitimate company will ever ask for it. If someone asks, they are trying to steal your account."
+      },
+      {
+        "id": "is-q6",
+        "question": "What is the best practice for your social media privacy?",
+        "options": [
+          "Review and configure privacy settings regularly, and limit what you share publicly",
+          "Post everything publicly to share with more people",
+          "Use the same password for social media as your bank account",
+          "Accept all friend requests to grow your network"
+        ],
+        "correct": 0,
+        "explanation": "Regularly reviewing privacy settings and being mindful of what you share publicly helps protect your personal information from being exploited by scammers or harassers."
+      },
+      {
+        "id": "is-q7",
+        "question": "Which is safer for online purchases?",
+        "options": [
+          "Credit card, because it has better fraud protection",
+          "Debit card, because the money goes directly from your account",
+          "GCash, because it's the most popular",
+          "Bank transfer, because it's the most secure"
+        ],
+        "correct": 0,
+        "explanation": "Credit cards generally offer stronger fraud protection and chargeback options compared to debit cards and digital wallets. If fraud occurs, you're more likely to recover your money with a credit card."
+      },
+      {
+        "id": "is-q8",
+        "question": "You receive an OTP you didn't request. What should you do?",
+        "options": [
+          "Change your password immediately and contact customer support",
+          "Ignore it since you didn't request it",
+          "Share the code with the sender to confirm it's yours",
+          "Forward it to your friends to see if they received it too"
+        ],
+        "correct": 0,
+        "explanation": "An unexpected OTP means someone is trying to access your account. Immediately change your password, enable 2FA if not already active, and contact the service's support team to secure your account."
+      }
+    ]
+  }
+}

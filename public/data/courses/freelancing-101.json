@@ -1,0 +1,156 @@
+{
+  "id": "freelancing-101",
+  "title": "Freelancing 101",
+  "subtitle": "Your complete guide to starting a freelancing career in the Philippines",
+  "description": "Learn the fundamentals of freelancing — from choosing your skills to setting up profiles on platforms like Upwork and OnlineJobs.ph. This course walks you through pricing your services, handling payments via GCash or Maya, and landing your first client.",
+  "category": "Freelancing",
+  "level": "Beginner",
+  "duration": "2 hours",
+  "icon": "briefcase",
+  "modules": [
+    {
+      "id": "freelancing-101-m1",
+      "title": "What is Freelancing & Is It For You?",
+      "content": "<h3>Understanding Freelancing</h3>\n<p>Freelancing means working for yourself instead of a single employer. You take on projects from different clients, set your own schedule, and work from anywhere — whether that's your bedroom in Manila, a coworking space in Cebu, or a beach in Siargao. As a freelancer, you are essentially your own boss.</p>\n\n<h3>Why Filipinos Are Thriving in Freelancing</h3>\n<p>The Philippines has become one of the top countries for freelance workers worldwide. Here's why:</p>\n<ul>\n<li><strong>Strong English proficiency</strong> — Many Filipinos are fluent in English, making them attractive to international clients.</li>\n<li><strong>Lower cost of living</strong> — A $5–$15/hour rate goes a long way in the Philippines, allowing you to earn well while staying competitive globally.</li>\n<li><strong>Large talent pool</strong> — Filipino freelancers are known for being hardworking, reliable, and easy to work with.</li>\n<li><strong>Growing infrastructure</strong> — With improving internet connectivity and coworking spaces, remote work has never been more accessible.</li>\n</ul>\n\n<h3>Is Freelancing Right For You?</h3>\n<p>Freelancing is not for everyone. Before you jump in, honestly assess whether this lifestyle suits you. Consider these questions:</p>\n<ul>\n<li>Can you manage your own time without a boss looking over your shoulder?</li>\n<li>Are you comfortable with income that varies from month to month, especially at the start?</li>\n<li>Are you willing to handle both the creative work <em>and</em> the business side — marketing, invoicing, taxes?</li>\n<li>Do you have the discipline to keep learning and improving your skills?</li>\n</ul>\n\n<h3>Common Freelance Fields</h3>\n<p>Freelancing covers a wide range of industries. Popular categories for Filipino freelancers include:</p>\n<ul>\n<li><strong>Virtual Assistance</strong> — Administrative tasks, email management, scheduling.</li>\n<li><strong>Graphic Design & Video Editing</strong> — Creating visual content for brands.</li>\n<li><strong>Web Development</strong> — Building and maintaining websites.</li>\n<li><strong>Content Writing</strong> — Blog posts, copywriting, SEO articles.</li>\n<li><strong>Social Media Management</strong> — Managing accounts and campaigns.</li>\n<li><strong>Customer Service</strong> — Handling client inquiries remotely.</li>\n</ul>\n\n<blockquote>Many successful Filipino freelancers started with zero experience in freelancing but a willingness to learn. If you're reading this, you're already taking the first step!</blockquote>",
+      "objectives": [
+        "Understand what freelancing is and how it works",
+        "Identify why Filipinos are well-positioned for freelancing",
+        "Evaluate whether freelancing fits your lifestyle and goals",
+        "Explore common freelance fields and specializations"
+      ]
+    },
+    {
+      "id": "freelancing-101-m2",
+      "title": "Top Freelance Skills for Filipinos",
+      "content": "<h3>In-Demand Skills in 2025</h3>\n<p>Not all freelance skills are created equal. Some skills command higher rates and have more consistent demand than others. Here are the top skills that Filipino freelancers can learn and offer to clients worldwide:</p>\n\n<h3>Writing & Content Creation</h3>\n<p>If you have a knack for writing, there are many opportunities available. You can write blog posts, website copy, email newsletters, product descriptions, and even ghostwrite books. Rates for Filipino content writers typically range from ₱500 to ₱2,500 per article depending on complexity and length. SEO writing skills can push your rates even higher.</p>\n\n<h3>Graphic Design & Video Editing</h3>\n<p>With tools like Canva, Adobe Photoshop, and Premiere Pro, many Filipinos have built thriving design businesses. Logo design, social media graphics, thumbnails, and short-form video editing are all in high demand. Designers can charge anywhere from ₱1,500 to ₱10,000+ per project depending on the scope.</p>\n\n<h3>Web Development & Programming</h3>\n<p>Web development remains one of the highest-paying freelance skills. If you know HTML, CSS, JavaScript, or frameworks like React and WordPress, you can command rates of $10–$30/hour or more. Even no-code skills with tools like Webflow or Shopify are highly valued by e-commerce businesses.</p>\n\n<h3>Virtual Assistance</h3>\n<p>Virtual assistance (VA) is one of the most accessible entry points into freelancing. Tasks include email management, data entry, scheduling, customer support, and research. Filipino VAs typically earn ₱15,000 to ₱45,000/month working part-time to full-time, with specialized VAs (like real estate or medical VAs) earning even more.</p>\n\n<h3>Social Media Management</h3>\n<p>Businesses need people who can create content calendars, schedule posts, engage with followers, and run paid ads on platforms like Facebook, Instagram, and TikTok. Filipino social media managers often earn ₱20,000 to ₱60,000/month depending on the number of clients they serve.</p>\n\n<h3>How to Choose Your Skill</h3>\n<p>Don't try to learn everything at once. Start by identifying what you already enjoy doing or what you have experience with. If you're completely new, consider these approaches:</p>\n<ul>\n<li><strong>Start with what you know</strong> — If you've been doing social media for fun, formalize that skill and offer it as a service.</li>\n<li><strong>Follow demand</strong> — Check job postings on Upwork or OnlineJobs.ph to see what clients are looking for.</li>\n<li><strong>Invest in learning</strong> — Free resources on YouTube and platforms like Coursera can help you build skills quickly.</li>\n</ul>\n\n<blockquote>Remember: you don't need to be an expert to start. You need to be good enough to solve a client's problem, and you'll improve with every project you take on.</blockquote>",
+      "objectives": [
+        "Identify the most in-demand freelance skills for Filipino workers",
+        "Understand typical earning potential for each skill category",
+        "Learn how to choose the right skill to start with",
+        "Discover free resources for skill development"
+      ]
+    },
+    {
+      "id": "freelancing-101-m3",
+      "title": "Creating Your Profile (Upwork, OnlineJobs.ph, Fiverr)",
+      "content": "<h3>Choosing the Right Platform</h3>\n<p>As a Filipino freelancer, you have several platforms to choose from. Each has its own strengths:</p>\n<ul>\n<li><strong>Upwork</strong> — Best for international clients. You bid on projects and build long-term relationships. Clients pay in USD.</li>\n<li><strong>OnlineJobs.ph</strong> — The largest platform for Filipino remote workers. Many jobs are full-time positions with local and international companies.</li>\n<li><strong>Fiverr</strong> — A gig-based marketplace where you list your services and clients come to you. Great for designers, writers, and video editors.</li>\n<li><strong>Facebook Groups</strong> — Don't underestimate local groups like \"Virtual Assistant Philippines\" or \"Filipino Freelancers.\" Many clients post jobs directly in these communities.</li>\n</ul>\n\n<h3>Building a Strong Upwork Profile</h3>\n<p>Your profile is your storefront on Upwork. Here's how to make it stand out:</p>\n<ul>\n<li><strong>Professional photo</strong> — Use a clear, friendly headshot. No selfies or group photos.</li>\n<li><strong>Compelling title</strong> — Instead of \"Freelancer,\" write something specific like \"SEO Content Writer for E-commerce Brands\" or \"WordPress Developer Specializing in WooCommerce.\"</li>\n<li><strong>Portfolio samples</strong> — Upload 3–5 of your best work samples. If you don't have client work yet, create sample projects.</li>\n<li><strong>Skills tags</strong> — Add relevant skills so clients can find you in search results.</li>\n</ul>\n\n<h3>OnlineJobs.ph Profile Tips</h3>\n<p>OnlineJobs.ph is especially popular among Filipino freelancers. To stand out:</p>\n<ul>\n<li>Complete your profile 100% — fill in all sections including education, skills, and work history.</li>\n<li>Take the skills tests available on the platform to verify your abilities.</li>\n<li>Write a personalized cover letter for each application — avoid copy-pasting generic messages.</li>\n<li>Mention your availability and preferred work arrangement (part-time, full-time, project-based).</li>\n</ul>\n\n<h3>Fiverr Gig Setup</h3>\n<p>On Fiverr, you create \"gigs\" — specific service listings that clients can purchase. Tips for great gigs:</p>\n<ul>\n<li>Use a clear, descriptive gig title like \"I Will Design a Modern Logo for Your Business\"</li>\n<li>Create an eye-catching gig image using Canva</li>\n<li>Write a detailed description of what's included in each package</li>\n<li>Offer three tiers: Basic, Standard, and Premium</li>\n</ul>\n\n<h3>Creating Your Portfolio</h3>\n<p>Even if you're just starting out, you need a portfolio. Here's what to include:</p>\n<ul>\n<li>Personal projects that demonstrate your skills</li>\n<li>Case studies showing how you solved a problem</li>\n<li>Testimonials from friends or former colleagues</li>\n<li>A link to a simple portfolio website (you can create one free using Carrd or Notion)</li>\n</ul>\n\n<blockquote>Your first impression matters. Invest time in creating a polished profile — it's the difference between being ignored and landing your first client.</blockquote>",
+      "objectives": [
+        "Compare major freelancing platforms and choose the right one",
+        "Build a professional and compelling Upwork profile",
+        "Create an effective OnlineJobs.ph profile for local opportunities",
+        "Set up Fiverr gigs and build a strong portfolio"
+      ]
+    },
+    {
+      "id": "freelancing-101-m4",
+      "title": "Pricing Your Services & Getting Paid",
+      "content": "<h3>How to Set Your Rates</h3>\n<p>Pricing is one of the most nerve-wracking parts of starting out. Here's a simple framework:</p>\n<ul>\n<li><strong>Hourly Rate</strong> — Calculate how much you want to earn per month, then divide by the number of working hours you expect. For example, if you want ₱30,000/month and can work 100 hours, that's ₱300/hour.</li>\n<li><strong>Project Rate</strong> — For defined deliverables like logos or articles, charge a flat fee. Research what others are charging for similar work.</li>\n<li><strong>Retainer Rate</strong> — For ongoing work like social media management, offer monthly packages. For example, ₱15,000–₱25,000/month for managing 3 social media accounts.</li>\n</ul>\n\n<h3>Common Pricing Mistakes</h3>\n<p>Avoid these pitfalls when starting out:</p>\n<ul>\n<li><strong>Don't race to the bottom</strong> — Charging ₱50/hour won't attract quality clients. It signals low value.</li>\n<li><strong>Don't work for free</strong> — \"Exposure\" doesn't pay your bills. At minimum, charge a small fee for any work.</li>\n<li><strong>Do raise your rates over time</strong> — As you gain experience and testimonials, increase your prices. Every 3–6 months is a good cadence.</li>\n</ul>\n\n<h3>Getting Paid as a Filipino Freelancer</h3>\n<p>Receiving payments from international clients is straightforward with these options:</p>\n<ul>\nli><strong>GCash</strong> — Many platforms now support direct withdrawals to GCash. It's fast and convenient for everyday transactions.</li>\n<li><strong>Maya (formerly PayMaya)</strong> — Similar to GCash, Maya allows you to receive international payments and has a virtual and physical card.</li>\n<li><strong>PayPal</strong> — A classic option for receiving USD payments. You can link it to your local bank account for withdrawal.</li>\n<li><strong>Wise (formerly TransferWise)</strong> — Offers better exchange rates than traditional banks. Great for receiving larger amounts.</li>\n<li><strong>Bank Transfer</strong> — Direct deposits to BDO, BPI, or other Philippine banks. Some platforms like Upwork support this.</li>\n</ul>\n\n<h3>Understanding Fees</h3>\n<p>Keep these fees in mind so you're not caught off guard:</p>\n<ul>\n<li><strong>Platform fees</strong> — Upwork takes 10% of your earnings. Fiverr takes 20%. OnlineJobs.ph charges a flat monthly fee to employers, not freelancers.</li>\n<li><strong>Conversion fees</strong> — When converting USD to PHP, the exchange rate and any transfer fees will eat into your earnings slightly.</li>\n<li><strong>Taxes</strong> — In the Philippines, freelance income is taxable. Consider registering as a sole proprietor with the BIR to properly manage your taxes and potentially claim deductions.</li>\n</ul>\n\n<blockquote>Start with a rate you're comfortable with, track your hours and earnings, and don't be afraid to negotiate. The more clients you serve, the more confident you'll become in pricing your work.</blockquote>",
+      "objectives": [
+        "Calculate appropriate hourly, project, and retainer rates",
+        "Avoid common pricing mistakes new freelancers make",
+        "Set up payment methods including GCash, Maya, and PayPal",
+        "Understand platform fees, conversion costs, and tax obligations"
+      ]
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "freelancing-101-q1",
+        "question": "Which of the following is NOT a common freelance field for Filipinos?",
+        "options": [
+          "Virtual Assistance",
+          "Graphic Design",
+          "Permanent government employment",
+          "Content Writing"
+        ],
+        "correct": 2,
+        "explanation": "Freelancing is self-employment with multiple clients. Permanent government employment is a traditional full-time role, not a freelance field."
+      },
+      {
+        "id": "freelancing-101-q2",
+        "question": "What is one major advantage Filipino freelancers have over competitors from other countries?",
+        "options": [
+          "They always work for free",
+          "Strong English proficiency and competitive rates",
+          "They don't need internet access",
+          "They exclusively use Filipino platforms"
+        ],
+        "correct": 1,
+        "explanation": "Filipino freelancers are known for strong English skills and rates that are competitive internationally while still providing good income locally."
+      },
+      {
+        "id": "freelancing-101-q3",
+        "question": "Which platform is specifically designed for Filipino remote workers?",
+        "options": [
+          "Upwork",
+          "Fiverr",
+          "OnlineJobs.ph",
+          "LinkedIn"
+        ],
+        "correct": 2,
+        "explanation": "OnlineJobs.ph is the largest job platform dedicated to Filipino remote workers and is widely used by both local and international employers."
+      },
+      {
+        "id": "freelancing-101-q4",
+        "question": "What should your Upwork profile title look like?",
+        "options": [
+          "\"Freelancer\"",
+          "\"Available for Work\"",
+          "\"SEO Content Writer for E-commerce Brands\"",
+          "\"Hire Me Please\""
+        ],
+        "correct": 2,
+        "explanation": "A specific, descriptive title helps clients find you in search results and immediately understand what you offer."
+      },
+      {
+        "id": "freelancing-101-q5",
+        "question": "A Filipino freelancer wants to earn ₱30,000/month and can work 100 hours. What should their minimum hourly rate be?",
+        "options": [
+          "₱100/hour",
+          "₱300/hour",
+          "₱50/hour",
+          "₱1,000/hour"
+        ],
+        "correct": 1,
+        "explanation": "₱30,000 ÷ 100 hours = ₱300/hour. This is the minimum rate needed to hit the target income."
+      },
+      {
+        "id": "freelancing-101-q6",
+        "question": "Which payment method offers better exchange rates for receiving USD payments?",
+        "options": [
+          "Cash pickup at a remittance center",
+          "Traditional bank wire transfer",
+          "Wise (formerly TransferWise)",
+          "Sending money through a friend"
+        ],
+        "correct": 2,
+        "explanation": "Wise is known for offering competitive exchange rates and lower fees compared to traditional banks for international transfers."
+      },
+      {
+        "id": "freelancing-101-q7",
+        "question": "How much does Upwork typically take from your earnings as a service fee?",
+        "options": [
+          "1%",
+          "5%",
+          "10%",
+          "50%"
+        ],
+        "correct": 2,
+        "explanation": "Upwork charges a flat 10% service fee on your earnings. Fiverr, by comparison, takes 20%."
+      },
+      {
+        "id": "freelancing-101-q8",
+        "question": "Why should you avoid charging extremely low rates to attract clients?",
+        "options": [
+          "Clients only respect expensive freelancers",
+          "It signals low quality and attracts difficult clients",
+          "There's a minimum wage law for freelancers",
+          "Platforms ban low-rate profiles"
+        ],
+        "correct": 1,
+        "explanation": "Racing to the bottom signals low value and often attracts clients who are demanding but unwilling to pay fairly. Quality clients pay for quality work."
+      }
+    ]
+  }
+}

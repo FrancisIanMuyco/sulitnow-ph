@@ -11,6 +11,9 @@ const Live = lazy(() => import('./pages/Live/Live'));
 const Deals = lazy(() => import('./pages/Deals/Deals'));
 const Raket = lazy(() => import('./pages/Raket/Raket'));
 const FreeCourses = lazy(() => import('./pages/FreeCourses/FreeCourses'));
+const Learn = lazy(() => import('./pages/Learn/Learn'));
+const CourseView = lazy(() => import('./pages/Learn/CourseView'));
+const Certificate = lazy(() => import('./pages/Learn/Certificate'));
 const Pricing = lazy(() => import('./pages/Pricing/Pricing'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -132,6 +135,9 @@ export default function App() {
             <Route path="deals" element={<Suspense fallback={<Loading />}><Deals /></Suspense>} />
             <Route path="raket" element={<Suspense fallback={<Loading />}><Raket /></Suspense>} />
             <Route path="courses" element={<Suspense fallback={<Loading />}><FreeCourses /></Suspense>} />
+            <Route path="learn" element={<Suspense fallback={<Loading />}><Learn /></Suspense>} />
+            <Route path="learn/:slug" element={<Suspense fallback={<Loading />}><CourseView /></Suspense>} />
+            <Route path="learn/:slug/certificate" element={<Suspense fallback={<Loading />}><Certificate /></Suspense>} />
             <Route path="pricing" element={<Suspense fallback={<Loading />}><Pricing /></Suspense>} />
             <Route path="about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
             <Route path="privacy" element={<Suspense fallback={<Loading />}><Privacy /></Suspense>} />
