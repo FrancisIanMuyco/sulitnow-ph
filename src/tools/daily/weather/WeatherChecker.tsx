@@ -158,30 +158,52 @@ export default function WeatherChecker() {
         const fallback = await fetch('/data/weather.json');
         if (fallback.ok) {
           const fbData = await fallback.json();
-          setWeather({
-            temperature: parseInt(fbData.temperature) || null,
-            description: fbData.forecast?.substring(0, 100) || 'Data from PAGASA',
-            icon: '🌤️',
-            city: 'Philippines',
-            source: 'PAGASA (cached)',
-          });
-          setLastUpdated(new Date(fbData.lastUpdated));
-          setLiveStatus('live');
-          setError('');
+          const cityData = fbData.cities?.[0];
+          if (cityData) {
+            const wmo = WMO_CODES[cityData.weatherCode] || { desc: 'Unknown', icon: '🌡️', color: 'text-gray-400' };
+            setWeather({
+              temperature: cityData.temperature,
+              feelsLike: cityData.feelsLike,
+              humidity: cityData.humidity,
+              windSpeed: cityData.windSpeed,
+              windDirection: cityData.windDirection,
+              precipitation: cityData.precipitation,
+              weatherCode: cityData.weatherCode,
+              description: wmo.desc,
+              icon: wmo.icon,
+              color: wmo.color,
+              city: cityData.city || 'Philippines',
+              source: 'Open-Meteo (cached)',
+            });
+            setForecast((cityData.forecast || []).map((d: any, i: number) => {
+              const dayWmo = WMO_CODES[d.weatherCode] || { desc: 'Unknown', icon: '🌡️' };
+              return {
+                ...d,
+                dayName: i === 0 ? 'Today' : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][new Date(d.date + 'T12:00:00').getDay()],
+                description: dayWmo.desc,
+                icon: dayWmo.icon,
+              };
+            }));
+            setLastUpdated(new Date(fbData.lastUpdated));
+            setLiveStatus('live');
+            setError('');
+          }
         }
       } catch {}
     }
   }, []);
 
-  // Fetch PAGASA typhoon bulletin
+  // Fetch PAGASA typhoon bulletin (from weather.json if available)
   const fetchPAGASA = useCallback(async () => {
     try {
       const res = await fetch('/data/weather.json');
       if (res.ok) {
         const data = await res.json();
+        // Only show if actual typhoon data exists (not error messages)
+        const forecast = data.cities?.[0]?.forecast;
         setPulsa({
-          signal: data.typhoon || null,
-          bulletin: data.forecast || null,
+          signal: data.typhoon && !data.typhoon.startsWith('Unable') ? data.typhoon : null,
+          bulletin: forecast?.[0]?.description || null,
         });
       }
     } catch {}

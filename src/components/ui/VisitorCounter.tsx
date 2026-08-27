@@ -45,7 +45,7 @@ export default function VisitorCounter({ className = '' }: VisitorCounterProps) 
         <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
       </div>
       <div className="text-xs text-white/90">
-        <span className="font-semibold">{totalViews.toLocaleString()}</span> total views
+        <span className="font-semibold">{totalViews.toLocaleString()}</span> views on this device
         {todayViews > 0 && (
           <span className="text-white/60 ml-1.5">· {todayViews} today</span>
         )}
