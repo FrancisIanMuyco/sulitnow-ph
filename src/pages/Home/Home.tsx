@@ -12,6 +12,7 @@ import { useScrollReveal, useCountUp } from '../../hooks/useAnimations';
 import { getIcon } from '../../utils/iconMap';
 import Card from '../../components/ui/Card';
 import SEOHead from '../../components/common/SEOHead';
+import AdBanner from '../../components/ads/AdBanner';
 
 const categoryIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Smartphone, Banknote, ShoppingBag, Home: HomeIcon, Shield, Briefcase,
@@ -274,6 +275,13 @@ export default function Home() {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
+          </section>
+        </RevealSection>
+
+        {/* Ad Banner */}
+        <RevealSection>
+          <section className="py-4">
+            <AdBanner category="savings" />
           </section>
         </RevealSection>
 
