@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Placeholder - replace with real GA4 ID
+const GA_MEASUREMENT_ID = 'G-R1Z7FCFNTG';
 
 export function initGA() {
   if (typeof window === 'undefined') return;
