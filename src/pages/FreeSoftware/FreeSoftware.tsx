@@ -10,23 +10,20 @@ interface Alternative {
   url: string;
 }
 
-interface SoftwareEntry {
-  id: string;
-  paidName: string;
-  paidPrice: string;
-  category: string;
-  alternatives: Alternative[];
+interface SoftwareItem {
+  paid: { name: string; price: string; icon: string };
+  freeAlternatives: Alternative[];
+}
+
+interface Category {
+  name: string;
+  icon: string;
+  software: SoftwareItem[];
 }
 
 interface SoftwareData {
   lastUpdated: string;
-  software: SoftwareEntry[];
-  categories: { name: string; count: number }[];
-  stats: {
-    totalPaid: number;
-    totalAlternatives: number;
-    totalCategories: number;
-  };
+  categories: Category[];
 }
 
 const platformIcon: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
@@ -69,14 +66,21 @@ export default function FreeSoftware() {
 
   const categories = data ? ['All', ...data.categories.map(c => c.name)] : ['All'];
 
-  const filtered = data?.software.filter(s => {
-    const q = search.toLowerCase();
-    const matchSearch = !search ||
-      s.paidName.toLowerCase().includes(q) ||
-      s.alternatives.some(a => a.name.toLowerCase().includes(q) || a.description.toLowerCase().includes(q));
-    const matchCat = selectedCategory === 'All' || s.category === selectedCategory;
-    return matchSearch && matchCat;
-  }) || [];
+  const filtered = data?.categories.flatMap(cat =>
+    cat.software
+      .filter(s => {
+        const q = search.toLowerCase();
+        const matchSearch = !search ||
+          s.paid.name.toLowerCase().includes(q) ||
+          s.freeAlternatives.some(a => a.name.toLowerCase().includes(q) || a.description.toLowerCase().includes(q));
+        const matchCat = selectedCategory === 'All' || cat.name === selectedCategory;
+        return matchSearch && matchCat;
+      })
+      .map(s => ({ ...s, category: cat.name, categoryIcon: cat.icon }))
+  ) || [];
+
+  const totalPaid = data?.categories.reduce((acc, cat) => acc + cat.software.length, 0) || 0;
+  const totalFree = data?.categories.reduce((acc, cat) => acc + cat.software.reduce((a, s) => a + s.freeAlternatives.length, 0), 0) || 0;
 
   return (
     <div>
@@ -105,15 +109,15 @@ export default function FreeSoftware() {
         {data && (
           <div className="grid grid-cols-3 gap-3 mb-6">
             <div className="bg-white dark:bg-slate-800 border border-border rounded-xl p-3 text-center">
-              <p className="text-lg font-bold text-primary">{data.stats.totalPaid}</p>
+              <p className="text-lg font-bold text-primary">{totalPaid}</p>
               <p className="text-[10px] text-text-muted">Paid Software</p>
             </div>
             <div className="bg-white dark:bg-slate-800 border border-border rounded-xl p-3 text-center">
-              <p className="text-lg font-bold text-green-600">{data.stats.totalAlternatives}</p>
+              <p className="text-lg font-bold text-green-600">{totalFree}</p>
               <p className="text-[10px] text-text-muted">Free Alternatives</p>
             </div>
             <div className="bg-white dark:bg-slate-800 border border-border rounded-xl p-3 text-center">
-              <p className="text-lg font-bold text-accent">{data.stats.totalCategories}</p>
+              <p className="text-lg font-bold text-accent">{data.categories.length}</p>
               <p className="text-[10px] text-text-muted">Categories</p>
             </div>
           </div>
@@ -135,8 +139,8 @@ export default function FreeSoftware() {
         <div className="flex gap-2 mb-6 overflow-x-auto no-scrollbar pb-1">
           {categories.map(cat => {
             const count = cat === 'All'
-              ? data?.software.length || 0
-              : data?.categories.find(c => c.name === cat)?.count || 0;
+              ? totalPaid
+              : data?.categories.find(c => c.name === cat)?.software.length || 0;
             return (
               <button
                 key={cat}
@@ -164,26 +168,26 @@ export default function FreeSoftware() {
         {/* Results count */}
         {!loading && (
           <p className="text-xs text-text-muted mb-4">
-            Showing {filtered.length} of {data?.software.length || 0} paid software with free alternatives
+            Showing {filtered.length} paid software with free alternatives
           </p>
         )}
 
         {/* Software Cards */}
         <div className="space-y-4">
-          {filtered.map(item => (
-            <div key={item.id} className="bg-white dark:bg-slate-800 border border-border rounded-xl overflow-hidden hover:card-shadow transition-all">
+          {filtered.map((item, idx) => (
+            <div key={idx} className="bg-white dark:bg-slate-800 border border-border rounded-xl overflow-hidden hover:card-shadow transition-all">
               {/* Paid Software Header */}
               <div className="p-4 border-b border-border">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 min-w-0">
                     <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center shrink-0">
-                      <span className="text-lg">💰</span>
+                      <span className="text-lg">{item.paid.icon || '💰'}</span>
                     </div>
                     <div className="min-w-0">
-                      <h3 className="text-sm font-semibold text-text truncate">{item.paidName}</h3>
+                      <h3 className="text-sm font-semibold text-text truncate">{item.paid.name}</h3>
                       <div className="flex items-center gap-2 mt-0.5">
                         <span className="text-[10px] px-2 py-0.5 rounded-full font-medium bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">
-                          {item.paidPrice}
+                          {item.paid.price}
                         </span>
                         <span className="text-[10px] px-2 py-0.5 rounded-full font-medium bg-surface-alt text-text-muted">
                           {item.category}
@@ -204,7 +208,7 @@ export default function FreeSoftware() {
 
               {/* Alternatives */}
               <div className="p-4 space-y-3">
-                {item.alternatives.map((alt, i) => (
+                {item.freeAlternatives.map((alt, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 bg-surface-alt/50 rounded-lg">
                     <div className="w-8 h-8 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
                       <span className="text-[10px] font-bold text-green-700 dark:text-green-400">FREE</span>
