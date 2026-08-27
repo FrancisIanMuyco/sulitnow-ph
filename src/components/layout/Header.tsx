@@ -31,7 +31,7 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg">
+        <Link to="/" className="flex items-center gap-2 font-bold text-lg btn-press">
           <span className="text-primary">Sulit</span>
           <span className="text-accent">Now</span>
           <span className="text-[10px] font-medium bg-primary/10 text-primary px-1.5 py-0.5 rounded">PH</span>
@@ -43,7 +43,7 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
             <Link
               key={link.path}
               to={link.path}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                 location.pathname === link.path
                   ? 'bg-primary/10 text-primary'
                   : 'text-text-secondary hover:text-text hover:bg-surface-alt'
@@ -58,7 +58,7 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
         <div className="flex items-center gap-2">
           <button
             onClick={onSearchOpen}
-            className="p-2 rounded-lg hover:bg-surface-alt transition-colors text-text-secondary"
+            className="p-2 rounded-lg hover:bg-surface-alt transition-all text-text-secondary btn-press"
             aria-label="Search tools"
           >
             <Search size={18} />
@@ -70,7 +70,7 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
               <button
                 key={t}
                 onClick={() => onThemeChange(t)}
-                className={`p-1.5 rounded-md transition-colors ${
+                className={`p-1.5 rounded-md transition-all duration-200 ${
                   theme === t
                     ? 'bg-white dark:bg-slate-700 text-primary shadow-sm'
                     : 'text-text-muted hover:text-text-secondary'
@@ -85,27 +85,39 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
           {/* Mobile menu */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-surface-alt transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-surface-alt transition-all btn-press"
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            <div className="relative w-5 h-5">
+              <Menu
+                size={20}
+                className={`absolute inset-0 transition-all duration-300 ${mobileOpen ? 'opacity-0 rotate-90 scale-50' : 'opacity-100 rotate-0 scale-100'}`}
+              />
+              <X
+                size={20}
+                className={`absolute inset-0 transition-all duration-300 ${mobileOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-50'}`}
+              />
+            </div>
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {mobileOpen && (
-        <nav className="md:hidden border-t border-border bg-white dark:bg-slate-900 px-4 py-3">
-          {navLinks.map((link) => (
+      {/* Mobile Nav - animated */}
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+      }`}>
+        <nav className="border-t border-border bg-white dark:bg-slate-900 px-4 py-3">
+          {navLinks.map((link, i) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
-              className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                 location.pathname === link.path
                   ? 'bg-primary/10 text-primary'
                   : 'text-text-secondary hover:bg-surface-alt'
               }`}
+              style={{ transitionDelay: mobileOpen ? `${i * 30}ms` : '0ms' }}
             >
               {link.label}
             </Link>
@@ -116,7 +128,7 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
               <button
                 key={t}
                 onClick={() => onThemeChange(t)}
-                className={`p-2 rounded-lg transition-colors ${
+                className={`p-2 rounded-lg transition-all duration-200 btn-press ${
                   theme === t
                     ? 'bg-primary/10 text-primary'
                     : 'text-text-muted hover:bg-surface-alt'
@@ -128,7 +140,7 @@ export default function Header({ theme, onThemeChange, onSearchOpen }: HeaderPro
             ))}
           </div>
         </nav>
-      )}
+      </div>
     </header>
   );
 }
