@@ -1,0 +1,134 @@
+{
+  "lastUpdated": "2026-08-28T08:57:16.267929",
+  "generatedBy": "scripts/security/tools_report.py",
+  "environment": {
+    "networkFast": false,
+    "sandboxNetRoutes": false
+  },
+  "tools": [
+    {
+      "name": "nuclei",
+      "category": "security",
+      "present": true,
+      "useForSulitNow": "Scan every scrape source for known CVEs/misconfig before trusting data",
+      "notes": "slow on this sandbox network; best in CI"
+    },
+    {
+      "name": "subfinder",
+      "category": "recon",
+      "present": true,
+      "useForSulitNow": "Passive subdomain discovery of data-provider domains",
+      "notes": "needs live passive sources"
+    },
+    {
+      "name": "naabu",
+      "category": "recon",
+      "present": true,
+      "useForSulitNow": "Fast port scan to find data endpoints on provider hosts",
+      "notes": "works (router-init warning is cosmetic)"
+    },
+    {
+      "name": "katana",
+      "category": "crawl",
+      "present": true,
+      "useForSulitNow": "Crawl provider pages to find hidden API/JSON endpoints for scraping",
+      "notes": "works via --headless"
+    },
+    {
+      "name": "ffuf",
+      "category": "fuzz",
+      "present": true,
+      "useForSulitNow": "Fuzz provider hosts for API paths (api, v1, json ...)",
+      "notes": "requires a wordlist"
+    },
+    {
+      "name": "gobuster",
+      "category": "fuzz",
+      "present": true,
+      "useForSulitNow": "Directory/content discovery on provider sites",
+      "notes": "VERIFIED \u2014 found /robots.txt, /json on httpbin"
+    },
+    {
+      "name": "amass",
+      "category": "recon",
+      "present": true,
+      "useForSulitNow": "Heavy subdomain/ASN mapping of provider networks",
+      "notes": "slow; use subfinder first"
+    },
+    {
+      "name": "bettercap",
+      "category": "network",
+      "present": true,
+      "useForSulitNow": "MITM/arp-spoof for inspecting scraped endpoints (research)",
+      "notes": "needs root netifaces \u2014 limited in sandbox"
+    },
+    {
+      "name": "nmap",
+      "category": "recon",
+      "present": true,
+      "useForSulitNow": "Detailed service/version scan of provider hosts",
+      "notes": "NOT usable here \u2014 no net routes in sandbox; use naabu"
+    },
+    {
+      "name": "nikto",
+      "category": "security",
+      "present": true,
+      "useForSulitNow": "Web-server misconfig scan of scrape sources",
+      "notes": "slow network; best in CI"
+    },
+    {
+      "name": "sqlmap",
+      "category": "security",
+      "present": true,
+      "useForSulitNow": "Optional SQLi check on discovered query endpoints",
+      "notes": "guard with --level 1 --risk 1"
+    },
+    {
+      "name": "hydra",
+      "category": "security",
+      "present": true,
+      "useForSulitNow": "Auth brute-force (NOT for scraping; documented only)",
+      "notes": "do not use on sources without authorization"
+    },
+    {
+      "name": "mitmproxy",
+      "category": "proxy",
+      "present": true,
+      "useForSulitNow": "Local reverse/transparent proxy for debugging scraped APIs",
+      "notes": "useful as a debugging MITM for scrapers"
+    },
+    {
+      "name": "httpx(go)",
+      "category": "recon",
+      "present": true,
+      "useForSulitNow": "Probe which discovered hosts are alive + fingerprint",
+      "notes": "STANDALONE BINARY NOT INSTALLED \u2014 PATH has Python httpx CLI; install via go"
+    },
+    {
+      "name": "tshark",
+      "category": "capture",
+      "present": true,
+      "useForSulitNow": "Packet capture analysis of scraper traffic",
+      "notes": "works where capture permissions exist"
+    },
+    {
+      "name": "john",
+      "category": "security",
+      "present": true,
+      "useForSulitNow": "Password hash cracking (documented only, authorized use)",
+      "notes": "not part of scraping workflow"
+    },
+    {
+      "name": "hashcat",
+      "category": "security",
+      "present": true,
+      "useForSulitNow": "GPU hash cracking (authorized only)",
+      "notes": "not part of scraping workflow"
+    }
+  ],
+  "summary": {
+    "total": 17,
+    "present": 17,
+    "verdict": "All core recon/security tools installed. Run heavy scans in CI (fast network). nmap needs a real host environment; PD httpx standalone binary not yet installed."
+  }
+}

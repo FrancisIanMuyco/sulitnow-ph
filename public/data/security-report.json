@@ -1,0 +1,270 @@
+{
+  "lastUpdated": "2026-08-28T08:58:37.904257",
+  "toolAvailability": {
+    "nuclei": true,
+    "nikto": true,
+    "sqlmap": true
+  },
+  "sources": [
+    {
+      "domain": "bir.gov.ph",
+      "purpose": "BIR tax tables / deadlines",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    },
+    {
+      "domain": "api.twilio.com",
+      "purpose": "crypto/gold data APIs",
+      "reachable": true,
+      "status": 200,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "dotr.gov.ph",
+      "purpose": "transport fares",
+      "reachable": true,
+      "status": 403,
+      "waf": "Cloudflare",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "api.exchangerate.host",
+      "purpose": "currency rate API",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare",
+      "blocked": false,
+      "strategy": "ROTATE_UA"
+    },
+    {
+      "domain": "api.coingecko.com",
+      "purpose": "crypto price API",
+      "reachable": true,
+      "status": 404,
+      "waf": "Cloudflare",
+      "blocked": false,
+      "strategy": "ROTATE_UA"
+    },
+    {
+      "domain": "gcash.com",
+      "purpose": "GCash fees",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "api.gold-api.com",
+      "purpose": "gold price API",
+      "reachable": true,
+      "status": 404,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "dito.ph",
+      "purpose": "DITO promo pages",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare",
+      "blocked": false,
+      "strategy": "ROTATE_UA"
+    },
+    {
+      "domain": "lto.gov.ph",
+      "purpose": "LTO fees",
+      "reachable": true,
+      "status": 403,
+      "waf": "Cloudflare",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "globe.com.ph",
+      "purpose": "Globe promo pages",
+      "reachable": true,
+      "status": 403,
+      "waf": "Cloudflare",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "philhealth.gov.ph",
+      "purpose": "PhilHealth table",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    },
+    {
+      "domain": "bdo.com.ph",
+      "purpose": "bank rates",
+      "reachable": true,
+      "status": 200,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "pse.com.ph",
+      "purpose": "PSE stock listings",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    },
+    {
+      "domain": "retailmenot.ph",
+      "purpose": "RetailMeNot PH coupons",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    },
+    {
+      "domain": "pagibigfund.gov.ph",
+      "purpose": "Pag-IBIG table",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare/challenge",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "landbank.com",
+      "purpose": "bank rates",
+      "reachable": true,
+      "status": 200,
+      "waf": "Imperva/Incapsula",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "sss.gov.ph",
+      "purpose": "SSS contributions",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    },
+    {
+      "domain": "api.open-meteo.com",
+      "purpose": "weather API",
+      "reachable": true,
+      "status": 400,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "open.er-api.com",
+      "purpose": "currency API (USD base)",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare",
+      "blocked": false,
+      "strategy": "ROTATE_UA"
+    },
+    {
+      "domain": "lazada.com.ph",
+      "purpose": "Lazada deals",
+      "reachable": true,
+      "status": 200,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "maya.ph",
+      "purpose": "Maya fees",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare",
+      "blocked": false,
+      "strategy": "ROTATE_UA"
+    },
+    {
+      "domain": "shopee.ph",
+      "purpose": "Shopee flash sale / vouchers",
+      "reachable": true,
+      "status": 200,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "picodi.com",
+      "purpose": "Picodi PH vouchers",
+      "reachable": true,
+      "status": 200,
+      "waf": "Cloudflare/challenge",
+      "blocked": true,
+      "strategy": "NEED_PROXY"
+    },
+    {
+      "domain": "smart.com.ph",
+      "purpose": "Smart promo pages",
+      "reachable": true,
+      "status": 200,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "pagasa.dost.gov.ph",
+      "purpose": "PAGASA weather",
+      "reachable": true,
+      "status": 200,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SCRAPE"
+    },
+    {
+      "domain": "bangko.com.ph",
+      "purpose": "bank rates",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    },
+    {
+      "domain": "tnt.ph",
+      "purpose": "TNT promo pages",
+      "reachable": false,
+      "status": null,
+      "waf": null,
+      "blocked": false,
+      "strategy": "SKIP"
+    }
+  ],
+  "nucleiFindings": [],
+  "niktoFindings": [
+    {
+      "note": "skipped"
+    }
+  ],
+  "sqlmapFindings": [],
+  "verdict": "PASS",
+  "blockedSources": [
+    "bir.gov.ph",
+    "philhealth.gov.ph",
+    "pse.com.ph",
+    "retailmenot.ph",
+    "sss.gov.ph",
+    "bangko.com.ph",
+    "tnt.ph"
+  ]
+}

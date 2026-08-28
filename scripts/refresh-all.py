@@ -80,8 +80,56 @@ def get_data_summary():
                     summary[f] = {'size': os.path.getsize(path), 'lastUpdated': 'error'}
     return summary
 
+def run_security_check():
+    """Run the scrape-source security audit (nuclei + nikto) via the toolkit."""
+    sec_script = os.path.join(SCRIPTS_DIR, 'security', 'check_sources.py')
+    if not os.path.exists(sec_script):
+        print("  ⏭️  Security audit: script not found")
+        return None
+    try:
+        result = subprocess.run(
+            ["python3", sec_script, "--skip-nikto"],
+            capture_output=True, text=True, timeout=600, cwd=PROJECT_ROOT
+        )
+        if result.returncode == 0:
+            print("  ✅ Security audit: PASS (no blocking findings)")
+            return True
+        else:
+            print("  ⚠️  Security audit: REVIEW findings detected")
+            for line in (result.stdout or "").strip().split('\n')[-15:]:
+                print(f"      {line}")
+            return False
+    except subprocess.TimeoutExpired:
+        print("  ⏰ Security audit: timed out (600s)")
+        return None
+
+
+def run_free_software_expansion():
+    """Keep the free-software directory populated with legit alternatives (idempotent)."""
+    exp_script = os.path.join(SCRIPTS_DIR, 'security', 'expand_free_software.py')
+    if not os.path.exists(exp_script):
+        print("  ⏭️  Free-software expansion: script not found")
+        return None
+    try:
+        result = subprocess.run(
+            ["python3", exp_script],
+            capture_output=True, text=True, timeout=120, cwd=PROJECT_ROOT
+        )
+        if result.returncode == 0:
+            for line in (result.stdout or "").strip().split('\n'):
+                if "Total" in line or "Added" in line:
+                    print(f"      {line}")
+            return True
+        print("  ⚠️  Free-software expansion failed")
+        return False
+    except subprocess.TimeoutExpired:
+        print("  ⏰ Free-software expansion: timed out (120s)")
+        return None
+
+
 def main():
     no_commit = '--no-commit' in sys.argv
+    run_sec = '--security' in sys.argv
     
     start = datetime.now()
     print("=" * 60)
@@ -94,7 +142,17 @@ def main():
     results = {}
     for name, script in SCRAPERS:
         results[name] = run_scraper(name, script)
-    
+
+    # Optional post-scrape security audit of scrape sources
+    sec_result = None
+    if run_sec:
+        print("\n🛡️ Running scrape-source security audit...")
+        sec_result = run_security_check()
+
+    # Keep the free-software directory up to date (idempotent)
+    print("\n📚 Expanding free-software alternatives...")
+    run_free_software_expansion()
+
     # Summary
     succeeded = sum(1 for v in results.values() if v is True)
     failed = sum(1 for v in results.values() if v is False)
@@ -119,7 +177,7 @@ def main():
         print("\n📝 Committing changes...")
         try:
             os.chdir(PROJECT_ROOT)
-            subprocess.run(["git", "add", "public/data/"], check=True, capture_output=True)
+            subprocess.run(["git", "add", "public/data/", "scripts/security/recon-out/"], check=True, capture_output=True)
             
             # Check if there are changes
             status = subprocess.run(["git", "status", "--porcelain", "public/data/"], capture_output=True, text=True)

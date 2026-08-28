@@ -26,3 +26,6 @@ dist-ssr
 # API Keys
 .env
 __pycache__/
+
+# Security/recon raw output (keep only the JSON reports in public/data)
+scripts/security/recon-out/

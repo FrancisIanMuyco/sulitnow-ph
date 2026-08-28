@@ -102,6 +102,32 @@ def scrape_fuel():
     """Fuel prices — skip (fuel-prices.json has good DOE data, fuel-prices-live.json is unused)."""
     print("\n⛽ Skipping fuel-prices-live (unused, fuel-prices.json is current)")
 
+# === RELIABILITY PRE-CHECK (opt-in with --reliability) ===
+# Before running the v2 scrapers, probe each target and only run the
+# scrapers for sources that are reachable / not WAF-blocked. Uses the
+# recon toolkit's smart_scrape_decision so we never waste time (or get
+# flagged) scraping dead or challenged sources.
+import sys
+RELIABILITY = '--reliability' in sys.argv
+
+if RELIABILITY:
+    try:
+        from security.recon_helpers import smart_scrape_decision
+        # Map each new scraper to the source URL it depends on.
+        RELIABILITY_TARGETS = {
+            'scrape-bank-rates.py': 'https://www.bangko.com.ph',
+            'scrape-toll-fees.py': 'https://trb.gov.ph',
+            'scrape-remittance.py': 'https://www.westernunion.com',
+            'scrape-medicine-prices.py': 'https://www.doh.gov.ph',
+            'scrape-pse-stocks.py': 'https://www.pse.com.ph',
+            'scrape-salary-data.py': 'https://psa.gov.ph',
+            'scrape-bir-deadlines.py': 'https://www.bir.gov.ph',
+        }
+        print("\n🛡️  Reliability pre-check enabled")
+    except Exception as e:
+        print(f"  ⚠️  Could not load reliability helpers ({e}); running all scrapers")
+        RELIABILITY = False
+
 if __name__ == "__main__":
     start = datetime.now()
     print("=" * 50)
@@ -135,15 +161,25 @@ if __name__ == "__main__":
     ]
     
     for script_name, label in new_scrapers:
+        # Reliability gate: skip scrapers whose source is down/blocked
+        if RELIABILITY and script_name in RELIABILITY_TARGETS:
+            url = RELIABILITY_TARGETS[script_name]
+            decision = smart_scrape_decision(url, timeout=8)
+            if decision['strategy'] == 'SKIP':
+                reason = decision['check'].get('reason', 'unreachable')
+                print(f"\n⏭️  Skipping {label} — source {url} {reason}")
+                continue
+            if decision['strategy'] == 'NEED_PROXY':
+                print(f"\n⚠️  {label} — source {url} blocked; trying direct anyway")
         try:
             script_path = os.path.join(os.path.dirname(__file__), script_name)
             if os.path.exists(script_path):
                 print(f"\n--- Running {label} scraper ---")
                 subprocess.run([sys.executable, script_path], timeout=120)
             else:
-                print(f"\n⚠️ {script_name} not found, skipping")
+                print(f"\n⚠️  {script_name} not found, skipping")
         except Exception as e:
-            print(f"  ⚠️ {label} scraper failed: {e}")
+            print(f"  ⚠️  {label} scraper failed: {e}")
     
     elapsed = (datetime.now() - start).total_seconds()
     print("\n" + "=" * 50)

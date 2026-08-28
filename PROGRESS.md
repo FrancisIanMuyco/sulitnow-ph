@@ -50,6 +50,37 @@
 - [x] Transparent scoring with factors
 - [x] "How is this calculated?" architecture
 
+### Security & Recon Toolkit (newly installed tools)
+- [x] Installed security/recon tools locally: nuclei, subfinder, httpx, naabu, katana, amass, ffuf, gobuster, sqlmap, nikto, nmap, hydra, bettercap, mitmproxy, tshark/termshark, john, hashcat
+- [x] `scripts/security/recon_helpers.py` — shared lib: tool registry, source reachability + WAF/anti-bot detection, proxy health check, strategy recommendation
+- [x] `scripts/security/check_sources.py` — audits every scrape source with nuclei + nikto; writes `public/data/security-report.json`; `--offline` mode for slow networks
+- [x] `scripts/security/discover_sources.py` — recon for new API/data endpoints (subfinder → httpx → katana → gobuster → nmap)
+- [x] `scripts/security/run_toolkit.sh` — one-shot orchestrator for security audit + discovery
+- [x] Integrated into `refresh-all.py --security` and GitHub Actions `scrape.yml` (installs Go tools + runs audit each run)
+- [x] `scripts/security/tools_report.py` — regenerable capability inventory → `public/data/tools-inventory.json` (17 tools)
+- [x] Verified PD `httpx` standalone binary installed at `/root/go/bin/httpx` (65MB) for alive-host probing
+- [x] Full capability demo: gobuster found `/robots.txt`+`/json` on httpbin, katana crawled pages, naabu found open ports 80/443 (nmap blocked by sandbox, works on real host/CI)
+
+### Reliability-aware scrapers
+- [x] `recon_helpers.py::smart_scrape_decision()` — one-shot `SKIP / NEED_PROXY / ROTATE_UA / SCRAPE` decision + live-proxy selection
+- [x] `scripts/scrape-all.py --reliability` — pre-checks each data source before running its scraper, skips dead/blocked ones
+- [x] Verified live: bir.gov.ph→ROTATE_UA, pse.com.ph→NEED_PROXY, httpbin→SCRAPE
+- [x] Wired into CI as a `--reliability` scrape step
+
+### Source Health panel
+- [x] Live Status page (`Live.tsx`) now loads `security-report.json` and renders a "Data Source Health" panel: per-source reachability, WAF badge, HTTP status, and scrape strategy (Direct / Rotate UA / Use Proxy / Down)
+- [x] Shares the auto-refresh lifecycle with the existing status board
+
+### Free Software Directory (legitimate expansion)
+- [x] Expanded `public/data/free-software.json` with verified, legitimate free/open-source alternatives (no pirated content — every link points to official sources)
+- [x] Added new alternatives to existing paid entries (Microsoft Office, Adobe, Norton, LastPass, ChatGPT Plus, Spotify, Google One, Slack, Canva Pro)
+- [x] Added new `System Utilities` category: WinRAR, WinZip, CCleaner, Ashampoo WinOptimizer with free alternatives (7-Zip, PeaZip, NanaZip, BleachBit)
+- [x] Added new `Media & Entertainment` category (Stremio, Plex, Jellyfin)
+- [x] Added Batch 2 of alternatives (LibreOffice, OnlyOffice, DaVinci Resolve, Figma, darktable, OBS, GNU Octave, FreeCAD, JASP, and more) — only targeting paid software that exists in the data
+- [x] Recalculated stats: now 41 paid software, 136 free alternatives, 12 categories
+- [x] `scripts/security/expand_free_software.py` — repeatable + idempotent (re-run adds 0 duplicates), wired into `refresh-all.py` and CI
+- [x] Build verified (FreeSoftware page renders new data)
+
 ### Pages
 - [x] Homepage — premium design
 - [x] Tools — filtered listing

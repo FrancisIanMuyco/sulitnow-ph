@@ -32,6 +32,17 @@ jobs:
           npm ci
           npx playwright install chromium --with-deps
 
+      - name: Install security/recon tools (Go)
+        run: |
+          go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+          go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+          go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+          go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+          go install github.com/projectdiscovery/katana/cmd/katana@latest
+          go install github.com/OJ/gobuster/v3@latest
+          go install github.com/ffuf/ffuf/v2@latest
+          nuclei -update-templates
+
       - name: Scrape all data sources
         run: python3 scripts/scrape-all.py
 
@@ -44,6 +55,18 @@ jobs:
       - name: Scrape gold, crypto, earthquakes
         run: python3 scripts/scrape-prices.py
 
+      - name: Security audit of scrape sources (nuclei)
+        run: |
+          export PATH="$HOME/go/bin:$PATH"
+          python3 scripts/security/check_sources.py --skip-nikto
+
+      - name: Reliability-aware scrape (pre-check sources)
+        run: |
+          python3 scripts/scrape-all.py --reliability || true
+
+      - name: Expand free-software directory (legit alternatives)
+        run: python3 scripts/security/expand_free_software.py
+
       - name: Build
         run: npm run build
 
@@ -51,7 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/ dist/
+          git add public/data/ scripts/security/recon-out/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
